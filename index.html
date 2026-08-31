@@ -225,10 +225,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 /* ============================================================
    WORK — visual-first preview cards
    ============================================================ */
-.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.work-grid{display:flex;flex-direction:column;gap:26px}
 .wcard{
-  grid-column:span 1;
-  display:flex;flex-direction:column;
+  display:flex;flex-direction:row;
   background:var(--card);
   border:1px solid var(--border);border-radius:var(--r-lg);
   box-shadow:var(--sh-soft);
@@ -236,18 +235,17 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s;
 }
 .wcard:hover{transform:translateY(-6px);box-shadow:var(--sh-lift);border-color:rgba(217,83,123,.35)}
-.wcard--featured{grid-column:1 / -1;flex-direction:row}
-.wcard--featured .wcard-visual{flex:1.15;min-height:340px;border-radius:0}
-.wcard--featured .wcard-body{flex:1;display:flex;flex-direction:column;justify-content:center}
+.wcard .wcard-visual{flex:1.15;min-height:340px;border-radius:0}
+.wcard .wcard-body{flex:1;display:flex;flex-direction:column;justify-content:center}
 
 .wcard-visual{
   position:relative;overflow:hidden;
-  aspect-ratio:16/9.5;
+  aspect-ratio:auto;
 }
-.wcard--featured .wcard-visual{aspect-ratio:auto}
 .wcard-visual .scene{position:absolute;inset:0;transition:transform .7s var(--ease)}
 .wcard:hover .wcard-visual .scene{transform:scale(1.05)}
 
+.pv-status{position:absolute;top:14px;right:14px;z-index:3;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;background:rgba(245,217,143,.16);color:#F5D98F;border:1px solid rgba(245,217,143,.4);border-radius:var(--r-pill);padding:5px 11px}
 .pv-tag{
   position:absolute;top:14px;left:14px;z-index:3;
   font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
@@ -285,11 +283,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .wcard-body .meta b{color:var(--rose);font-weight:500}
 .wcard-body h3{
   font-family:var(--serif);font-weight:500;
-  font-size:clamp(21px,2.4vw,29px);line-height:1.15;letter-spacing:-.01em;
+  font-size:clamp(24px,2.8vw,34px);line-height:1.15;letter-spacing:-.01em;
   margin-bottom:8px;
 }
 .wcard-body h3 em{font-style:italic;color:var(--rose)}
-.wcard--featured .wcard-body h3{font-size:clamp(24px,2.8vw,34px)}
 .wcard-body .oneline{font-size:14.5px;color:var(--muted);line-height:1.6;margin-bottom:14px}
 .wcard-body .chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px}
 .wcard-body .chips span{
@@ -327,15 +324,23 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .pv-med .pulse{position:absolute;top:14px;right:14px;background:#fff;border:1px solid #BFDFD6;border-radius:10px;padding:6px 11px;font-family:var(--mono);font-size:10px;letter-spacing:.05em;color:#1D7263;box-shadow:0 5px 14px rgba(31,122,108,.14)}
 
 /* alibi */
-.pv-alibi{background:linear-gradient(155deg,#251824 0%,#37202F 60%,#432638 100%);padding:9% 8%}
-.pv-alibi .head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
-.pv-alibi .t{font-family:var(--serif);font-style:italic;font-size:16px;color:#F7EBDD}
-.pv-alibi .chip{font-family:var(--mono);font-size:9px;color:#F5D98F;border:1px solid rgba(245,217,143,.45);border-radius:var(--r-pill);padding:3px 9px;letter-spacing:.1em;text-transform:uppercase}
-.pv-alibi .bars{display:flex;align-items:flex-end;gap:6px;height:46%;margin-bottom:12px}
-.pv-alibi .bars i{flex:1;border-radius:4px 4px 0 0;background:linear-gradient(180deg,#7A4E63,#4A2F3F)}
-.pv-alibi .bars i.hot{background:linear-gradient(180deg,#F5D98F,#C99B45)}
-.pv-alibi .l{height:5px;border-radius:3px;background:#4A3542;margin-bottom:6px}
-.pv-alibi .l.s{width:55%}
+.pv-alibi{background:linear-gradient(155deg,#1C1420 0%,#2B1B27 55%,#3A2431 100%);padding:9% 8%;position:relative;overflow:hidden}
+.pv-alibi::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 88% 10%, rgba(245,217,143,.09), transparent 46%)}
+.pv-alibi .a2-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:13%;position:relative}
+.pv-alibi .a2-mark{font-family:var(--serif);font-style:italic;font-size:clamp(15px,2.6vw,21px);color:#F7EBDD;letter-spacing:.01em}
+.pv-alibi .a2-year{font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:rgba(245,217,143,.5)}
+.pv-alibi .a2-upload{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:9.5px;letter-spacing:.03em;color:#F5D98F;border:1px dashed rgba(245,217,143,.4);border-radius:var(--r-pill);padding:7px 13px;margin-bottom:11%;position:relative}
+.pv-alibi .a2-updot{width:6px;height:6px;border-radius:50%;background:#F5D98F;flex:none}
+.pv-alibi .a2-or{color:rgba(247,235,221,.5)}
+.pv-alibi .a2-card{background:rgba(247,235,221,.05);border:1px solid rgba(247,235,221,.12);border-radius:12px;padding:9px 12px;margin-bottom:10%;position:relative}
+.pv-alibi .a2-card-row{display:flex;align-items:center;gap:8px;padding:4px 0}
+.pv-alibi .a2-card-dot{width:5px;height:5px;border-radius:50%;background:rgba(245,217,143,.6);flex:none}
+.pv-alibi .a2-card-line{height:5px;border-radius:3px;background:rgba(247,235,221,.16);flex:1}
+.pv-alibi .a2-card-line.short{max-width:55%}
+.pv-alibi .a2-card-amt{font-family:var(--mono);font-size:9px;color:rgba(247,235,221,.4);flex:none}
+.pv-alibi .a2-insight{font-family:var(--serif);font-style:italic;font-size:clamp(11.5px,1.7vw,14px);line-height:1.4;color:#F7EBDD;position:relative}
+.pv-alibi .a2-quote{color:#F5D98F;font-size:1.3em;margin-right:2px}
+.pv-alibi .a2-clue{display:inline-block;margin-left:8px;font-family:var(--mono);font-style:normal;font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,217,143,.7);border:1px solid rgba(245,217,143,.3);border-radius:var(--r-pill);padding:2px 8px;vertical-align:2px}
 
 /* beyond */
 .pv-beyond{background:linear-gradient(160deg,#F0EDF3 0%,#E1DCE6 100%)}
@@ -348,6 +353,16 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 @keyframes spin{to{transform:rotate(360deg)}}
 .pv-beyond .orbit i{position:absolute;top:-4px;left:50%;width:7px;height:7px;border-radius:50%;background:var(--lavender)}
 
+/* human mode — abstract editorial visual, no app mockup */
+.pv-hmn{background:linear-gradient(165deg,#FBF3EC 0%,#F2E4DB 100%);position:relative;overflow:hidden}
+.pv-hmn::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(180deg, rgba(87,31,43,.05) 0, rgba(87,31,43,.05) 1px, transparent 1px, transparent 30px);opacity:.7}
+.pv-hmn .hm-tag{position:absolute;top:7%;left:8%;font-family:var(--hand);font-size:clamp(18px,2.4vw,24px);color:var(--ca-deep)}
+.pv-hmn .hm-note{position:absolute;top:38%;left:9%;max-width:56%;font-family:var(--hand);font-size:clamp(14px,1.9vw,18px);line-height:1.3;color:var(--ink)}
+.pv-hmn .hm-note::after{content:"";position:absolute;left:-3%;right:-10%;bottom:-7px;height:2px;background:var(--ca);opacity:.5;transform:rotate(-.6deg)}
+.pv-hmn .hm-mark{position:absolute;top:20%;right:15%;font-size:22px;color:var(--ca);opacity:.55;transform:rotate(-9deg)}
+.pv-hmn .hm-branch{position:absolute;left:15%;top:50%;width:1px;height:22%;background:linear-gradient(var(--ca),transparent);opacity:.4}
+.pv-hmn .hm-ai{position:absolute;bottom:13%;right:8%;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ca-deep);border:1px dashed var(--ca);border-radius:var(--r-pill);padding:8px 14px;background:rgba(255,253,250,.55)}
+
 /* ============================================================
    CASE STUDY PAGES (views)
    ============================================================ */
@@ -356,6 +371,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .cv-med{--ca:#2E9E8B;--ca-deep:#1D7263;--ca-soft:rgba(46,158,139,.12)}
 .cv-alb{--ca:#C99B45;--ca-deep:#A57C2F;--ca-soft:rgba(201,155,69,.14)}
 .cv-byd{--ca:#8F7BA8;--ca-deep:#6E5C8A;--ca-soft:rgba(143,123,168,.13)}
+.cv-hmn{--ca:#7A2E3E;--ca-deep:#571F2B;--ca-soft:rgba(122,46,62,.11)}
 
 .cs-hero{padding:clamp(40px,6vw,72px) 0 clamp(30px,4vw,48px);position:relative;overflow:hidden}
 .cs-hero::before{
@@ -392,6 +408,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .cs-meta-row div{font-size:13px}
 .cs-meta-row .k{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ca);display:block}
 .cs-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+.status-pill{display:inline-flex;align-items:center;gap:8px;margin:2px 0 20px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ca-deep);background:var(--ca-soft);border:1px solid var(--ca-soft);border-radius:var(--r-pill);padding:7px 15px}
+.status-pill .dot{width:7px;height:7px;border-radius:50%;background:var(--ca);flex:none}
 .cs-chips span{
   font-size:12.5px;font-weight:500;color:var(--ca-deep);
   background:var(--ca-soft);border-radius:var(--r-pill);padding:6px 13px;
@@ -871,6 +889,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .screen-tile .scr{position:relative;height:100%;border-radius:18px;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .screen-tile .scr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
 .ph-scr{position:absolute;inset:0;background:linear-gradient(170deg,#E9F6F2 0%,#CDEAE1 60%,#A8DACB 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px}
+.ph-scr.dark{background:linear-gradient(170deg,#241827 0%,#33202F 55%,#432638 100%)}
+.ph-scr.dark .add{color:rgba(245,217,143,.75);border-color:rgba(245,217,143,.4)}
+.ph-scr.dark .sn{color:rgba(245,217,143,.55)}
 .ph-scr .add{
   font-family:var(--mono);font-size:8.5px;letter-spacing:.13em;text-transform:uppercase;
   color:rgba(20,80,68,.65);border:1.5px dashed rgba(20,80,68,.4);border-radius:var(--r-pill);padding:4px 10px;
@@ -879,6 +900,20 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .screen-tile .s-cap{padding:12px 4px 0}
 .screen-tile .s-cap b{font-size:14px;font-weight:600;display:block;margin-bottom:3px}
 .screen-tile .s-cap p{font-size:12.5px;color:var(--muted);line-height:1.55}
+
+.screen-grid.landscape{grid-template-columns:1fr;gap:26px}
+.screen-grid.landscape.cols-2{grid-template-columns:1fr 1fr;gap:22px}
+.screen-tile .frame-web{
+  border-radius:14px;background:#fff;border:1px solid var(--border);
+  box-shadow:var(--sh-soft);overflow:hidden;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+}
+.screen-tile:hover .frame-web{transform:translateY(-4px);box-shadow:var(--sh-lift)}
+.frame-web .browser-bar{height:28px;background:#F3EAE3;display:flex;align-items:center;gap:5px;padding:0 14px;border-bottom:1px solid var(--border)}
+.frame-web .browser-bar i{width:7px;height:7px;border-radius:50%;background:#DDD0C8}
+.frame-web .scr-web{position:relative;aspect-ratio:16/9;overflow:hidden}
+.frame-web .scr-web img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+.frame-web .scr-web .ph-scr{position:absolute;inset:0}
 
 .swatch-row{display:flex;flex-wrap:wrap;gap:12px}
 .swatch{width:104px;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--card)}
@@ -903,20 +938,60 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .find p{font-size:13.5px;color:var(--muted);line-height:1.6}
 .find p b{color:var(--ink);font-weight:600}
 
+/* generic pill row — service channels, tag lists (no checkmark) */
+.pill-row{display:flex;flex-wrap:wrap;gap:9px;margin:16px 0 6px}
+.pill-row span{font-size:12.5px;font-weight:500;color:var(--ca-deep);background:var(--ca-soft);border-radius:var(--r-pill);padding:7px 14px}
+
+/* progress timeline — stages, not percentages */
+.progress-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.progress-col{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px 24px}
+.progress-head{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-weight:500;font-size:16px;margin-bottom:14px;color:var(--ink)}
+.progress-dot{width:9px;height:9px;border-radius:50%;flex:none;background:var(--muted);opacity:.4}
+.progress-col.done .progress-dot{background:var(--ca);opacity:1}
+.progress-col.now .progress-dot{background:#C98A2E;opacity:1}
+.progress-col ul{display:grid;gap:9px}
+.progress-col li{font-size:13.5px;color:var(--muted);line-height:1.55;padding-left:16px;position:relative}
+.progress-col li::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%;background:var(--muted);opacity:.4}
+.progress-col.done li::before{background:var(--ca);opacity:.7}
+.progress-col.now li::before{background:#C98A2E;opacity:.75}
+
+/* upcoming screens — wireframe placeholders, not real screenshots */
+.wire-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.wire-card{border:1.5px dashed var(--border);border-radius:14px;padding:20px 18px;background:var(--card);transition:border-color .3s,transform .3s var(--ease)}
+.wire-card:hover{border-color:var(--ca);transform:translateY(-2px)}
+.wire-card .wn{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;color:var(--ca);text-transform:uppercase;display:block;margin-bottom:10px}
+.wire-card b{font-family:var(--serif);font-weight:500;font-size:14.5px;display:block;margin-bottom:16px;color:var(--ink);line-height:1.3}
+.wire-skel{display:grid;gap:6px}
+.wire-skel i{display:block;height:6px;border-radius:3px;background:var(--border)}
+.wire-skel i.w1{width:78%}
+.wire-skel i.w2{width:100%}
+.wire-skel i.w3{width:46%}
+
+/* closing statement — ongoing project sign-off */
+.hm-closing{text-align:center;max-width:640px;margin:clamp(40px,6vw,64px) auto 4px;padding-top:clamp(34px,5vw,50px);border-top:1px solid var(--border)}
+.hm-closing h3{font-family:var(--serif);font-weight:500;font-size:clamp(24px,3.4vw,34px);margin-bottom:14px}
+.hm-closing h3 em{font-style:italic;color:var(--ca)}
+.hm-closing p{color:var(--muted);font-size:15px;line-height:1.75;margin-bottom:22px}
+.hm-closing .status-pill{margin:0}
+
 @media (max-width:960px){
   .mini-grid,.mini-grid--4{grid-template-columns:1fr 1fr}
   .ia-grid{grid-template-columns:repeat(3,1fr)}
   .screen-grid{grid-template-columns:1fr 1fr}
+  .screen-grid.landscape.cols-2{grid-template-columns:1fr}
   .stage-grid{grid-template-columns:1fr 1fr}
   .insight-row{grid-template-columns:38px 1fr}
   .insight-row .opp{grid-column:2}
   .persona-grid{grid-template-columns:1fr}
+  .progress-grid{grid-template-columns:1fr}
+  .wire-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:620px){
   .mini-grid,.mini-grid--4,.stage-grid{grid-template-columns:1fr}
   .ia-grid{grid-template-columns:1fr 1fr}
   .screen-grid{grid-template-columns:1fr}
   .persona .p-cols{grid-template-columns:1fr}
+  .wire-grid{grid-template-columns:1fr}
 }
 
 /* reveal */
@@ -927,9 +1002,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
    RESPONSIVE
    ============================================================ */
 @media (max-width:960px){
-  .work-grid{grid-template-columns:1fr}
-  .wcard--featured{flex-direction:column}
-  .wcard--featured .wcard-visual{min-height:0;aspect-ratio:16/9.5}
+  .wcard{flex-direction:column}
+  .wcard .wcard-visual{min-height:0;aspect-ratio:16/9.5}
   .case-grid{grid-template-columns:1fr}
   .about-grid{grid-template-columns:1fr}
   .polaroid{position:static;max-width:400px}
@@ -965,7 +1039,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     <a class="logo" href="#top" data-home><span class="dot"></span>Ray design</a>
     <div class="nav-links">
       <a href="#work" data-home>Work</a>
-      <a href="#think" data-home>Approach</a>
+      <a href="#think" data-home>How I think</a>
       <a href="#about" data-home>About</a>
       <a href="#life" data-home>Life</a>
       <a href="#experience" data-home>Experience</a>
@@ -975,7 +1049,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   </div>
   <div class="nav-mobile" id="mnav">
     <a href="#work" data-home>Work</a>
-    <a href="#think" data-home>Approach</a>
+    <a href="#think" data-home>How I think</a>
     <a href="#about" data-home>About</a>
     <a href="#life" data-home>Life</a>
     <a href="#experience" data-home>Experience</a>
@@ -1004,7 +1078,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   <span class="spark s3" aria-hidden="true">✦</span>
   <div class="container">
     <div class="hero-meta">
-      <div><span class="k">name:</span> Reshma Shirin A</div>
+      <div><span class="k">name:</span> Reshma “Ray” Shirin A</div>
       <div><span class="k">role:</span> UX/UI & Interaction Designer</div>
       <div><span class="k">base:</span> Ireland / India</div>
       <div><span class="k">status:</span> <b>open to work</b></div>
@@ -1034,7 +1108,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 <div class="stat-strip">
   <div class="stat-grid">
     <div class="stat"><b>2+ yrs</b><span>product &amp; UX design</span></div>
-    <div class="stat"><b>4</b><span>project stories inside</span></div>
+    <div class="stat"><b>5</b><span>project stories inside</span></div>
     <div class="stat"><b>1st class</b><span>honours · MSc IxD</span></div>
     <div class="stat"><b>7</b><span>certifications</span></div>
   </div>
@@ -1068,7 +1142,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
         </div>
         <div class="wcard-body">
           <span class="meta">VRM · <b>RAY</b> · MSc Thesis · University of Limerick</span>
-          <h3>Designing calm for the <em>worst headache days</em> — VR for Migraine</h3>
+          <h3><em>Exploring VR for Relaxation During Migraine Episodes</em></h3>
           <p class="oneline">A VR relaxation concept built for a user's lowest-capacity moment: near-dark by default, zero reading, one-action entry.</p>
           <div class="chips"><span>UX Research</span><span>VR UX</span><span>Interaction Design</span><span>3D</span></div>
           <span class="read">Read case study →</span>
@@ -1113,27 +1187,58 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
       <a class="wcard reveal" href="#/work/alibi">
         <div class="wcard-visual">
           <div class="scene pv-alibi">
-            <div class="head"><span class="t">Your July, explained</span><span class="chip">Monthly story</span></div>
-            <div class="bars">
-              <i style="height:38%"></i><i style="height:62%"></i><i class="hot" style="height:88%"></i>
-              <i style="height:52%"></i><i style="height:70%"></i><i style="height:44%"></i><i style="height:58%"></i>
+            <div class="a2-top"><span class="a2-mark">Alibi</span><span class="a2-year">2026</span></div>
+            <div class="a2-upload"><span class="a2-updot"></span>Upload a statement <span class="a2-or">or try sample data</span></div>
+            <div class="a2-card">
+              <div class="a2-card-row"><span class="a2-card-dot"></span><span class="a2-card-line"></span><span class="a2-card-amt">•••• 42</span></div>
+              <div class="a2-card-row"><span class="a2-card-dot"></span><span class="a2-card-line short"></span><span class="a2-card-amt">•••• 88</span></div>
             </div>
-            <div class="l"></div><div class="l s"></div>
+            <div class="a2-insight"><span class="a2-quote">"</span>Your Tuesdays are unusually heavy this month.<span class="a2-clue">Clue 03</span></div>
           </div>
-          <span class="pv-tag">FinTech · Editorial</span>
+          <span class="pv-tag">FinTech · Behavioural</span>
+          <span class="pv-status">Ongoing</span>
           <div class="wcard-peek" aria-hidden="true">
             <span class="peek-title">a peek inside</span>
-            <span class="peek-line">diary studies on money memory &amp; payday rituals</span>
-            <span class="peek-line">AI stories under a strict no-guilt tone contract</span>
+            <span class="peek-line">start with one month of statement data — no bank linking</span>
+            <span class="peek-line">HDFC, ICICI, SBI, Axis &amp; Kotak statement support</span>
             <span class="peek-cta">open the full story →</span>
           </div>
         </div>
         <div class="wcard-body">
-          <span class="meta">ALB · <b>RAY</b> · FinTech · SaaS</span>
-          <h3>Your bank knows what. <em>Alibi asks why</em> — behavioural finance</h3>
-          <p class="oneline">A reflective finance product turning UPI history into monthly stories about habits — with zero budgeting guilt.</p>
-          <div class="chips"><span>Product Design</span><span>Data Storytelling</span><span>AI-assisted</span></div>
+          <span class="meta">ALB · <b>RAY</b> · FinTech · Behavioural Finance · SaaS</span>
+          <h3>From an ordinary transaction to <em>a clue you can carry</em> — Alibi</h3>
+          <p class="oneline">A reflective finance product that turns statement data into monthly stories, spending clues, and next-month watchlists.</p>
+          <div class="chips"><span>Product Strategy</span><span>UX Direction</span><span>Ongoing Project</span></div>
           <span class="read">Read case study →</span>
+        </div>
+      </a>
+
+      <!-- Human Mode -->
+      <a class="wcard reveal" href="#/work/human-mode">
+        <div class="wcard-visual">
+          <div class="scene pv-hmn">
+            <span class="hm-tag">Human Mode</span>
+            <span class="hm-mark">✎</span>
+            <span class="hm-note">an idea, half-formed…</span>
+            <span class="hm-branch"></span>
+            <span class="hm-ai">structured suggestion →</span>
+          </div>
+          <span class="pv-tag">UX/UI · Service Design</span>
+          <span class="pv-status">Ongoing</span>
+          <div class="wcard-peek" aria-hidden="true">
+            <span class="peek-title">a peek inside</span>
+            <span class="peek-line">a thinking layer between your request and the AI's answer</span>
+            <span class="peek-line">three modes — My Turn, Think Together, Fast Assist</span>
+            <span class="peek-cta">see the work in progress →</span>
+          </div>
+        </div>
+        <div class="wcard-body">
+          <span class="meta">HMN · <b>RAY</b> · UX/UI · Service Design · Human–AI Interaction</span>
+          <h3>Use AI. <em>Keep your mind.</em> — Human Mode</h3>
+          <p class="oneline">Human Mode explores how people can use generative AI without losing ownership of their thinking — starting with your own idea before choosing how much AI help you actually need.</p>
+          <p style="font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;color:var(--muted);margin:-6px 0 14px">Currently designing the core experience and interaction system.</p>
+          <div class="chips"><span>UX Research</span><span>Service Design</span><span>Ongoing Project</span></div>
+          <span class="read">View Work in Progress →</span>
         </div>
       </a>
 
@@ -1170,44 +1275,44 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   <div class="container">
     <div class="section-head reveal">
       <span class="mono-label">design principles</span>
-      <h2>How I <span class="it">approach design.</span></h2>
+      <h2>How I <span class="it">think.</span></h2>
     </div>
     <div class="principles reveal">
       <div class="principle">
         <button class="principle-head" aria-expanded="false">
-          <span class="num">01</span><span class="t">Start with the user’s hardest moment</span><span class="plus">+</span>
+          <span class="num">01</span><span class="t">Start with the worst moment</span><span class="plus">+</span>
         </button>
-        <div class="principle-body"><p>I begin by understanding where users feel most confused, anxious, rushed, or unsupported. Designing for those moments helps create experiences that feel clearer, calmer, and more useful for everyone.</p></div>
+        <div class="principle-body"><p>Design for users at their lowest capacity — in pain, anxious, distracted — and the experience works for everyone. My migraine VR work made every ounce of friction visible; that lens never left.</p></div>
       </div>
       <div class="principle">
         <button class="principle-head" aria-expanded="false">
-          <span class="num">02</span><span class="t">Structure before screens</span><span class="plus">+</span>
+          <span class="num">02</span><span class="t">Flows before screens</span><span class="plus">+</span>
         </button>
-        <div class="principle-body"><p>Before designing interfaces, I map the journey, user states, edge cases, and decision points. A strong flow makes the final UI feel more natural, consistent, and easy to use.</p></div>
+        <div class="principle-body"><p>A beautiful screen that breaks under edge cases is not good design. Map the journey, the states, and the interaction logic first — the UI becomes almost inevitable after that.</p></div>
       </div>
       <div class="principle">
         <button class="principle-head" aria-expanded="false">
-          <span class="num">03</span><span class="t">Words shape the experience</span><span class="plus">+</span>
+          <span class="num">03</span><span class="t">Words are interface</span><span class="plus">+</span>
         </button>
-        <div class="principle-body"><p>Microcopy is part of the interface. The right words can reduce confusion, build trust, and guide users with confidence — especially in sensitive areas like healthcare, finance, and support flows.</p></div>
+        <div class="principle-body"><p>The wrong word in a health alert causes panic; the right one builds trust. I treat tone of voice as a design system component — with rules, states, and reviews.</p></div>
       </div>
       <div class="principle">
         <button class="principle-head" aria-expanded="false">
-          <span class="num">04</span><span class="t">Constraints sharpen the solution</span><span class="plus">+</span>
+          <span class="num">04</span><span class="t">Constraints are the brief</span><span class="plus">+</span>
         </button>
-        <div class="principle-body"><p>Business goals, technical limits, accessibility needs, regulations, and content capacity are part of the brief. I design within real constraints to create solutions that are practical, scalable, and usable.</p></div>
+        <div class="principle-body"><p>Shopify sections, ISO 13485, headset comfort limits, a small team's content capacity — real constraints make design decisions sharper, not smaller. I design inside them, not around them.</p></div>
       </div>
       <div class="principle">
         <button class="principle-head" aria-expanded="false">
-          <span class="num">05</span><span class="t">Evidence over assumptions</span><span class="plus">+</span>
+          <span class="num">05</span><span class="t">Evidence over aesthetics debates</span><span class="plus">+</span>
         </button>
-        <div class="principle-body"><p>I use research, testing, feedback, and behaviour patterns to guide design decisions. Good design is not just about visual preference — it is about learning, validating, and improving.</p></div>
+        <div class="principle-body"><p>Test it, watch it fail, fix it, test again. The best iterations in my work came from being confidently wrong in front of five users.</p></div>
       </div>
       <div class="principle">
         <button class="principle-head" aria-expanded="false">
-          <span class="num">06</span><span class="t">Complexity can be made clear</span><span class="plus">+</span>
+          <span class="num">06</span><span class="t">Everything is figureoutable</span><span class="plus">+</span>
         </button>
-        <div class="principle-body"><p>Whether I’m designing for healthcare, immersive experiences, finance, or e-commerce, my goal is to simplify complexity into thoughtful flows, clear interfaces, and meaningful product experiences.</p></div>
+        <div class="principle-body"><p>Migraine-safe VR, post-surgery recovery, UPI behaviour stories, post-screen interfaces — given enough time and the right questions, no problem is too tangled to design for.</p></div>
       </div>
     </div>
   </div>
@@ -1218,22 +1323,22 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   <div class="container">
     <div class="section-head reveal">
       <span class="mono-label">about</span>
-      <h2>A little about <span class="it">me.</span></h2>
+      <h2>A little about <span class="it">Ray.</span></h2>
     </div>
     <div class="about-grid">
       <aside class="polaroid reveal">
         <span class="tape" aria-hidden="true"></span>
         <div class="ph-area">
           <img src="photos/ray-portrait.jpg" alt="Reshma Shirin A" onerror="this.remove()">
-          <div class="ray">this is<br><span>me</span></div>
+          <div class="ray">this is<br><span>Ray</span></div>
         </div>
         <div class="cap"><span class="hand-note">hi, it's me!</span><span>est. 2022</span></div>
       </aside>
       <div class="about-copy reveal">
-        <p class="big-line"><em>Hi, I'm Reshma — and I solve problems for a living.</em> The fun kind: where "it's complicated" becomes "oh, I get it."</p>
+        <p class="big-line"><em>Hi, I'm Reshma — Ray to most people — and I solve problems for a living.</em> The fun kind: where "it's complicated" becomes "oh, I get it."</p>
         <p>Designer by profession, interaction thinker by training, healthcare nerd by choice. I studied Interaction Design in Bangalore, took an MSc in Interaction &amp; Experience Design at the University of Limerick (First Class Honours — thesis on VR for migraine relief), and I'm now deep in <b>Medical Device Technology &amp; Business</b> at Griffith University, learning why regulated products are the ultimate design constraint.</p>
         <p>My happy place is the intersection of <b>care and craft</b>: healthcare flows that calm people down, immersive experiences that respect the body, AI features that earn trust instead of demanding it. When I'm not pushing pixels, you'll find me at the water's edge, chasing a new trail, three hours deep in a playlist, hunting down <b>FOOOODD</b> worth photographing — or photographing everything else.</p>
-        <p class="sig">~ Reshma Shirin A</p>
+        <p class="sig">~ Reshma "Ray" Shirin A</p>
         <div class="fact-list">
           <div class="fact"><span class="k">degree</span><span>MSc Interaction &amp; Experience Design · University of Limerick · First Class Honours</span></div>
           <div class="fact"><span class="k">now</span><span>PG · Medical Device Technology &amp; Business · Griffith University, Ireland</span></div>
@@ -1281,8 +1386,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
           </div>
           <div class="frame">
             <span class="frame-no">RAY · 35MM · 03A</span>
-            <div class="shot"><div class="ph-fill ph-music"><span class="sym">🎧</span><span class="add">your photo here</span></div><img src="photos/03-music.jpg" alt="Temple architecture" onerror="this.remove()"></div>
-            <div class="cap"><span>temple runs</span><b>03</b></div>
+            <div class="shot"><div class="ph-fill ph-music"><span class="sym">🎧</span><span class="add">your photo here</span></div><img src="photos/03-music.jpg" alt="Deep in a playlist" onerror="this.remove()"></div>
+            <div class="cap"><span>playlist mode</span><b>03</b></div>
           </div>
           <div class="frame">
             <span class="frame-no">RAY · 35MM · 04A</span>
@@ -1302,7 +1407,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
         </div>
       </div>
     </div>
-    <p class="film-note reveal"><span class="dot"></span> hover to pause the reel · drop your shots into a /photos folder (01-beach.jpg → 06-golden.jpg) and the frames fill themselves</p>
+    <p class="film-note reveal"><span class="dot"></span> hover to pause the reel</p>
   </div>
 </section>
 
@@ -1481,72 +1586,237 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   <header class="cs-hero">
     <div class="container">
       <a class="cs-back" href="#work" data-home>← back to work</a>
-      <span class="meta">VRM · <b>RAY</b> · MSc Thesis · Immersive Healthcare</span>
-      <h1>Designing calm for the <em>worst headache days.</em></h1>
+      <span class="meta">VRM · <b>RAY</b> · MSc Thesis · University of Limerick, 2024</span>
+      <h1><em>Exploring VR for Relaxation During Migraine Episodes.</em></h1>
       <p class="tagline hand-note">can immersion be gentle?</p>
-      <p class="lede">A VR relaxation concept built for a user's lowest-capacity moment — <b>near-dark by default, zero reading, one-action entry</b>. My MSc thesis at the University of Limerick, exploring virtual reality for relaxation during migraine episodes.</p>
+      <p class="lede">A VR relaxation prototype exploring whether a fully customisable, low-stimulation environment can help migraine sufferers relax and manage discomfort during an episode — without asking too much of a body that's already struggling. My MSc thesis in Interaction &amp; Experience Design at the University of Limerick, submitted August 2024, built and evaluated with real migraine sufferers through surveys, interviews, and hands-on user testing.</p>
       <div class="cs-meta-row">
-        <div><span class="k">role</span>UX Researcher &amp; Designer</div>
+        <div><span class="k">role</span>UX Researcher &amp; Interaction Designer</div>
         <div><span class="k">context</span>MSc Thesis · University of Limerick</div>
-        <div><span class="k">tools</span>Unity · Blender · Figma · Miro</div>
+        <div><span class="k">tools</span>Unity · XR Interaction Toolkit · C# · Figma</div>
         <div><span class="k">platform</span>VR headset · immersive</div>
       </div>
-      <div class="cs-chips"><span>UX Research</span><span>VR UX</span><span>Interaction Design</span><span>3D Experience</span><span>Usability Testing</span></div>
+      <div class="cs-chips"><span>UX Research</span><span>Mixed-Methods Study</span><span>VR Interaction Design</span><span>Usability Testing</span><span>Digital Health</span></div>
       <div class="cs-banner">
         <div class="scene pv-vr">
           <div class="ring"></div><div class="orb"></div><div class="hor"></div>
-          <div class="hud">session · calm · 12 min</div>
+          <div class="hud">forest · dark room · starry night</div>
         </div>
       </div>
     </div>
   </header>
   <div class="cs-body-wrap">
     <div class="container">
-      <p class="case-pull">"How might we design an immersive environment that demands almost nothing from your eyes, ears, or attention?"</p>
+      <p class="case-pull">"How can Virtual Reality technology be utilised to enhance relaxation and manage migraine symptoms?" — the thesis research question</p>
+
+      <!-- problem space -->
+      <div class="cs-sub">
+        <span class="mono-label">problem space</span>
+        <h3>Widely experienced. <em>Narrowly treated.</em></h3>
+        <p class="sub-lede">Migraine affects an estimated 12% of the global population and is a significant cause of disability, particularly for women and people aged 18–44. Yet the tools available to sufferers are either pharmacological, come with real side effects, or simply don't reach the moment an attack is actually happening.</p>
+      </div>
+      <div class="mini-grid">
+        <div class="mini-card"><span class="n">01</span><h5>Prevalent, disabling, under-addressed</h5><p>Roughly 1 in 8 people worldwide live with migraine, yet comprehensive relief — beyond just the headache — remains rare.</p></div>
+        <div class="mini-card"><span class="n">02</span><h5>Acute treatments, real trade-offs</h5><p>NSAIDs and triptans relieve pain but carry gastrointestinal or cardiovascular risk, and overuse can itself trigger chronic headache.</p></div>
+        <div class="mini-card"><span class="n">03</span><h5>Preventives take months to work</h5><p>Beta-blockers, antiepileptics and antidepressants can help, but often bring fatigue, weight gain or cognitive side effects along the way.</p></div>
+        <div class="mini-card"><span class="n">04</span><h5>Non-pharmacological options exist — thinly</h5><p>CBT, biofeedback and relaxation techniques help but rarely address the biological mechanisms alone, and guidance on them is inconsistent.</p></div>
+        <div class="mini-card"><span class="n">05</span><h5>VR is proven elsewhere in healthcare</h5><p>VR already supports rehabilitation, exposure therapy and acute pain distraction — but migraine-specific VR remained largely unexplored.</p></div>
+        <div class="mini-card"><span class="n">06</span><h5>An episode changes what's possible</h5><p>Photophobia, phonophobia, nausea and cognitive fog mean any tool offered mid-attack has to ask very little of the user.</p></div>
+      </div>
+
+      <!-- design challenge -->
+      <div class="cs-sub">
+        <span class="mono-label">research question &amp; objectives</span>
+        <h3>How might we…</h3>
+      </div>
+      <div class="hmw-list">
+        <div class="hmw"><span class="k">hmw 01</span><p>Design VR environments specifically tailored to the sensory needs and triggers of migraine sufferers?</p></div>
+        <div class="hmw"><span class="k">hmw 02</span><p>Understand which visual, auditory and interactive settings migraine sufferers actually want control over?</p></div>
+        <div class="hmw"><span class="k">hmw 03</span><p>Test a working VR prototype with real migraine sufferers and use their feedback to shape the next iteration?</p></div>
+      </div>
+
+      <!-- research -->
+      <div class="cs-sub">
+        <span class="mono-label">research</span>
+        <h3>A mixed-methods study, <em>grounded in real experience.</em></h3>
+        <p class="sub-lede">Quantitative and qualitative methods combined to understand migraine experiences, current coping strategies, and reactions to a working VR prototype — not just design assumptions.</p>
+      </div>
+      <div class="mini-grid mini-grid--4">
+        <div class="mini-card"><span class="big">30</span><h5>Survey respondents</h5><p>An online survey capturing migraine severity, current management strategies, and openness to VR as a tool.</p></div>
+        <div class="mini-card"><span class="big">5</span><h5>Semi-structured interviews</h5><p>In-depth conversations exploring triggers, symptoms, daily-life impact, and reactions to the idea of VR relief.</p></div>
+        <div class="mini-card"><span class="big">5</span><h5>User testing sessions</h5><p>Hands-on sessions with the working prototype, walking through real tasks inside the headset.</p></div>
+        <div class="mini-card"><span class="big">—</span><h5>Literature review</h5><p>Migraine treatment research, VR in healthcare, VR for pain management, and VR-biofeedback systems.</p></div>
+      </div>
+
+      <!-- insights -->
+      <div class="cs-sub">
+        <span class="mono-label">key insights</span>
+        <h3>Four themes from the <em>thematic analysis.</em></h3>
+      </div>
+      <div class="insight-list">
+        <div class="insight-row"><span class="n">1</span><h5>Light was the most consistently reported trigger</h5><p class="opp"><b>design opportunity</b>Full brightness and colour-temperature control, defaulting toward dimmer, warmer tones rather than a bright default.</p></div>
+        <div class="insight-row"><span class="n">2</span><h5>Sound sensitivity meant audio had to be optional, not just adjustable</h5><p class="opp"><b>design opportunity</b>A one-tap mute reachable at any point, not buried inside a settings menu.</p></div>
+        <div class="insight-row"><span class="n">3</span><h5>A migraine already impairs patience and comfort</h5><p class="opp"><b>design opportunity</b>A genuinely lightweight headset framing, plus a single, unmissable way to exit the session.</p></div>
+        <div class="insight-row"><span class="n">4</span><h5>Participants over 35 struggled most with icon-only navigation</h5><p class="opp"><b>design opportunity</b>A guided avatar or first-time tutorial, flagged as the top request for future iterations.</p></div>
+      </div>
+
+      <!-- persona -->
+      <div class="cs-sub">
+        <span class="mono-label">from the interviews</span>
+        <h3>Five very different <em>relationships with pain.</em></h3>
+      </div>
+      <div class="persona-grid">
+        <div class="persona">
+          <div class="p-head"><span class="p-ava">🧑</span><div><b>Participant 1</b><span>migraine since high school · triggers: hormonal cycle, cold wind, wet hair</span></div></div>
+          <p class="p-bio">Has learned her own triggers well — always carries an umbrella, wears a hat in the wind, and times medication around her cycle — but still loses whole days when a migraine hits, and has cancelled plans with friends because of it.</p>
+          <div class="p-cols">
+            <div><h6>what they wanted</h6><ul><li>Voice control to dim lights or play calming sound</li><li>Small interactive touches, like gentle distraction elements</li><li>A headset light enough not to add to the pain</li></ul></div>
+            <div><h6>what worried them</h6><ul><li>The weight and comfort of the headset itself</li><li>Whether VR would help both during and before an attack</li><li>Sessions running too long without an easy way to leave</li></ul></div>
+          </div>
+          <p class="p-quote">"I'm curious about how VR could help during a migraine — but I'm concerned about the weight and comfort of wearing a headset."</p>
+        </div>
+        <div class="persona">
+          <div class="p-head"><span class="p-ava">🧑</span><div><b>Participant 5</b><span>nurse · migraines roughly once a week · triggers: cold wind, night shifts</span></div></div>
+          <p class="p-bio">On her feet all day at work, so a migraine mid-shift means leaving early and letting colleagues down. At home, copes by finding somewhere warm and quiet — tracking apps never stuck, since the last thing she wants mid-attack is to touch her phone.</p>
+          <div class="p-cols">
+            <div><h6>what they wanted</h6><ul><li>Full control over brightness and sound levels</li><li>A dark, quiet space she can customise herself</li><li>To use it lying down, at home, not at work</li></ul></div>
+            <div><h6>what worried them</h6><ul><li>Visuals or sound feeling overwhelming when already in pain</li><li>A headset heavy enough to add strain</li><li>Sessions that feel like a commitment rather than something to dip in and out of</li></ul></div>
+          </div>
+          <p class="p-quote">"I don't want anything heavy on my head when I'm already feeling like crap."</p>
+        </div>
+      </div>
+
+      <!-- design considerations -->
+      <div class="cs-sub">
+        <span class="mono-label">design considerations</span>
+        <h3>Built around a body <em>that's already struggling.</em></h3>
+        <p class="sub-lede">Three principles carried through every design decision, drawn directly from the research findings.</p>
+      </div>
+      <div class="stage-grid">
+        <div class="stage"><b>User comfort</b><span class="emo">any position works</span><p>Sit, stand, or lie down — the 360° environment adapts via a camera-height offset, so no position is "wrong."</p></div>
+        <div class="stage"><b>Quick exit</b><span class="emo">one press, always</span><p>A single press of the home button exits the session and returns to the main menu at any time.</p></div>
+        <div class="stage"><b>Minimised triggers</b><span class="emo">stable, not stimulating</span><p>No flickering lights or sudden noise. Only 360° rotation and subtle animation — falling leaves, gentle light — nothing more.</p></div>
+      </div>
+
+      <!-- system logic -->
+      <div class="cs-sub">
+        <span class="mono-label">the three core features</span>
+        <h3>Tone. Sound. <em>Environment.</em></h3>
+        <p class="sub-lede">Rather than one fixed "relaxing" scene, the prototype gives users direct control over the three elements the research flagged as most personal to each person's triggers.</p>
+      </div>
+      <div class="ia-grid">
+        <div class="ia-col"><h6>Tone adjustment</h6><ul><li>Swipe to shift cooler → warmer light</li><li>Eases light sensitivity in the moment</li><li>Controlled via in-scene white balance</li></ul></div>
+        <div class="ia-col"><h6>Soundscape options</h6><ul><li>Forest sound, gentle music, or birds chirping</li><li>Volume slider plus a one-tap mute</li><li>Silence is a valid choice, not a fallback</li></ul></div>
+        <div class="ia-col"><h6>Environment switching</h6><ul><li>Calm forest, dark room, or starry night</li><li>Swipe or tap to change scene anytime</li><li>15-minute timer returns to home automatically</li></ul></div>
+        <div class="ia-col"><h6>Position &amp; exit</h6><ul><li>Sit, stand or lie down at setup</li><li>Camera offset adapts to the choice</li><li>One press of home always exits</li></ul></div>
+      </div>
+
+      <!-- flows -->
+      <div class="cs-sub">
+        <span class="mono-label">the user journey</span>
+        <h3>From headset-on <em>to session end.</em></h3>
+      </div>
+      <div class="flow-box">
+        <span class="k">flow — a full VR relaxation session</span>
+        <div class="flow-chain">
+          <span class="fstep">Headset on, choose position</span><span class="farr">→</span>
+          <span class="fstep">Pick an environment</span><span class="farr">→</span>
+          <span class="fstep">Adjust tone, cooler ↔ warmer</span><span class="farr">→</span>
+          <span class="fstep">Choose a soundscape or mute</span><span class="farr">→</span>
+          <span class="fstep">Migraine tips available anytime</span><span class="farr">→</span>
+          <span class="fdone">Auto-timeout or one-press exit ✓</span>
+        </div>
+      </div>
+
+      <div class="cs-sub">
+        <span class="mono-label">from the build</span>
+        <h3>Inside the <em>prototype.</em></h3>
+        <p class="sub-lede">Captures from user testing and the Unity build — added here as the final images are selected.</p>
+      </div>
+      <div class="screen-grid landscape">
+        <div class="screen-tile">
+          <div class="frame-web">
+            <div class="scr-web"><div class="ph-scr dark" style="background:linear-gradient(165deg,#2C3B27 0%,#5C7A52 100%)"><span class="sn">01</span><span class="add">your photo here</span></div><img src="photos/vr-01.jpg" alt="Participant using the VR prototype during testing" onerror="this.remove()"></div>
+          </div>
+          <div class="s-cap"><b>User testing session</b><p>A participant in headset, working through the prototype's tasks.</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web">
+            <div class="scr-web"><div class="ph-scr dark" style="background:linear-gradient(165deg,#1E1B3A 0%,#5D4FA5 100%)"><span class="sn">02</span><span class="add">your screenshot here</span></div><img src="photos/vr-02.jpg" alt="Environment selection screen during testing" onerror="this.remove()"></div>
+          </div>
+          <div class="s-cap"><b>Environment selection</b><p>The test screen where participants chose forest, dark room, or starry night.</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web">
+            <div class="scr-web"><div class="ph-scr dark" style="background:linear-gradient(165deg,#2A2B2E 0%,#5C4A2E 100%)"><span class="sn">03</span><span class="add">your render here</span></div><img src="photos/vr-03.jpg" alt="Dark room and forest environments built in Unity" onerror="this.remove()"></div>
+          </div>
+          <div class="s-cap"><b>Unity environment build</b><p>The dark room and forest scenes, developed and lit in Unity.</p></div>
+        </div>
+      </div>
+
+      <!-- design system -->
+      <div class="cs-sub">
+        <span class="mono-label">visual design system</span>
+        <h3>Three environments, <em>one calm language.</em></h3>
+        <p class="sub-lede">Forest, dark room and starry night were each built to be visually appealing but low-stimulation — subtle animation only, nothing that risks acting as a visual trigger.</p>
+      </div>
+      <div class="swatch-row">
+        <div class="swatch"><i style="background:#4C6B4F"></i><b>Forest green</b><em>#4C6B4F</em></div>
+        <div class="swatch"><i style="background:#2A2B52"></i><b>Starry night indigo</b><em>#2A2B52</em></div>
+        <div class="swatch"><i style="background:#5C4A2E"></i><b>Dark room amber</b><em>#5C4A2E</em></div>
+        <div class="swatch"><i style="background:#7A6BC4"></i><b>Sky lavender</b><em>#7A6BC4</em></div>
+        <div class="swatch"><i style="background:#F5D98F"></i><b>Warm lantern glow</b><em>#F5D98F</em></div>
+        <div class="swatch"><i style="background:#0D0C1E"></i><b>Near-black base</b><em>#0D0C1E</em></div>
+      </div>
+      <div class="case-block" style="margin-top:22px">
+        <h4>sensory-safe build rules</h4>
+        <ul>
+          <li>No flickering lights, strobing, or sudden loud sounds anywhere in the build</li>
+          <li>Motion limited to 360° rotation plus subtle animation — moving leaves, gentle light shifts</li>
+          <li>Built in Unity with the XR Interaction Toolkit; UI logic, audio and scene transitions handled in C#</li>
+          <li>Interface designed in Figma with large, minimal icons for users with limited VR experience</li>
+        </ul>
+      </div>
+
+      <!-- testing -->
+      <div class="cs-sub">
+        <span class="mono-label">user testing</span>
+        <h3>Five participants, <em>real feedback.</em></h3>
+        <p class="sub-lede">Each participant put on the headset, chose a position, selected an environment, adjusted tone and sound, checked the migraine-tips section, then exited — while being observed for friction points.</p>
+      </div>
+      <div class="find-list">
+        <div class="find"><span class="tag t-friction">friction</span><p>Several participants said the headset felt heavy after extended use. <b>Noted for future iterations: a lighter, more ergonomic headset design.</b></p></div>
+        <div class="find"><span class="tag t-confusion">confusion</span><p>Icon-only navigation was unclear for some, especially participants over 35. <b>Top suggestion: a guided avatar or short tutorial for first-time users.</b></p></div>
+        <div class="find"><span class="tag t-positive">positive</span><p>The quick-mute soundscape control was called out as <b>essential for managing sensory overload</b> during a migraine.</p></div>
+        <div class="find"><span class="tag t-iteration">iteration</span><p>Multiple participants wanted more environments and soundscapes to choose from. <b>Flagged directly for the next version of the prototype.</b></p></div>
+        <div class="find"><span class="tag t-concern">concern</span><p>A couple of participants worried about exiting by accident. <b>Suggested addition: a brief confirmation prompt before leaving a session.</b></p></div>
+      </div>
+
+      <!-- outcome -->
+      <div class="cs-sub">
+        <span class="mono-label">outcome &amp; reflection</span>
+        <h3>What this thesis <em>contributed.</em></h3>
+      </div>
+      <p class="case-pull">"Migraines are highly individualised — what works for one person may not work for another." — a finding that shaped every feature decision</p>
       <div class="case-grid">
         <div>
           <div class="case-block">
-            <h4>the problem</h4>
-            <p>During an episode, users experience photophobia, phonophobia, nausea, and cognitive fog. Bright interfaces and stimulating audio become actively harmful. Yet VR offers something unique: <b>total control over every photon and sound</b> — an environment gentler than the real world.</p>
-          </div>
-          <div class="case-block">
-            <h4>research</h4>
-            <ul>
-              <li>Interviews with migraine sufferers about episode rituals and sensory limits</li>
-              <li>Audit of meditation apps and VR wellness titles — nearly all failed photosensitivity heuristics</li>
-              <li>Literature review: VR distraction therapy + migraine trigger research</li>
-              <li>Sensory mapping across prodrome → aura → attack → postdrome</li>
-            </ul>
-          </div>
-          <div class="case-block">
-            <h4>key insights</h4>
-            <ul>
-              <li>Control beats content — instant dim/mute/exit outweighs any environment's beauty</li>
-              <li>Darkness is the baseline: users add light, never subtract it</li>
-              <li>Interaction load must approach zero — even a menu is too much mid-attack</li>
-            </ul>
+            <h4>the result</h4>
+            <p>A working VR prototype — evaluated with real migraine sufferers, not just designed around assumptions — that treats customisation, comfort and simplicity as the three load-bearing requirements of a therapeutic VR tool. Positioned as a non-pharmacological option, not a replacement for medical care.</p>
           </div>
         </div>
         <div>
           <div class="case-block">
-            <h4>the product</h4>
-            <p>A twilight environment in midnight blues and lavenders, with one glowing orb as focal point and breathing guide. States, not screens: <b>Arrival → Settling → Deep Calm → Return</b>, driven by time and breathing pace. Gaze up dims. Closing both eyes for three seconds fades everything to black — a panic-free escape hatch. Removing the headset just ends it. No confirm dialogs, ever.</p>
-          </div>
-          <div class="case-block">
-            <h4>tested &amp; iterated</h4>
+            <h4>learnings</h4>
             <ul>
-              <li>Removed the environment menu entirely — choice added anxiety</li>
-              <li>Re-timed all motion after headset testing: everything slowed by half</li>
-              <li>Replaced melodic audio with unstructured natural texture</li>
+              <li>Customisation isn't a nice-to-have here — migraine triggers are individual enough that a fixed "relaxing" scene would fail most users</li>
+              <li>Usability details most designers treat as minor — headset weight, icon clarity, exit visibility — directly determine whether a therapeutic tool gets used at all</li>
+              <li>Guided onboarding matters most for exactly the users who need the tool most: older, less VR-familiar sufferers mid-episode</li>
             </ul>
-          </div>
-          <div class="case-block">
-            <h4>outcome</h4>
-            <p>First Class Honours thesis. A transferable framework for <b>sensory-safe immersive design</b> under strict luminance, audio, and motion budgets — plus a one-action, zero-reading entry flow.</p>
           </div>
         </div>
       </div>
-      <p class="case-note">research project — outcomes stated as design impact goals, not clinical claims</p>
+      <p class="case-note">MSc thesis, University of Limerick (Aug 2024) — findings from 30 survey respondents and 5 interview/user-testing participants, framed as design-research insights, not clinical claims.</p>
     </div>
   </div>
   <div class="cs-next">
@@ -1757,29 +2027,29 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
         <h3>Ten screens. <em>One focused recovery experience.</em></h3>
         <p class="sub-lede">Each screen was designed around a single job — no feature creep, no unnecessary information. Just what the user needs, when they need it. Screen mockups are on their way; the frames below fill automatically.</p>
       </div>
-      <div class="screen-grid">
+      <div class="screen-grid landscape cols-2">
         <div class="screen-tile">
-          <div class="frame-ph"><div class="scr"><div class="ph-scr"><span class="sn">01</span><span class="add">your screen here</span></div><img src="photos/medcare-01.jpg" alt="Welcome screen" onerror="this.remove()"></div></div>
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">01</span><span class="add">your screen here</span></div><img src="photos/medcare-01.jpg" alt="Welcome screen" onerror="this.remove()"></div></div>
           <div class="s-cap"><b>Welcome</b><p>Single CTA, calm trustworthy tone before any data entry.</p></div>
         </div>
         <div class="screen-tile">
-          <div class="frame-ph"><div class="scr"><div class="ph-scr"><span class="sn">02</span><span class="add">your screen here</span></div><img src="photos/medcare-02.jpg" alt="Today dashboard" onerror="this.remove()"></div></div>
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">02</span><span class="add">your screen here</span></div><img src="photos/medcare-02.jpg" alt="Today dashboard" onerror="this.remove()"></div></div>
           <div class="s-cap"><b>Today dashboard</b><p>Medicines, readings, and appointments for this day only.</p></div>
         </div>
         <div class="screen-tile">
-          <div class="frame-ph"><div class="scr"><div class="ph-scr"><span class="sn">03</span><span class="add">your screen here</span></div><img src="photos/medcare-03.jpg" alt="Medicine schedule" onerror="this.remove()"></div></div>
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">03</span><span class="add">your screen here</span></div><img src="photos/medcare-03.jpg" alt="Medicine schedule" onerror="this.remove()"></div></div>
           <div class="s-cap"><b>Medicine schedule</b><p>Full-width "Mark as taken", time and instruction on every card.</p></div>
         </div>
         <div class="screen-tile">
-          <div class="frame-ph"><div class="scr"><div class="ph-scr"><span class="sn">04</span><span class="add">your screen here</span></div><img src="photos/medcare-04.jpg" alt="Health readings" onerror="this.remove()"></div></div>
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">04</span><span class="add">your screen here</span></div><img src="photos/medcare-04.jpg" alt="Health readings" onerror="this.remove()"></div></div>
           <div class="s-cap"><b>Health readings</b><p>Mini trend bars and plain-language context after each save.</p></div>
         </div>
         <div class="screen-tile">
-          <div class="frame-ph"><div class="scr"><div class="ph-scr"><span class="sn">05</span><span class="add">your screen here</span></div><img src="photos/medcare-05.jpg" alt="Is this normal" onerror="this.remove()"></div></div>
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">05</span><span class="add">your screen here</span></div><img src="photos/medcare-05.jpg" alt="Is this normal" onerror="this.remove()"></div></div>
           <div class="s-cap"><b>Is this normal?</b><p>Symptom list with three calm outcome labels — no alarm bells.</p></div>
         </div>
         <div class="screen-tile">
-          <div class="frame-ph"><div class="scr"><div class="ph-scr"><span class="sn">06</span><span class="add">your screen here</span></div><img src="photos/medcare-06.jpg" alt="Caregiver view" onerror="this.remove()"></div></div>
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">06</span><span class="add">your screen here</span></div><img src="photos/medcare-06.jpg" alt="Caregiver view" onerror="this.remove()"></div></div>
           <div class="s-cap"><b>Caregiver view</b><p>Summary-level recovery status plus a gentle reminder action.</p></div>
         </div>
       </div>
@@ -1854,7 +2124,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
       <div>
         <span class="k">next story</span>
         <h3>Alibi</h3>
-        <p>A reflective finance product that turns UPI history into monthly stories.</p>
+        <p>An ongoing behavioural finance product turning statement data into monthly clues.</p>
       </div>
       <a class="btn" href="#/work/alibi">Read next →</a>
     </div>
@@ -1862,83 +2132,346 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 </div>
 
 <!-- ============================================================
-     CASE VIEW · ALIBI
+     CASE VIEW · ALIBI — ongoing project
      ============================================================ -->
 <div class="view case-view cv-alb" id="view-alb">
   <header class="cs-hero">
     <div class="container">
       <a class="cs-back" href="#work" data-home>← back to work</a>
       <span class="meta">ALB · <b>RAY</b> · FinTech · Behavioural Finance · SaaS</span>
-      <h1>Your bank knows what. <em>Alibi asks why.</em></h1>
-      <p class="tagline hand-note">money stories, not money guilt</p>
-      <p class="lede">People see their transactions but never the recurring behaviours and emotional context behind them. Alibi turns UPI history into <b>monthly stories</b> — "Your July, explained" — helping users understand spending patterns and habits with zero budgeting guilt.</p>
+      <span class="status-pill"><i class="dot"></i>Ongoing project</span>
+      <h1>From an ordinary transaction to <em>a clue you can carry.</em></h1>
+      <p class="tagline hand-note">start with one month. see what Alibi notices about you.</p>
+      <p class="lede">Alibi is a behavioural finance product that reads UPI and bank statement data and turns ordinary transactions into meaningful clues — surfacing recurring behaviours, spending leaks, EMI stress, and habits that usually go unnoticed. It reads like a monthly story, not a budgeting dashboard.</p>
       <div class="cs-meta-row">
-        <div><span class="k">role</span>Product Designer</div>
-        <div><span class="k">timeline</span>Concept → interactive prototype</div>
-        <div><span class="k">tools</span>Figma · Miro · AI-assisted synthesis</div>
+        <div><span class="k">role</span>Product Thinking · UX Strategy · IA</div>
+        <div><span class="k">status</span>Ongoing project</div>
+        <div><span class="k">tools</span>Figma · Notion · AI-assisted research</div>
         <div><span class="k">platform</span>Mobile-first web app</div>
       </div>
-      <div class="cs-chips"><span>Product Design</span><span>Data Storytelling</span><span>FinTech UX</span><span>AI-assisted Design</span></div>
+      <div class="cs-chips"><span>Product Strategy</span><span>UX Direction</span><span>Information Architecture</span><span>Behavioural Insight Design</span></div>
       <div class="cs-banner">
-        <div class="scene pv-alibi" style="padding:4% 5%;">
-          <div class="head"><span class="t">Your July, explained</span><span class="chip">Monthly story</span></div>
-          <div class="bars" style="height:52%">
-            <i style="height:38%"></i><i style="height:62%"></i><i class="hot" style="height:88%"></i>
-            <i style="height:52%"></i><i style="height:70%"></i><i style="height:44%"></i>
-            <i style="height:58%"></i><i style="height:66%"></i><i style="height:40%"></i>
+        <div class="scene pv-alibi">
+          <div class="a2-top"><span class="a2-mark">Alibi</span><span class="a2-year">2026</span></div>
+          <div class="a2-upload"><span class="a2-updot"></span>Upload a statement <span class="a2-or">or try sample data</span></div>
+          <div class="a2-card">
+            <div class="a2-card-row"><span class="a2-card-dot"></span><span class="a2-card-line"></span><span class="a2-card-amt">•••• 42</span></div>
+            <div class="a2-card-row"><span class="a2-card-dot"></span><span class="a2-card-line short"></span><span class="a2-card-amt">•••• 88</span></div>
+            <div class="a2-card-row"><span class="a2-card-dot"></span><span class="a2-card-line"></span><span class="a2-card-amt">•••• 15</span></div>
           </div>
-          <div class="l"></div><div class="l s"></div>
+          <div class="a2-insight"><span class="a2-quote">"</span>Your Tuesdays are unusually heavy this month.<span class="a2-clue">Clue 03</span></div>
         </div>
       </div>
     </div>
   </header>
   <div class="cs-body-wrap">
     <div class="container">
-      <p class="case-pull">"Transaction lists answer 'what did I spend?' Nothing answers 'who am I when I spend?'"</p>
+      <p class="case-pull">"People can see where their money went. They rarely understand the behaviour behind it."</p>
       <div class="case-grid">
         <div>
           <div class="case-block">
             <h4>the problem</h4>
-            <p>UPI made spending frictionless and invisible to memory. Budgeting apps respond with categories, limits, and guilt — and get deleted within weeks. Not because the maths is wrong, but because <b>nobody wants an app that scolds</b>.</p>
+            <p>Users can view their transactions, but often miss the behavioural patterns behind their spending — the recurring habits, quiet leaks, and unclear transfers that don't show up on a statement.</p>
           </div>
           <div class="case-block">
-            <h4>research</h4>
-            <ul>
-              <li>Diary study: participants annotated a week of their own UPI history — few transactions were even remembered</li>
-              <li>Interviews about money feelings: guilt, avoidance, payday rituals</li>
-              <li>Data-shape study: merchant names are messy; time, frequency, and rhythm are gold</li>
-            </ul>
-          </div>
-          <div class="case-block">
-            <h4>key insights</h4>
-            <ul>
-              <li>People remember stories, not amounts</li>
-              <li>Judgement kills reflection — neutral, curious framing keeps them reading</li>
-              <li>Rhythm reveals more than category (payday spikes, late-night orders)</li>
-              <li>Monthly is the natural unit of self-reflection</li>
-            </ul>
+            <h4>product direction</h4>
+            <p>A reflective finance experience that transforms raw transaction history into monthly summaries, spending insights, behavioural patterns, and next-month watchlists — privacy-first, and built around awareness rather than budgeting rules.</p>
           </div>
         </div>
         <div>
           <div class="case-block">
-            <h4>the product</h4>
-            <p>A dark, editorial long-read — closer to a reading app at night than a bank. Each month opens like a magazine feature ("Tuesday is your most expensive day"), one insight per chapter, one chart per idea, one gold highlight per chart. <b>Every claim expands to its evidence</b> — the exact transactions behind it. Stories end with one reflective question, never a target.</p>
-          </div>
-          <div class="case-block">
-            <h4>tested &amp; iterated</h4>
+            <h4>what's live now</h4>
             <ul>
-              <li>Low-confidence patterns became questions ("A new Tuesday habit?") — softer claims survive being wrong</li>
-              <li>Cut the totals dashboard: it pulled users from reflection mode into accounting mode</li>
-              <li>AI narrative runs under a strict tone contract — banned words include "overspent" and "you should"</li>
+              <li>Starts with one month of statement data — no account linking or bank API required</li>
+              <li>Upload a real statement or explore with sample data first</li>
+              <li>Statement support currently spans HDFC Bank, ICICI Bank, State Bank of India, Axis Bank, and Kotak</li>
+              <li>In progress: upload flows, transaction classification, monthly insight stories, EMI stress checks, and behavioural pattern views</li>
             </ul>
           </div>
           <div class="case-block">
-            <h4>outcome</h4>
-            <p>Testers finished the stories — a quiet victory in fintech — and unprompted began explaining the context behind their own patterns. Goal: users can name three of their own spending habits after two months.</p>
+            <h4>my role</h4>
+            <p>Product thinking, UX strategy, and interaction design direction — shaping the information architecture and the behavioural insight experience from the ground up.</p>
           </div>
         </div>
       </div>
-      <p class="case-note">concept project — outcomes framed as design impact goals, not shipped metrics</p>
+
+      <div class="cs-sub">
+        <span class="mono-label">early product preview</span>
+        <h3>A first look <em>inside Alibi.</em></h3>
+        <p class="sub-lede">Product screens are still being designed — these frames will fill in as they're ready.</p>
+      </div>
+      <div class="screen-grid landscape">
+        <div class="screen-tile">
+          <div class="frame-web">
+            <div class="browser-bar"><i></i><i></i><i></i></div>
+            <div class="scr-web"><div class="ph-scr dark"><span class="sn">01</span><span class="add">your screenshot here</span></div><img src="photos/alibi-01.jpg" alt="Alibi statement upload screen" onerror="this.remove()"></div>
+          </div>
+          <div class="s-cap"><b>Statement upload</b><p>Upload a statement or start with sample data — no bank linking.</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web">
+            <div class="browser-bar"><i></i><i></i><i></i></div>
+            <div class="scr-web"><div class="ph-scr dark"><span class="sn">02</span><span class="add">your screenshot here</span></div><img src="photos/alibi-02.jpg" alt="Alibi monthly insight screen" onerror="this.remove()"></div>
+          </div>
+          <div class="s-cap"><b>Monthly insight</b><p>A reflective summary of the month's spending behaviour.</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web">
+            <div class="browser-bar"><i></i><i></i><i></i></div>
+            <div class="scr-web"><div class="ph-scr dark"><span class="sn">03</span><span class="add">your screenshot here</span></div><img src="photos/alibi-03.jpg" alt="Alibi transaction clue screen" onerror="this.remove()"></div>
+          </div>
+          <div class="s-cap"><b>Transaction clue</b><p>An ordinary transaction, reframed as a clue worth noticing.</p></div>
+        </div>
+      </div>
+
+      <p class="case-note">ongoing project — interface, flows, and product scope are still evolving. drop landscape screenshots (16:9, e.g. 1600×900px) into /photos as alibi-01.jpg → alibi-03.jpg</p>
+    </div>
+  </div>
+  <div class="cs-next">
+    <div class="cs-next-card">
+      <div>
+        <span class="k">next stop</span>
+        <h3>Human Mode</h3>
+        <p>An ongoing UX/UI &amp; service design project on intentional human&ndash;AI collaboration.</p>
+      </div>
+      <a class="btn" href="#/work/human-mode">See the work in progress →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     CASE VIEW · HUMAN MODE — ongoing UX/UI & service design project
+     ============================================================ -->
+<div class="view case-view cv-hmn" id="view-hmn">
+  <header class="cs-hero">
+    <div class="container">
+      <a class="cs-back" href="#work" data-home>← back to work</a>
+      <span class="meta">HMN · <b>RAY</b> · UX/UI · Service Design · Human–AI Interaction</span>
+      <span class="status-pill"><i class="dot"></i>Ongoing project · currently in development</span>
+      <h1>Use AI. <em>Keep your mind.</em></h1>
+      <p class="tagline hand-note">a human–AI interaction &amp; service design concept</p>
+      <p class="lede">A human–AI interaction and service design concept that helps people think independently before relying on AI-generated answers. I am currently developing the research framework, service model and core user journey — UX/UI screens and interactive prototyping will be added as the project progresses.</p>
+      <div class="cs-meta-row">
+        <div><span class="k">role</span>UX/UI &amp; Service Designer</div>
+        <div><span class="k">status</span>Ongoing · in development</div>
+        <div><span class="k">tools</span>Figma · Miro · Service Blueprinting</div>
+        <div><span class="k">platform</span>Cross-platform service layer</div>
+      </div>
+      <div class="cs-chips"><span>UX Research</span><span>Service Design</span><span>Interaction Design</span><span>Human–AI Interaction</span></div>
+      <div class="cs-banner">
+        <div class="scene pv-hmn">
+          <span class="hm-tag">Human Mode</span>
+          <span class="hm-mark">✎</span>
+          <span class="hm-note">an idea, half-formed…</span>
+          <span class="hm-branch"></span>
+          <span class="hm-ai">structured suggestion →</span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="cs-body-wrap">
+    <div class="container">
+
+      <!-- overview -->
+      <div class="cs-sub">
+        <span class="mono-label">project overview</span>
+        <h3>A different way <em>to work with AI.</em></h3>
+        <p class="sub-lede">Generative AI has made writing, studying, brainstorming and decision-making faster. But most AI tools are designed to provide complete answers immediately. Human Mode explores a different interaction model — one where AI supports a person's thinking without automatically replacing it.</p>
+      </div>
+      <div class="case-block">
+        <h4>the service lets users choose</h4>
+        <ul>
+          <li>Think independently, with no AI involved yet</li>
+          <li>Develop an idea with AI guidance alongside them</li>
+          <li>Receive full AI assistance for a routine task</li>
+        </ul>
+        <p>The goal is not to discourage AI use. It's to make the level of AI involvement visible, intentional, and controlled by the person doing the thinking.</p>
+      </div>
+
+      <!-- problem -->
+      <div class="cs-sub">
+        <span class="mono-label">the problem</span>
+        <h3>Convenience is quietly <em>replacing thinking.</em></h3>
+        <p class="sub-lede">People increasingly turn to AI as the first step for writing, studying, planning, ideation and problem-solving. It saves time — but it also means accepting ready-made responses before developing an original idea, opinion, or line of reasoning.</p>
+      </div>
+      <div class="case-block">
+        <h4>most AI tools focus on</h4>
+        <ul>
+          <li>Generating answers quickly</li>
+          <li>Reducing effort</li>
+          <li>Completing tasks</li>
+          <li>Producing polished outputs</li>
+        </ul>
+        <p>They rarely ask users what they already know, what they think, what they've already attempted, or how much support they actually need — which can quietly reduce ownership of the final work and build dependency on AI as the starting point for everything.</p>
+      </div>
+
+      <!-- design challenge -->
+      <p class="case-pull">How might we help people use AI without allowing convenience to replace independent thinking?</p>
+
+      <!-- concept -->
+      <div class="cs-sub">
+        <span class="mono-label">the concept</span>
+        <h3>A thinking layer, <em>before the answer.</em></h3>
+        <p class="sub-lede">Human Mode adds a thinking layer between a person's request and the AI-generated response. Instead of immediately producing an answer, the service asks how they want to approach the task — then offers one of three modes.</p>
+      </div>
+      <div class="mini-grid">
+        <div class="mini-card"><span class="n">mode 01</span><h5>My Turn</h5><p>The user begins with their own thought, rough attempt, sketch or direction before receiving any AI assistance.</p></div>
+        <div class="mini-card"><span class="n">mode 02</span><h5>Think Together</h5><p>AI asks questions, offers hints, challenges assumptions, and helps organise the user's existing ideas — without immediately completing the task.</p></div>
+        <div class="mini-card"><span class="n">mode 03</span><h5>Fast Assist</h5><p>AI provides direct support for urgent, repetitive or administrative tasks, where independent thinking isn't the point.</p></div>
+      </div>
+      <div class="case-block" style="margin-top:26px">
+        <p>Human Mode is not anti-AI. It helps people make a conscious decision about when to think independently, when to collaborate, and when to simply automate.</p>
+      </div>
+
+      <!-- early feature exploration -->
+      <div class="cs-sub">
+        <span class="mono-label">features currently being explored</span>
+        <h3>Early concepts, <em>not finished features.</em></h3>
+        <p class="sub-lede">These are directions I'm actively exploring and testing — presented here as concepts, not shipped functionality.</p>
+      </div>
+      <div class="mini-grid">
+        <div class="mini-card"><span class="n">01</span><h5>Idea Seed</h5><p>Users contribute one initial thought before AI begins generating any suggestions.</p></div>
+        <div class="mini-card"><span class="n">02</span><h5>Reveal Ladder</h5><p>Users gradually choose how much help they want — from a guiding question to a complete generated example.</p></div>
+        <div class="mini-card"><span class="n">03</span><h5>Ask-Back</h5><p>Instead of answering immediately, AI asks a focused question that helps the user clarify their own thinking.</p></div>
+        <div class="mini-card"><span class="n">04</span><h5>Counterpoint</h5><p>AI introduces an alternative perspective instead of automatically agreeing with the user.</p></div>
+        <div class="mini-card"><span class="n">05</span><h5>Review My Work</h5><p>AI evaluates an existing attempt, identifies gaps, and improves clarity — without replacing the original work.</p></div>
+        <div class="mini-card"><span class="n">06</span><h5>Human Receipt</h5><p>At the end of a task, users can see what they created, what AI contributed, and what still needs verification.</p></div>
+      </div>
+
+      <!-- early user journey -->
+      <div class="cs-sub">
+        <span class="mono-label">early user journey</span>
+        <h3>One proposed path <em>through the service.</em></h3>
+      </div>
+      <div class="flow-box">
+        <span class="k">early design hypothesis</span>
+        <div class="flow-chain">
+          <span class="fstep">Enter a task</span><span class="farr">→</span>
+          <span class="fstep">Choose an intention</span><span class="farr">→</span>
+          <span class="fstep">Select a support mode</span><span class="farr">→</span>
+          <span class="fstep">Add an original idea</span><span class="farr">→</span>
+          <span class="fstep">Receive guided assistance</span><span class="farr">→</span>
+          <span class="fstep">Develop the work</span><span class="farr">→</span>
+          <span class="fdone">Review human &amp; AI contributions</span>
+        </div>
+      </div>
+      <p class="case-note">this journey is an early design hypothesis and will be refined through research and prototype testing</p>
+
+      <!-- service design direction -->
+      <div class="cs-sub">
+        <span class="mono-label">service design direction</span>
+        <h3>Beyond one app — <em>a service layer.</em></h3>
+        <p class="sub-lede">Human Mode could work as a service layer across several existing surfaces, rather than a single standalone product.</p>
+      </div>
+      <div class="pill-row">
+        <span>AI assistants</span><span>Writing tools</span><span>Learning platforms</span><span>Universities</span><span>Workplace productivity systems</span><span>Creative applications</span>
+      </div>
+      <div class="case-block" style="margin-top:22px">
+        <h4>the wider service may include</h4>
+        <ul>
+          <li>Digital tools and interaction patterns embedded in existing platforms</li>
+          <li>AI-literacy workshops for students and teams</li>
+          <li>Educator guidance for classroom and coursework use</li>
+          <li>Workplace policies around intentional AI use</li>
+          <li>Personal reflection tools for tracking one's own thinking over time</li>
+        </ul>
+        <p>The service blueprint and stakeholder ecosystem are currently being developed.</p>
+      </div>
+
+      <!-- design principles -->
+      <div class="cs-sub">
+        <span class="mono-label">design principles</span>
+        <h3>What this project <em>won't compromise on.</em></h3>
+      </div>
+      <div class="hmw-list">
+        <div class="hmw"><span class="k">principle 01</span><p>Human thinking should remain visible</p></div>
+        <div class="hmw"><span class="k">principle 02</span><p>AI assistance should be intentional</p></div>
+        <div class="hmw"><span class="k">principle 03</span><p>Productive friction must provide value</p></div>
+        <div class="hmw"><span class="k">principle 04</span><p>Users should control the level of support</p></div>
+        <div class="hmw"><span class="k">principle 05</span><p>Full AI assistance should remain available when appropriate</p></div>
+        <div class="hmw"><span class="k">principle 06</span><p>Reflection should not feel like judgement</p></div>
+        <div class="hmw"><span class="k">principle 07</span><p>Personal work and private prompts should remain protected</p></div>
+      </div>
+
+      <!-- current progress -->
+      <div class="cs-sub">
+        <span class="mono-label">where the project is now</span>
+        <h3>Progress, shown <em>in stages.</em></h3>
+      </div>
+      <div class="progress-grid">
+        <div class="progress-col done">
+          <div class="progress-head"><span class="progress-dot"></span>Completed</div>
+          <ul>
+            <li>Initial problem definition</li>
+            <li>Concept direction</li>
+            <li>Secondary research framing</li>
+            <li>Target-user definition</li>
+            <li>Three-mode interaction model</li>
+            <li>Early feature exploration</li>
+            <li>Initial user journey</li>
+          </ul>
+        </div>
+        <div class="progress-col now">
+          <div class="progress-head"><span class="progress-dot"></span>Currently working on</div>
+          <ul>
+            <li>Research planning</li>
+            <li>User interview questions</li>
+            <li>Service ecosystem</li>
+            <li>Service blueprint</li>
+            <li>Information architecture</li>
+            <li>Core interaction flow</li>
+          </ul>
+        </div>
+        <div class="progress-col next">
+          <div class="progress-head"><span class="progress-dot"></span>Next</div>
+          <ul>
+            <li>Low-fidelity wireframes</li>
+            <li>UX/UI visual system</li>
+            <li>High-fidelity screens</li>
+            <li>Interactive prototype</li>
+            <li>Usability testing</li>
+            <li>Design iterations</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- upcoming screens -->
+      <div class="cs-sub">
+        <span class="mono-label">upcoming UX/UI screens</span>
+        <h3>What's being <em>designed next.</em></h3>
+        <p class="sub-lede">UX/UI screens are currently in development. These titles reflect the planned scope — not finished designs.</p>
+      </div>
+      <div class="wire-grid">
+        <div class="wire-card"><span class="wn">screen 01</span><b>Human Mode onboarding</b><div class="wire-skel"><i class="w1"></i><i class="w2"></i><i class="w3"></i></div></div>
+        <div class="wire-card"><span class="wn">screen 02</span><b>Task entry</b><div class="wire-skel"><i class="w2"></i><i class="w1"></i><i class="w3"></i></div></div>
+        <div class="wire-card"><span class="wn">screen 03</span><b>Task-intention selection</b><div class="wire-skel"><i class="w1"></i><i class="w3"></i><i class="w2"></i></div></div>
+        <div class="wire-card"><span class="wn">screen 04</span><b>Mode recommendation</b><div class="wire-skel"><i class="w2"></i><i class="w2"></i><i class="w1"></i></div></div>
+        <div class="wire-card"><span class="wn">screen 05</span><b>Idea Seed workspace</b><div class="wire-skel"><i class="w1"></i><i class="w2"></i><i class="w1"></i></div></div>
+        <div class="wire-card"><span class="wn">screen 06</span><b>Reveal Ladder</b><div class="wire-skel"><i class="w3"></i><i class="w2"></i><i class="w2"></i></div></div>
+        <div class="wire-card"><span class="wn">screen 07</span><b>AI counterpoint</b><div class="wire-skel"><i class="w2"></i><i class="w1"></i><i class="w3"></i></div></div>
+        <div class="wire-card"><span class="wn">screen 08</span><b>Work comparison</b><div class="wire-skel"><i class="w1"></i><i class="w1"></i><i class="w2"></i></div></div>
+        <div class="wire-card"><span class="wn">screen 09</span><b>Human Receipt</b><div class="wire-skel"><i class="w2"></i><i class="w3"></i><i class="w1"></i></div></div>
+        <div class="wire-card"><span class="wn">screen 10</span><b>Reflection dashboard</b><div class="wire-skel"><i class="w1"></i><i class="w2"></i><i class="w2"></i></div></div>
+      </div>
+
+      <!-- reflection -->
+      <div class="cs-sub">
+        <span class="mono-label">project reflection</span>
+        <h3>Where this is <em>heading.</em></h3>
+      </div>
+      <div class="case-block">
+        <p>Human Mode began with a concern about AI dependency, but the project is evolving into a broader exploration of intentional human–AI collaboration. The aim is not to reduce AI use, but to design interactions that help people remain active participants in their own thinking.</p>
+      </div>
+
+      <p class="case-note">ongoing UX/UI &amp; service design project — research framework, service model and screens are still in development, not finished outcomes</p>
+
+      <!-- final section -->
+      <div class="hm-closing">
+        <h3>The project is <em>still thinking.</em></h3>
+        <p>Human Mode is currently being developed through research, service design and interaction exploration. The complete user experience, prototype and testing outcomes will be added as the project progresses.</p>
+        <span class="status-pill"><i class="dot"></i>Next update: core user flow and early wireframes</span>
+      </div>
+
     </div>
   </div>
   <div class="cs-next">
@@ -1983,33 +2516,31 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     <div class="container">
       <p class="case-pull">"The sketchbook is where taste gets built — one unjudged page at a time."</p>
 
-      <!-- gallery · drop your artwork in the /photos folder as art-01.jpg → art-06.jpg
-           and the tiles pick them up automatically. Edit the captions to match. -->
-      <div class="art-grid">
-        <figure class="art-tile">
-          <div class="art-shot"><div class="ph-fill ph-music"><span class="sym">✏️</span><span class="add">your art here</span></div><img src="photos/art-01.jpg" alt="Illustration 01" onerror="this.remove()"></div>
-          <figcaption><span class="hand-note">illustration no. 01</span><b>INK &amp; DIGITAL</b></figcaption>
-        </figure>
-        <figure class="art-tile">
-          <div class="art-shot"><div class="ph-fill ph-beach"><span class="sym">🎨</span><span class="add">your art here</span></div><img src="photos/art-02.jpg" alt="Illustration 02" onerror="this.remove()"></div>
-          <figcaption><span class="hand-note">colour study</span><b>PALETTE PLAY</b></figcaption>
-        </figure>
-        <figure class="art-tile">
-          <div class="art-shot"><div class="ph-fill ph-lens"><span class="sym">🧊</span><span class="add">your art here</span></div><img src="photos/art-03.jpg" alt="3D render" onerror="this.remove()"></div>
-          <figcaption><span class="hand-note">blender study</span><b>3D RENDER</b></figcaption>
-        </figure>
-        <figure class="art-tile">
-          <div class="art-shot"><div class="ph-fill ph-food"><span class="sym">🖍️</span><span class="add">your art here</span></div><img src="photos/art-04.jpg" alt="Doodle" onerror="this.remove()"></div>
-          <figcaption><span class="hand-note">doodle of the week</span><b>SKETCHBOOK</b></figcaption>
-        </figure>
-        <figure class="art-tile">
-          <div class="art-shot"><div class="ph-fill ph-golden"><span class="sym">🌟</span><span class="add">your art here</span></div><img src="photos/art-05.jpg" alt="Poster experiment" onerror="this.remove()"></div>
-          <figcaption><span class="hand-note">poster play</span><b>TYPE &amp; TEXTURE</b></figcaption>
-        </figure>
-        <figure class="art-tile">
-          <div class="art-shot"><div class="ph-fill ph-adventure"><span class="sym">🫧</span><span class="add">your art here</span></div><img src="photos/art-06.jpg" alt="Experiment" onerror="this.remove()"></div>
-          <figcaption><span class="hand-note">happy accident</span><b>EXPERIMENT</b></figcaption>
-        </figure>
+      <div class="screen-grid landscape cols-2">
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr" style="background:linear-gradient(165deg,#E8DFF2 0%,#BCABD8 60%,#77639C 100%)"><span class="sn">01</span><span class="add">your art here</span></div><img src="photos/art-01.jpg" alt="Illustration 01" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Ink &amp; digital</b><p>illustration no. 01</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr" style="background:linear-gradient(165deg,#C4E6E3 0%,#93CBCD 55%,#EEDDBC 100%)"><span class="sn">02</span><span class="add">your art here</span></div><img src="photos/art-02.jpg" alt="Illustration 02" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Palette play</b><p>colour study</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr" style="background:linear-gradient(165deg,#EBE7DD 0%,#CDC6B6 55%,#918A7F 100%)"><span class="sn">03</span><span class="add">your art here</span></div><img src="photos/art-03.jpg" alt="3D render" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>3D render</b><p>blender study</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr" style="background:linear-gradient(165deg,#F7E2CB 0%,#EDBC8E 55%,#CE7752 100%)"><span class="sn">04</span><span class="add">your art here</span></div><img src="photos/art-04.jpg" alt="Doodle" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Sketchbook</b><p>doodle of the week</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr" style="background:linear-gradient(165deg,#F8E6BB 0%,#F1BD6E 55%,#CD8141 100%)"><span class="sn">05</span><span class="add">your art here</span></div><img src="photos/art-05.jpg" alt="Poster experiment" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Type &amp; texture</b><p>poster play</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr" style="background:linear-gradient(165deg,#DDD8C8 0%,#ACB79E 60%,#66755F 100%)"><span class="sn">06</span><span class="add">your art here</span></div><img src="photos/art-06.jpg" alt="Experiment" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Experiment</b><p>happy accident</p></div>
+        </div>
       </div>
 
       <div class="case-grid" style="margin-top:clamp(34px,5vw,52px)">
@@ -2031,7 +2562,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
           </div>
         </div>
       </div>
-      <p class="case-note">drop your artwork into the /photos folder as art-01.jpg → art-06.jpg — the tiles fill themselves</p>
     </div>
   </div>
   <div class="cs-next">
@@ -2039,7 +2569,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
       <div>
         <span class="k">back to the start</span>
         <h3>VR for Migraine</h3>
-        <p>Designing calm for the worst headache days.</p>
+        <p>Exploring VR for Relaxation During Migraine Episodes.</p>
       </div>
       <a class="btn" href="#/work/vr-migraine">Read the case study →</a>
     </div>
@@ -2055,6 +2585,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     "#/work/vr-migraine":"view-vrm",
     "#/work/medcare":"view-med",
     "#/work/alibi":"view-alb",
+    "#/work/human-mode":"view-hmn",
     "#/work/beyond":"view-byd"
   };
   var views=document.querySelectorAll(".view");
