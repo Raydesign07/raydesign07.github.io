@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ray design — Reshma Shirin A · UX/UI & Interaction Designer</title>
+<title>Reshma Shirin — UX/UI & Interaction Designer</title>
 <meta name="description" content="UX/UI and Interaction Designer who thinks in flows, systems, and spaces. Healthcare, MedTech, AR/VR, and AI-assisted product design.">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=Caveat:wght@500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Caveat:wght@500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
    RAY DESIGN — single-file portfolio · soft edition v3
@@ -26,7 +26,7 @@
   --border:  #EEDFD8;
   --plum:    #3B2430;
 
-  --serif: "Fraunces", Georgia, serif;
+  --serif: "Poppins", "Inter", system-ui, sans-serif;
   --body:  "Inter", sans-serif;
   --hand:  "Caveat", cursive;
   --mono:  "DM Mono", monospace;
@@ -301,6 +301,62 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 }
 .wcard:hover .wcard-body .read{gap:13px;color:var(--rose)}
 
+
+/* water tourism + ambient light — project themes & preview scenes */
+.cv-wtr{--ca:#3E7CA8;--ca-deep:#28597F;--ca-soft:rgba(62,124,168,.12)}
+.cv-amb{--ca:#C7792F;--ca-deep:#9C5A1C;--ca-soft:rgba(199,121,47,.13)}
+.pv-wtr{background:linear-gradient(165deg,#CFE3F1 0%,#8FB9D6 55%,#3E6F95 100%);overflow:hidden}
+.pv-wtr .rp{position:absolute;left:50%;top:56%;border:1.5px solid rgba(255,255,255,.65);border-radius:50%;transform:translate(-50%,-50%)}
+.pv-wtr .rp1{width:60px;height:22px}.pv-wtr .rp2{width:130px;height:46px;opacity:.7}.pv-wtr .rp3{width:210px;height:74px;opacity:.45}.pv-wtr .rp4{width:300px;height:104px;opacity:.25}
+.pv-wtr .wt{position:absolute;left:8%;top:16%;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(40,89,127,.55);border-radius:100px;padding:5px 11px}
+.pv-wtr .yr{position:absolute;right:8%;bottom:14%;font-family:var(--serif);font-style:italic;font-size:clamp(26px,5vw,44px);color:rgba(255,255,255,.9)}
+.pv-amb{background:radial-gradient(circle at 50% 38%,#FFE7B8 0%,#F4C37A 30%,#7A5230 75%,#3A2A1E 100%);overflow:hidden}
+.pv-amb .gl{position:absolute;left:50%;top:40%;width:86px;height:86px;margin:-43px 0 0 -43px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#FFFDF5,#FFE9BE 60%,#F2C27E);box-shadow:0 0 60px 18px rgba(255,214,140,.65)}
+.pv-amb .bx{position:absolute;left:50%;top:56%;width:130px;height:62px;margin-left:-65px;border-radius:6px 6px 10px 10px;background:repeating-linear-gradient(90deg,#F4EEF3 0 6px,#D9CFD8 6px 8px);box-shadow:0 14px 26px rgba(0,0,0,.3)}
+.pv-amb .at{position:absolute;left:8%;top:16%;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(58,42,30,.55);border-radius:100px;padding:5px 11px}
+
+
+/* verasa — concept e-commerce */
+.cv-vrs{--ca:#75505E;--ca-deep:#5A3A47;--ca-soft:rgba(117,80,94,.12)}
+.pv-vrs{background:#F2E6E6;overflow:hidden}
+.pv-vrs img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px 22px}
+.stat-card .k{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ca-deep);display:block;margin-bottom:10px}
+.stat-card b{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3.4vw,38px);display:block;line-height:1.1;margin-bottom:6px}
+.stat-card span.d{font-size:13px;color:var(--muted);line-height:1.5}
+.eq-box{background:var(--ca);color:#fff;border-radius:16px;padding:20px 26px;font-family:var(--mono);font-size:clamp(11px,1.5vw,14px);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+.eq-box i{font-style:normal;opacity:.6;margin:0 .6em}
+.quote-card{background:var(--ca-soft);border-radius:18px;padding:24px 26px}
+.quote-card .k{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ca-deep);display:block;margin-bottom:4px}
+.quote-card .m{font-size:12px;color:var(--muted);display:block;margin-bottom:14px}
+.quote-card q{font-family:var(--serif);font-size:clamp(18px,2vw,22px);line-height:1.35;display:block;margin-bottom:14px;quotes:none}
+.quote-card p{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:4px}
+.quote-card p b{color:var(--ink)}
+.src{font-family:var(--mono);font-size:10.5px;color:var(--muted);line-height:1.8;margin-top:14px;word-break:break-word}
+
+
+/* medcare — real screens thumbnail */
+.pv-med3{background:#EEF3FB;overflow:hidden}.pv-med3 img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center}
+/* (legacy wireframe scene) */
+.pv-med2{background-color:#EEF3FB;background-image:linear-gradient(rgba(49,94,187,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(49,94,187,.09) 1px,transparent 1px);background-size:22px 22px;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:4%}
+.pv-med2 .wf{position:relative;width:21%;max-width:150px;aspect-ratio:412/917;background:#fff;border:1.5px solid #315EBB;border-radius:16px;padding:9% 8% 0;box-shadow:0 14px 30px rgba(49,94,187,.18);display:flex;flex-direction:column;gap:7px;overflow:hidden}
+.pv-med2 .wf.c{width:25%;max-width:176px;z-index:2}
+.pv-med2 .wf.l{transform:rotate(-4deg) translateY(4%)}.pv-med2 .wf.r{transform:rotate(4deg) translateY(4%)}
+.pv-med2 .wf .t{height:7px;width:62%;background:#152637;border-radius:3px}
+.pv-med2 .wf .s{height:4px;width:80%;background:#C9D6EC;border-radius:2px}
+.pv-med2 .wf .b{height:4px;background:#DCE5F3;border-radius:2px}
+.pv-med2 .wf .card{background:#EBF1FC;border:1px dashed #9DB5E3;border-radius:8px;padding:7%;display:flex;flex-direction:column;gap:5px}
+.pv-med2 .wf .btn2{height:13px;border-radius:5px;background:#315EBB}
+.pv-med2 .wf .btn2.o{background:#fff;border:1.2px solid #315EBB}
+.pv-med2 .wf .big{height:20px;width:55%;background:#152637;border-radius:3px;margin:3px 0}
+.pv-med2 .wf .inp{height:15px;border:1.2px solid #8A97B0;border-radius:5px}
+.pv-med2 .wf .warn{background:#FCEFF1;border:1px dashed #D58B97;border-radius:8px;padding:7%;display:flex;flex-direction:column;gap:5px}
+.pv-med2 .wf .btn2.red{background:#A52A41}
+.pv-med2 .wf .nav{margin-top:auto;margin-inline:-9%;border-top:1px solid #DCE5F3;height:15%;display:flex;align-items:center;justify-content:space-around;background:#fff}
+.pv-med2 .wf .nav i{width:9px;height:9px;border-radius:3px;border:1.2px solid #8A97B0}
+.pv-med2 .wf .nav i.on{background:#315EBB;border-color:#315EBB}
+.pv-med2 .wf-tag{position:absolute;left:5%;bottom:7%;font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#315EBB;background:#fff;border:1px dashed #315EBB;border-radius:100px;padding:4px 10px;z-index:3}
+
 /* ---------- scene visuals (pure CSS) ---------- */
 /* vr */
 .pv-vr{background:linear-gradient(160deg,#2A2B52 0%,#3D3A6E 55%,#6A62A5 100%)}
@@ -534,7 +590,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     linear-gradient(165deg,#F6EDE2 0%,#EFDFD2 100%);
   display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
 }
-.polaroid .ph-area img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.polaroid .ph-area img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%}
 .polaroid .ph-area .ray{
   font-family:var(--hand);font-weight:600;
   font-size:clamp(38px,4.5vw,54px);line-height:1;text-align:center;color:var(--ink);
@@ -903,6 +959,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
 .screen-grid.landscape{grid-template-columns:1fr;gap:26px}
 .screen-grid.landscape.cols-2{grid-template-columns:1fr 1fr;gap:22px}
+.screen-grid.landscape.cols-3{grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.screen-grid.landscape.cols-3{grid-template-columns:1fr}}
 .screen-tile .frame-web{
   border-radius:14px;background:#fff;border:1px solid var(--border);
   box-shadow:var(--sh-soft);overflow:hidden;
@@ -1029,31 +1087,294 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   *,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}
   .reveal{opacity:1;transform:none}
 }
+
+/* typography — Poppins: light headings with bold emphasis, Inter body */
+h1,h2,h3,.hero h1,.section-head h2,.cs-sub h3,.cs-hero h1,.wcard-body h3,.cs-next-card h3,.hm-closing h3{font-family:var(--serif);font-weight:300;letter-spacing:-.025em;line-height:1.14}
+.hero h1,.cs-hero h1{letter-spacing:-.035em}
+h1 em,h2 em,h3 em,.it,.lav{font-style:normal;font-weight:700}
+
+/* alignment & rhythm */
+h1,h2,h3{text-wrap:balance}
+.hero h1{font-size:clamp(38px,6.6vw,86px);line-height:1.08;margin-bottom:14px;max-width:16ch;text-align:left}
+.section-head{text-align:left}
+.section-head h2{font-size:clamp(30px,4.4vw,52px);line-height:1.12;max-width:20ch}
+.cs-hero h1{font-size:clamp(32px,5vw,64px);max-width:20ch;text-align:left}
+.cs-sub h3{max-width:26ch}
+.hero-sub .big-line{font-weight:300;line-height:1.5}
+.hero-sub .big-line em{font-style:normal;font-weight:600}
+.hero-blurb p,.about-copy p,.cs-hero .lede,.sub-lede{max-width:62ch;text-align:left}
+
+/* ============================================================
+   REDESIGN — big statement hero, ticker, full-width showcases
+   ============================================================ */
+body{background:var(--cream)}
+.nav{background:rgba(251,245,238,.88);backdrop-filter:blur(14px);border-bottom:1px solid transparent}
+.nav .logo{font-family:"Caveat","Segoe Script","Bradley Hand",cursive;font-weight:600;font-size:38px;letter-spacing:0;line-height:1}
+.logo-hand{position:relative;display:inline-block;transform:rotate(-4deg);transition:transform .35s var(--ease)}
+.logo:hover .logo-hand{transform:rotate(2deg) scale(1.06)}
+.nav-links a{font-weight:500}
+.h2-hero{position:relative;padding:clamp(56px,9vw,120px) 0 clamp(48px,7vw,90px);overflow:hidden}
+.h2-hero .star{position:absolute;font-size:clamp(22px,3vw,40px);animation:twinkle 4s ease-in-out infinite}
+.h2-hero .s1{top:12%;right:9%;color:#E8B730}.h2-hero .s2{top:52%;right:3%;color:var(--rose);animation-delay:1.3s}.h2-hero .s3{bottom:14%;left:46%;color:var(--lavender);animation-delay:2.2s}
+.h2-kicker{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:28px}
+.h2-hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(40px,7.4vw,104px);line-height:1.08;letter-spacing:-.04em;max-width:15ch;margin-bottom:clamp(34px,5vw,64px);color:var(--ink)}
+.u{text-decoration:underline wavy;text-decoration-thickness:.06em;text-underline-offset:.16em;font-weight:600}
+.u-rose{text-decoration-color:var(--rose)}.u-lav{text-decoration-color:var(--lavender)}.u-yel{text-decoration-color:#E8B730}
+.h2-sub{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(24px,5vw,80px);align-items:end}
+.h2-burst{display:flex;gap:18px;align-items:flex-start;font-size:clamp(16px,1.6vw,19px);line-height:1.55;color:var(--muted);max-width:52ch}
+.h2-burst b{flex:none;font-family:var(--serif);font-weight:600;font-size:clamp(34px,4vw,52px);line-height:1;color:var(--ink);position:relative;padding:12px 16px;background:var(--butter);border-radius:50%;transform:rotate(-8deg)}
+.h2-where{font-size:15px;color:var(--muted);line-height:1.9}
+.h2-open{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink)}
+.h2-open i{width:9px;height:9px;border-radius:50%;background:#2FB36B;box-shadow:0 0 0 4px rgba(47,179,107,.2)}
+.h2-scroll{display:inline-block;margin-top:clamp(34px,5vw,60px);font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);border-bottom:1.5px solid var(--ink);padding-bottom:3px}
+.h2-help{padding:clamp(28px,4vw,48px) 0 clamp(36px,5vw,64px);border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--card)}
+.h2-help h2{font-family:var(--serif);font-weight:300;font-size:clamp(22px,2.6vw,30px);letter-spacing:-.02em;margin-bottom:22px}
+.h2-ticker{overflow:hidden}
+.h2-ticker-track{display:flex;gap:30px;width:max-content;animation:scroll 40s linear infinite;align-items:center}
+.h2-ticker span{font-family:var(--serif);font-weight:300;font-size:clamp(24px,3.4vw,44px);letter-spacing:-.03em;white-space:nowrap}
+.h2-ticker b{font-size:clamp(16px,2vw,24px);color:var(--rose)}
+.h2-ticker:hover .h2-ticker-track{animation-play-state:paused}
+.h2-work{padding:clamp(56px,8vw,110px) 0}
+.h2-title{font-family:var(--serif);font-weight:300;font-size:clamp(32px,5.4vw,68px);letter-spacing:-.035em;line-height:1.1;margin-bottom:clamp(30px,5vw,60px)}
+.h2-show{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(24px,4vw,64px);align-items:center;background:var(--bg);color:var(--ink);border-radius:32px;padding:clamp(18px,2.4vw,34px);margin-bottom:clamp(22px,3vw,36px);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.h2-show:nth-of-type(even){grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr)}
+.h2-show:nth-of-type(even) .sc-visual{order:2}
+.h2-show:hover{transform:translateY(-6px);box-shadow:var(--sh-lift)}
+.h2-show.dark{color:#F7EBDD}.h2-show.dark .sc-k,.h2-show.dark p{color:rgba(247,235,221,.7)}
+.sc-visual{position:relative;overflow:hidden;border-radius:22px;aspect-ratio:16/10;background:rgba(255,255,255,.5)}
+.sc-visual .scene{position:absolute;inset:0}
+.sc-visual .scene img.cover,.scene img.cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:5}
+.pv-img{background:#F3E1D2}
+.sc-text{padding:clamp(4px,1vw,14px)}
+.sc-n{font-family:var(--mono);font-size:12px;letter-spacing:.14em;opacity:.6;display:block;margin-bottom:12px}
+.sc-k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:14px}
+.sc-text h3{font-family:var(--serif);font-weight:300;font-size:clamp(26px,3.2vw,44px);letter-spacing:-.03em;line-height:1.12;margin-bottom:16px}
+.sc-text p{font-size:15.5px;line-height:1.65;color:var(--muted);margin-bottom:26px;max-width:42ch}
+.sc-btn{display:inline-flex;gap:10px;align-items:center;font-weight:600;font-size:14px;background:var(--ink);color:#fff;border-radius:100px;padding:12px 22px;transition:gap .3s var(--ease),background .3s}
+.h2-show.dark .sc-btn{background:#F7EBDD;color:#1F1B24}
+.h2-show:hover .sc-btn{gap:16px;background:var(--rose);color:#fff}
+@media (max-width:860px){
+  .h2-sub{grid-template-columns:1fr}
+  .h2-show,.h2-show:nth-of-type(even){grid-template-columns:1fr}
+  .h2-show:nth-of-type(even) .sc-visual{order:0}
+}
+
+/* intro */
+.intro{position:fixed;inset:0;z-index:999;background:var(--cream);display:flex;align-items:center;justify-content:center;overflow:hidden;transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.intro.out{opacity:0;transform:translateY(-24px);pointer-events:none}
+.intro .rings{position:absolute;left:50%;top:50%;width:0;height:0}
+.intro .rings i{position:absolute;border:3px solid;border-radius:50%;transform:translate(-50%,-50%) scale(.2);opacity:0;animation:ringIn 1.1s var(--ease) forwards,ringPulse 4s ease-in-out 1.4s infinite}
+.intro .rings i:nth-child(1){width:96vmin;height:96vmin;border-color:var(--rose);animation-delay:.1s,1.4s}
+.intro .rings i:nth-child(2){width:76vmin;height:76vmin;border-color:var(--lavender);animation-delay:.25s,1.6s}
+.intro .rings i:nth-child(3){width:56vmin;height:56vmin;border-color:var(--peach);animation-delay:.4s,1.8s}
+.intro .rings i:nth-child(4){width:36vmin;height:36vmin;border-color:var(--butter);animation-delay:.55s,2s}
+@keyframes ringIn{to{transform:translate(-50%,-50%) scale(1);opacity:.9}}
+@keyframes ringPulse{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.04)}}
+.intro-text{position:relative;text-align:center;padding:0 24px;z-index:2}
+.intro-text>*{opacity:0;transform:translateY(18px);animation:iUp .9s var(--ease) forwards}
+.intro-text .i1{font-family:var(--mono);font-size:clamp(12px,1.4vw,15px);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;animation-delay:.9s}
+.intro-text .i2{font-family:var(--serif);font-weight:300;font-size:clamp(40px,8vw,104px);letter-spacing:-.04em;line-height:1.05;color:var(--ink);animation-delay:1.1s}
+.intro-text .i3{margin-top:16px;font-size:clamp(13px,1.5vw,17px);color:var(--muted);animation-delay:1.5s}
+.istar{position:absolute;font-size:clamp(28px,4vw,56px);opacity:0;animation:iUp 1s var(--ease) 1.2s forwards,twinkle 3.5s ease-in-out 2s infinite}
+.istar.a{top:26%;left:22%;color:#E8B730}.istar.b{bottom:24%;right:22%;color:var(--rose)}
+.intro-skip{position:absolute;right:24px;bottom:24px;z-index:3;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);border-radius:100px;padding:8px 16px;background:var(--card);cursor:pointer}
+.intro-skip:hover{color:var(--ink);border-color:var(--ink)}
+@keyframes iUp{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.intro{display:none}}
+
+/* waves intro (overrides rings) */
+.intro{background:transparent;transition:none}
+.intro.out{opacity:1;transform:none}
+.wv{position:absolute;left:0;right:0;bottom:0;height:150%;transform:translateY(100%);animation:wvUp 1.5s cubic-bezier(.22,1,.36,1) forwards;pointer-events:none}
+.wv::before{content:"";position:absolute;left:0;right:0;top:-71px;height:72px;background-size:720px 72px;background-repeat:repeat-x;animation:wvSlide 5s linear infinite}
+.wv::after{content:"";position:absolute;left:0;right:0;top:0;bottom:0}
+.wv1{animation-delay:0s}.wv1::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 80' preserveAspectRatio='none'%3E%3Cpath d='M0 40 C90 0 180 80 360 40 C540 0 630 80 720 40 L720 80 L0 80Z' fill='%23F6C6A8'/%3E%3C/svg%3E")}.wv1::after{background:#F6C6A8}
+.wv2{animation-delay:.18s}.wv2::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 80' preserveAspectRatio='none'%3E%3Cpath d='M0 40 C90 0 180 80 360 40 C540 0 630 80 720 40 L720 80 L0 80Z' fill='%23B69CD8'/%3E%3C/svg%3E");animation-duration:7s;animation-direction:reverse}.wv2::after{background:#B69CD8}
+.wv3{animation-delay:.36s}.wv3::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 80' preserveAspectRatio='none'%3E%3Cpath d='M0 40 C90 0 180 80 360 40 C540 0 630 80 720 40 L720 80 L0 80Z' fill='%23D9537B'/%3E%3C/svg%3E");animation-duration:6s}.wv3::after{background:#D9537B}
+@keyframes wvUp{to{transform:translateY(-20%)}}
+@keyframes wvSlide{to{background-position-x:-720px}}
+@keyframes wvOut{from{transform:translateY(-20%)}to{transform:translateY(-135%)}}
+.intro.out .wv{animation:wvOut 1.1s cubic-bezier(.65,0,.35,1) forwards}
+.intro.out .wv3{animation-delay:0s}.intro.out .wv2{animation-delay:.12s}.intro.out .wv1{animation-delay:.24s}
+.intro.out .intro-text,.intro.out .istar,.intro.out .intro-skip{opacity:0;transition:opacity .4s}
+.intro-text .i1,.intro-text .i3{color:rgba(255,255,255,.85)}
+.intro-text .i2{color:#fff;font-weight:300}
+.istar.a,.istar.b{color:#fff}
+.intro-skip{background:rgba(255,255,255,.2);color:#fff;border-color:rgba(255,255,255,.6)}
+.intro-skip:hover{background:#fff;color:#D9537B}
+
+
+/* section jump bar */
+.cs-subnav{position:sticky;top:84px;z-index:60;display:flex;justify-content:center;padding:0 14px;margin:0 0 6px;pointer-events:none}
+.cs-subnav-in{pointer-events:auto;display:flex;gap:4px;align-items:center;background:rgba(255,255,255,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--border,rgba(67,51,59,.12));border-radius:999px;padding:5px;box-shadow:0 8px 24px rgba(67,51,59,.1);overflow-x:auto;max-width:100%}
+.cs-subnav a,.cs-subnav button{font-family:inherit;font-weight:600;font-size:13.5px;line-height:1;cursor:pointer;color:var(--muted);background:none;border:0;padding:10px 16px;border-radius:999px;white-space:nowrap;transition:background .25s,color .25s}
+.cs-subnav button:hover{color:var(--ink);background:var(--ca-soft,rgba(217,83,123,.1))}
+.cs-subnav button.on{background:var(--ca-deep,var(--rose-deep));color:#fff}
+.cs-subnav .sn-back{color:var(--ink)}
+.cs-sub,.case-pull,.case-grid,.screen-grid,.case-block{scroll-margin-top:150px}
+
+/* ---- intro variants (waves is the default above) ---- */
+.cu,.st,.bl{display:none}
+.intro:not(.s-waves) .wv{display:none}
+.intro:not(.s-waves) .intro-text .i1,.intro:not(.s-waves) .intro-text .i3{color:var(--muted)}
+.intro:not(.s-waves) .intro-text .i2{color:var(--ink)}
+.intro:not(.s-waves) .istar.a{color:#E8B730}.intro:not(.s-waves) .istar.b{color:var(--rose)}
+.intro:not(.s-waves) .intro-skip{background:rgba(255,255,255,.6);color:var(--muted);border-color:var(--border,rgba(67,51,59,.2))}
+/* curtain */
+.intro.s-curtain .cu{display:block;position:absolute;top:0;bottom:0;width:50.3%;background:#3B2430;z-index:1;transition:transform 1.15s cubic-bezier(.76,0,.24,1)}
+.intro.s-curtain .cu.l{left:0}.intro.s-curtain .cu.r{right:0;background:#4A2D3A}
+.intro.s-curtain .cu.l::after,.intro.s-curtain .cu.r::after{content:"";position:absolute;top:0;bottom:0;width:3px;background:var(--rose)}
+.intro.s-curtain .cu.l::after{right:0}.intro.s-curtain .cu.r::after{left:0}
+.intro.s-curtain .intro-text{z-index:2}
+.intro.s-curtain .intro-text .i1,.intro.s-curtain .intro-text .i3{color:rgba(251,245,238,.78)}
+.intro.s-curtain .intro-text .i2{color:#FBF5EE}
+.intro.s-curtain .istar{z-index:2}.intro.s-curtain .istar.a{color:var(--butter)}.intro.s-curtain .istar.b{color:var(--peach)}
+.intro.s-curtain .intro-skip{z-index:3;background:rgba(255,255,255,.12);color:#FBF5EE;border-color:rgba(251,245,238,.5)}
+.intro.s-curtain.out .cu.l{transform:translateX(-101%)}.intro.s-curtain.out .cu.r{transform:translateX(101%)}
+/* stripes */
+.intro.s-stripes .st{display:block;position:absolute;top:0;bottom:0;left:calc(var(--i)*100%/7);width:calc(100%/7 + 1px);transform:translateY(-101%);animation:stIn .85s cubic-bezier(.22,1,.36,1) forwards;animation-delay:calc(var(--i)*.09s)}
+.intro.s-stripes .intro-text,.intro.s-stripes .istar{z-index:2}
+.intro.s-stripes .intro-text .i1,.intro.s-stripes .intro-text .i3{color:#5C4652}
+.intro.s-stripes .intro-text .i2{color:#3B2430;font-weight:400}
+.intro.s-stripes.out .st{animation:stOut .95s cubic-bezier(.65,0,.35,1) forwards;animation-delay:calc((6 - var(--i))*.08s)}
+@keyframes stIn{to{transform:none}}
+@keyframes stOut{from{transform:none}to{transform:translateY(101%)}}
+/* type + iris */
+.intro.s-type{background:var(--cream);clip-path:circle(150% at 50% 50%);transition:clip-path 1.05s cubic-bezier(.65,0,.35,1)}
+.intro.s-type.out{clip-path:circle(0% at 50% 50%)}
+.intro.s-type .intro-text .i1{animation-delay:.2s}
+.intro.s-type .intro-text .i2{animation-delay:.2s;min-height:1.05em}
+.intro.s-type .intro-text .i2::after{content:"";display:inline-block;width:.055em;height:.85em;background:var(--rose);margin-left:.07em;vertical-align:-.06em;animation:caret .7s steps(1) infinite}
+.intro.s-type .intro-text .i3{animation-delay:2.4s}
+@keyframes caret{50%{opacity:0}}
+/* bloom */
+.intro.s-bloom{background:var(--cream);transition:opacity 1s var(--ease),transform 1s var(--ease),filter 1s var(--ease)}
+.intro.s-bloom.out{opacity:0;transform:scale(1.12);filter:blur(14px)}
+.intro.s-bloom .bl{display:block;position:absolute;border-radius:50%;filter:blur(55px);opacity:0;animation:blIn 1.6s ease forwards,blFloat 7s ease-in-out infinite}
+.intro.s-bloom .b1{width:52vmax;height:52vmax;left:-8%;top:-14%;background:#F2A6BD}
+.intro.s-bloom .b2{width:56vmax;height:56vmax;right:-14%;bottom:-20%;background:#C9B3E6;animation-delay:.2s,.2s}
+.intro.s-bloom .b3{width:42vmax;height:42vmax;left:26%;bottom:-24%;background:#F6C6A8;animation-delay:.4s,.8s}
+.intro.s-bloom .b4{width:30vmax;height:30vmax;right:14%;top:-6%;background:#F5D98F;animation-delay:.6s,1.2s}
+.intro.s-bloom .intro-text{z-index:2}
+@keyframes blIn{to{opacity:.85}}
+@keyframes blFloat{50%{transform:translate(4vmax,-3vmax) scale(1.12)}}
+/* style picker (only visible when previewing with ?intro=) */
+.intro-picker{position:fixed;left:14px;bottom:14px;z-index:1100;display:flex;gap:6px;flex-wrap:wrap;background:rgba(255,255,255,.92);border:1px solid rgba(67,51,59,.15);border-radius:16px;padding:8px;box-shadow:0 10px 30px rgba(67,51,59,.18);font-size:13px}
+.intro-picker b{font-weight:600;color:var(--muted);padding:6px 8px 6px 6px}
+.intro-picker a{padding:6px 12px;border-radius:999px;color:var(--ink);font-weight:600;background:rgba(67,51,59,.06)}
+.intro-picker a.on{background:var(--rose);color:#fff}
+
+/* ---- sketch + sticker intro ---- */
+.skwrap,.sk-stk{display:none}
+.intro.s-sketch{background:var(--cream);transition:opacity .9s .55s var(--ease)}
+.intro.s-sketch.out{opacity:0}
+.intro.s-sketch .intro-text,.intro.s-sketch .istar{display:none}
+.intro.s-sketch .skwrap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2}
+.intro.s-sketch .skwrap svg{width:min(900px,94vw);height:auto;overflow:visible}
+.skd{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:5;stroke-dasharray:1;stroke-dashoffset:1;animation:skDraw var(--t,1s) ease-out var(--d,1.6s) forwards}
+@keyframes skDraw{to{stroke-dashoffset:0}}
+.sk-name{font-family:Poppins,Inter,system-ui,sans-serif;font-weight:300;font-size:118px;letter-spacing:-4px;fill:#43333B;fill-opacity:0;stroke:#3A4BD8;stroke-width:2.2;stroke-dasharray:760;stroke-dashoffset:760;animation:skTxt 2s ease-in-out .2s forwards,skFill .8s ease 2.1s forwards}
+@keyframes skTxt{to{stroke-dashoffset:0}}
+@keyframes skFill{to{fill-opacity:1;stroke-opacity:0}}
+.sk-sub{opacity:0;margin:-8px 0 0;font-size:clamp(13px,1.5vw,17px);color:var(--muted);animation:skUp .8s ease 3.3s forwards}
+@keyframes skUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.intro.s-sketch .sk-stk{display:flex;position:absolute;z-index:3;left:var(--x);top:var(--y);width:clamp(58px,9vw,92px);height:clamp(58px,9vw,92px);margin:calc(clamp(58px,9vw,92px)/-2) 0 0 calc(clamp(58px,9vw,92px)/-2);border-radius:26%;background:#fff;border:5px solid #fff;box-shadow:0 12px 26px rgba(67,51,59,.22),inset 0 0 0 2px var(--c);align-items:center;justify-content:center;font-size:clamp(28px,4.6vw,46px);opacity:0;transform:scale(0) rotate(var(--r));animation:skPop .8s cubic-bezier(.3,1,.4,1) calc(2.5s + var(--i)*.22s) forwards,skWig 1.9s ease-in-out calc(3.4s + var(--i)*.22s) infinite}
+@keyframes skPop{0%{opacity:0;transform:scale(0) rotate(var(--r))}40%{opacity:1;transform:scale(1.3,.78) rotate(var(--r))}58%{transform:scale(.84,1.2) rotate(var(--r))}75%{transform:scale(1.08,.94) rotate(var(--r))}100%{opacity:1;transform:scale(1) rotate(var(--r))}}
+@keyframes skWig{0%,100%{transform:scale(1) rotate(var(--r))}25%{transform:scale(1.05,.97) rotate(calc(var(--r) - 5deg))}75%{transform:scale(.97,1.05) rotate(calc(var(--r) + 5deg))}}
+.intro.s-sketch.out .sk-stk{animation:skOut .95s cubic-bezier(.6,0,.4,1) calc(var(--i)*.05s) forwards}
+@keyframes skOut{0%{opacity:1;transform:scale(1) rotate(var(--r))}22%{opacity:1;transform:scale(1.18,.9) rotate(calc(var(--r) - 8deg))}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.4) rotate(calc(var(--r) + 150deg))}}
+.intro.s-sketch.out .skwrap{animation:skFade .6s .2s forwards}
+@keyframes skFade{to{opacity:0;transform:translateY(-16px)}}
+
+/* scroll extras: hand-drawn underline + drifting doodles */
+.section-head.reveal h2::after{content:"";display:block;height:14px;width:0;margin-top:10px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='14' viewBox='0 0 120 14'%3E%3Cpath d='M2 7 Q17 -2 32 7 T62 7 T92 7 T118 7' fill='none' stroke='%23D9537B' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") 0 0/120px 14px repeat-x;transition:width 1.1s .5s var(--ease)}
+.section-head.reveal.in h2::after{width:150px}
+.fl-dd{position:fixed;z-index:2;pointer-events:none;font-size:26px;opacity:.5;will-change:transform;line-height:1}
+@media (max-width:900px){.fl-dd{display:none}}
+
+
+/* custom cursor */
+@media (hover:hover) and (pointer:fine){html.has-cursor,html.has-cursor *{cursor:none!important}}
+.cur-dot,.cur-ring,.cur-spark{position:fixed;left:0;top:0;pointer-events:none;z-index:1001}
+.cur-dot{width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;background:var(--rose);transition:transform .2s var(--ease),background .2s}
+.cur-ring{z-index:1002;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;border:1.5px solid var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:transparent;transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),background .3s,border-color .3s,color .2s;mix-blend-mode:normal}
+.cur-ring.link{width:60px;height:60px;margin:-30px 0 0 -30px;background:rgba(217,83,123,.14);border-color:var(--rose)}
+.cur-ring.view{width:96px;height:96px;margin:-48px 0 0 -48px;background:var(--rose);border-color:var(--rose);color:#fff}
+.cur-ring.hi{width:80px;height:80px;margin:-40px 0 0 -40px;background:var(--lavender);border-color:var(--lavender);color:#fff;border-radius:42% 58% 55% 45%/50% 45% 55% 50%}
+.cur-ring.text{width:4px;height:30px;margin:-15px 0 0 -2px;border-radius:2px;background:var(--rose);border-color:var(--rose)}
+.cur-dot.hide{opacity:0!important}
+.cur-spark{z-index:1000;font-size:var(--sz,20px);line-height:1;margin:-10px 0 0 -10px;font-weight:700;text-shadow:0 0 5px currentColor,0 1px 0 rgba(255,255,255,.7);animation:sparkFall 1s ease-out forwards}
+@keyframes sparkFall{from{opacity:1;transform:translate(0,0) scale(1) rotate(0)}50%{opacity:1}to{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.4) rotate(160deg)}}
+
+/* scroll animations */
+.reveal{filter:blur(6px);transition:opacity .8s var(--ease),transform .8s var(--ease),filter .8s var(--ease);transition-delay:var(--d,0ms)}
+.reveal.in{filter:none}
+.reveal.from-l{transform:translateX(-50px)}.reveal.from-r{transform:translateX(50px)}
+.reveal.from-l.in,.reveal.from-r.in{transform:none}
+.reveal.zoom{transform:translateY(40px) scale(.95)}.reveal.zoom.in{transform:none}
+.h2-show.reveal{transform:translateY(60px) scale(.96)}
+.h2-show.reveal.in{transform:none}
+.h2-show.reveal.in:hover{transform:translateY(-6px)}
+.polaroid.reveal{transform:translateY(40px) rotate(-8deg)}
+.polaroid.reveal.in{transform:rotate(-2deg)}
+.scroll-bar{position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--rose),var(--lavender),var(--butter));z-index:1002}
+@media (prefers-reduced-motion:reduce){.reveal{filter:none}.cur-spark{display:none}}
 </style>
 </head>
 <body>
 
+<div class="scroll-bar" id="scrollBar"></div>
+<div class="intro s-waves" id="intro" aria-hidden="true">
+  <div class="wv wv1"></div><div class="wv wv2"></div><div class="wv wv3"></div>
+  <div class="cu l"></div><div class="cu r"></div>
+  <div class="st" style="--i:0;background:#F6C6A8"></div><div class="st" style="--i:1;background:#E4D6F3"></div><div class="st" style="--i:2;background:#F5D98F"></div><div class="st" style="--i:3;background:#FADBE4"></div><div class="st" style="--i:4;background:#D9C8EE"></div><div class="st" style="--i:5;background:#F6C6A8"></div><div class="st" style="--i:6;background:#F5D98F"></div>
+  <div class="bl b1"></div><div class="bl b2"></div><div class="bl b3"></div><div class="bl b4"></div>
+  <div class="skwrap"><svg viewBox="0 0 900 340" aria-hidden="true">
+    <text class="sk-name" x="450" y="190" text-anchor="middle">Reshma Shirin</text>
+    <path class="skd" pathLength="1" style="--d:2.2s;--t:.9s;stroke:#3A4BD8" d="M170 235 C 300 262, 420 222, 560 248 S 740 238, 735 252"/>
+    <path class="skd" pathLength="1" style="--d:2.4s;--t:.7s;stroke:#E0A63A" d="M110 60 L122 92 L156 94 L130 114 L140 146 L110 128 L80 146 L90 114 L64 94 L98 92 Z"/>
+    <path class="skd" pathLength="1" style="--d:2.6s;--t:.8s;stroke:#D9537B" d="M790 70 C 790 40, 835 40, 835 72 C 835 40, 880 40, 880 70 C 880 105, 835 125, 835 140 C 835 125, 790 105, 790 70 Z"/>
+    <path class="skd" pathLength="1" style="--d:2.7s;--t:.9s;stroke:#4FA8D8" d="M730 290 c10 -22 24 -22 30 0 s22 22 30 0 s22 -22 30 0"/>
+    <path class="skd" pathLength="1" style="--d:2.9s;--t:.8s;stroke:#3A4BD8" d="M120 270 c-22 -40 14 -62 36 -40 c22 22 -16 52 -34 22"/>
+  </svg><p class="sk-sub">UX/UI &amp; interaction designer &middot; nearly 2 years of experience</p></div>
+  <div class="sk-stk" style="--i:0;--x:21%;--y:27%;--r:-12deg;--c:#E8B730;--dx:-60vw;--dy:-30vh">&#9733;</div>
+  <div class="sk-stk" style="--i:1;--x:79%;--y:25%;--r:9deg;--c:#D9537B;--dx:60vw;--dy:-30vh">&#10084;&#65039;</div>
+  <div class="sk-stk" style="--i:2;--x:14%;--y:68%;--r:8deg;--c:#B69CD8;--dx:-60vw;--dy:30vh">&#128247;</div>
+  <div class="sk-stk" style="--i:3;--x:86%;--y:71%;--r:-10deg;--c:#F6C6A8;--dx:60vw;--dy:30vh">&#9999;&#65039;</div>
+  <div class="sk-stk" style="--i:4;--x:34%;--y:86%;--r:-6deg;--c:#4FA8D8;--dx:-20vw;--dy:60vh">&#9823;&#65039;</div>
+  <div class="sk-stk" style="--i:5;--x:66%;--y:13%;--r:12deg;--c:#B69CD8;--dx:20vw;--dy:-60vh">&#9749;</div>
+  <div class="sk-stk" style="--i:6;--x:50%;--y:90%;--r:6deg;--c:#E8B730;--dx:0vw;--dy:60vh">&#10022;</div>
+
+  <span class="istar a" aria-hidden="true">&#10022;</span><span class="istar b" aria-hidden="true">&#10039;</span>
+  <div class="intro-text">
+    <p class="i1">Hello, I&rsquo;m</p>
+    <h1 class="i2">Reshma Shirin</h1>
+    <p class="i3">UX/UI &amp; interaction designer &middot; nearly 2 years of experience</p>
+  </div>
+  <button class="intro-skip" id="introSkip" type="button">Skip intro</button>
+</div>
+<script>
+/* INTRO STYLE: sketch | waves | curtain | stripes | type | bloom  (default = sketch; preview any with index.html?intro=curtain) */
+(function(){var D="sketch",L=["sketch","waves","curtain","stripes","type","bloom"],m=/[?&]intro=(\w+)/.exec(location.search),n=m&&L.indexOf(m[1])>-1?m[1]:D,e=document.getElementById("intro");if(e)e.className="intro s-"+n;window.__introStyle=n;window.__introPreview=!!(m&&L.indexOf(m[1])>-1);window.__introList=L;})();
+</script>
+
 <!-- ================= NAV ================= -->
 <nav class="nav">
   <div class="nav-inner">
-    <a class="logo" href="#top" data-home><span class="dot"></span>Ray design</a>
+    <a class="logo" href="#top" data-home aria-label="Reshma Shirin, home"><span class="logo-hand">Ray</span></a>
     <div class="nav-links">
       <a href="#work" data-home>Work</a>
-      <a href="#think" data-home>How I think</a>
       <a href="#about" data-home>About</a>
-      <a href="#life" data-home>Life</a>
       <a href="#experience" data-home>Experience</a>
-      <a class="resume-link" href="#contact" data-home>Contact</a>
+      <a class="resume-link" href="#contact" data-home>Say hello</a>
     </div>
     <button class="nav-burger" id="burger" aria-expanded="false" aria-controls="mnav">menu +</button>
   </div>
   <div class="nav-mobile" id="mnav">
     <a href="#work" data-home>Work</a>
-    <a href="#think" data-home>How I think</a>
     <a href="#about" data-home>About</a>
-    <a href="#life" data-home>Life</a>
     <a href="#experience" data-home>Experience</a>
-    <a href="#contact" data-home>Contact</a>
+    <a href="#contact" data-home>Say hello</a>
   </div>
 </nav>
 
@@ -1062,131 +1383,70 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
      ============================================================ -->
 <div class="view active" id="view-home">
 
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>UX/UI design</span><span>·</span><span>interaction design</span><span>·</span><span>healthcare UX</span><span>·</span><span>MedTech</span><span>·</span><span>AR/VR</span><span>·</span><span>AI-assisted product design</span><span>·</span><span>everything is figureoutable</span><span>·</span>
-    <span>UX/UI design</span><span>·</span><span>interaction design</span><span>·</span><span>healthcare UX</span><span>·</span><span>MedTech</span><span>·</span><span>AR/VR</span><span>·</span><span>AI-assisted product design</span><span>·</span><span>everything is figureoutable</span><span>·</span>
-  </div>
-</div>
 
 <main id="top">
 
-<!-- ================= HERO ================= -->
-<header class="hero">
-  <span class="spark s1" aria-hidden="true">✦</span>
-  <span class="spark s2" aria-hidden="true">✧</span>
-  <span class="spark s3" aria-hidden="true">✦</span>
+<header class="h2-hero">
+  <span class="star s1" aria-hidden="true">&#10022;</span><span class="star s2" aria-hidden="true">&#10039;</span><span class="star s3" aria-hidden="true">&#10022;</span>
   <div class="container">
-    <div class="hero-meta">
-      <div><span class="k">name:</span> Reshma “Ray” Shirin A</div>
-      <div><span class="k">role:</span> UX/UI & Interaction Designer</div>
-      <div><span class="k">base:</span> Ireland / India</div>
-      <div><span class="k">status:</span> <b>open to work</b></div>
+    <p class="h2-kicker">Reshma Shirin &middot; UX/UI &amp; Interaction Designer</p>
+    <h1>I turn <span class="u u-rose">messy problems</span> into <span class="u u-lav">clear, kind</span> products.</h1>
+    <div class="h2-sub">
+      <div class="h2-burst"><b>~2</b><span>Nearly two years designing healthcare, MedTech, AR/VR and AI-assisted products. MSc in Interaction &amp; Experience Design, First Class Honours.</span></div>
+      <p class="h2-where">Based in Ireland / India<br><span class="h2-open"><i></i>Open to work</span></p>
     </div>
-
-    <h1>Messy problems in.<br><span class="it">Clear, kind</span> products <span class="lav">out.</span></h1>
-
-    <div class="hero-sub">
-      <p class="big-line">Designer who thinks in <em>flows, systems, and spaces</em> — turning complex user problems into products people actually get. From migraine-safe VR to post-surgery recovery apps.</p>
-      <div class="hero-blurb">
-        <p>Designer by profession, interaction thinker by training, healthcare nerd by choice. 2+ years across web, mobile, MedTech, AR/VR, and AI-assisted product design — with an MSc in Interaction &amp; Experience Design and a soft spot for problems everyone else calls "too complicated".</p>
-        <p>If something makes you curious, my inbox is <a href="mailto:reshma.shirin07@gmail.com">open</a>.</p>
-        <div class="hero-ctas">
-          <a class="btn" href="#work" data-home>See the work ↓</a>
-          <a class="btn btn--ghost" href="#contact" data-home>Say hello</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-chips">
-      <span>Figma</span><span>Adobe XD</span><span>Sketch</span><span>Unity 3D</span><span>Blender</span><span>Miro</span><span>After Effects</span><span>AI tools</span>
-    </div>
+    <a class="h2-scroll" href="#work" data-home>Scroll down &darr;</a>
   </div>
 </header>
 
-<!-- ================= STATS ================= -->
-<div class="stat-strip">
-  <div class="stat-grid">
-    <div class="stat"><b>2+ yrs</b><span>product &amp; UX design</span></div>
-    <div class="stat"><b>5</b><span>project stories inside</span></div>
-    <div class="stat"><b>1st class</b><span>honours · MSc IxD</span></div>
-    <div class="stat"><b>7</b><span>certifications</span></div>
-  </div>
-</div>
+<section class="h2-help" aria-label="What I can help with">
+  <div class="container"><h2>What I can help you with</h2></div>
+  <div class="h2-ticker" aria-hidden="true"><div class="h2-ticker-track"><span>UX/UI Design</span><b>&#10022;</b><span>Interaction Design</span><b>&#10022;</b><span>Healthcare UX</span><b>&#10022;</b><span>MedTech</span><b>&#10022;</b><span>AR/VR</span><b>&#10022;</b><span>AI-assisted Design</span><b>&#10022;</b><span>User Research</span><b>&#10022;</b><span>Design Systems</span><b>&#10022;</b><span>Prototyping</span><b>&#10022;</b><span>Accessibility</span><b>&#10022;</b><span>Figma</span><b>&#10022;</b><span>Unity</span><b>&#10022;</b><span>UX/UI Design</span><b>&#10022;</b><span>Interaction Design</span><b>&#10022;</b><span>Healthcare UX</span><b>&#10022;</b><span>MedTech</span><b>&#10022;</b><span>AR/VR</span><b>&#10022;</b><span>AI-assisted Design</span><b>&#10022;</b><span>User Research</span><b>&#10022;</b><span>Design Systems</span><b>&#10022;</b><span>Prototyping</span><b>&#10022;</b><span>Accessibility</span><b>&#10022;</b><span>Figma</span><b>&#10022;</b><span>Unity</span><b>&#10022;</b></div></div>
+</section>
 
-<!-- ================= WORK (previews) ================= -->
-<section class="section" id="work">
+<section class="h2-work" id="work">
   <div class="container">
-    <div class="section-head reveal">
-      <span class="mono-label">recent work</span>
-      <h2>Stories I've researched,<br>designed &amp; <span class="it">lovingly told.</span></h2>
-    </div>
-
-    <div class="work-grid">
-
-      <!-- featured: VR for Migraine -->
-      <a class="wcard wcard--featured reveal" href="#/work/vr-migraine">
-        <div class="wcard-visual">
-          <div class="scene pv-vr">
+    <h2 class="h2-title">Here&rsquo;s where I&rsquo;ve <span class="u u-yel">done it</span></h2>
+    
+    <a class="h2-show" style="--bg:#E8E3F6" href="#/work/vr-migraine">
+      <div class="sc-visual"><div class="scene pv-vr">
             <div class="ring"></div><div class="orb"></div><div class="hor"></div>
             <div class="hud">session · calm · 12 min</div>
-          </div>
-          <span class="pv-tag">Immersive Healthcare · VR</span>
-          <div class="wcard-peek" aria-hidden="true">
-            <span class="peek-title">a peek inside</span>
-            <span class="peek-line">interviews with migraine sufferers on sensory limits</span>
-            <span class="peek-line">a zero-reading, one-action entry flow</span>
-            <span class="peek-line">First Class Honours thesis · sensory-safe VR framework</span>
-            <span class="peek-cta">open the full story →</span>
-          </div>
-        </div>
-        <div class="wcard-body">
-          <span class="meta">VRM · <b>RAY</b> · MSc Thesis · University of Limerick</span>
-          <h3><em>Exploring VR for Relaxation During Migraine Episodes</em></h3>
-          <p class="oneline">A VR relaxation concept built for a user's lowest-capacity moment: near-dark by default, zero reading, one-action entry.</p>
-          <div class="chips"><span>UX Research</span><span>VR UX</span><span>Interaction Design</span><span>3D</span></div>
-          <span class="read">Read case study →</span>
-        </div>
-      </a>
+            <img class="cover" src="photos/vr-05.jpg" alt="Moonlit Japanese garden from the VR environment" onerror="this.remove()">
+          </div></div>
+      <div class="sc-text">
+        <span class="sc-n">01</span>
+        <span class="sc-k">MSc thesis · Immersive healthcare</span>
+        <h3>Exploring VR for relaxation during migraine episodes</h3>
+        <p>A near-dark, zero-reading, one-action VR relaxation concept for a user's lowest-capacity moment. First Class Honours thesis, University of Limerick.</p>
+        <span class="sc-btn">View case study <i>&rarr;</i></span>
+      </div>
+    </a>
 
-      <!-- MedCare -->
-      <a class="wcard reveal" href="#/work/medcare">
-        <div class="wcard-visual">
-          <div class="scene pv-med">
-            <div class="ph back">
-              <div class="row"><div class="bar"></div></div>
-              <div class="card"><div class="bar"></div><div class="bar" style="width:55%"></div></div>
-              <div class="card"><div class="bar"></div><div class="bar" style="width:70%"></div></div>
-            </div>
-            <div class="ph">
-              <div class="row"><i></i><div class="bar"></div></div>
-              <div class="row"><i></i><div class="bar"></div></div>
-              <div class="row"><i></i><div class="bar"></div></div>
-              <div class="card"><div class="bar"></div><div class="bar" style="width:60%"></div></div>
-            </div>
-            <div class="pulse">day 14/30 · BP 122/78</div>
-          </div>
-          <span class="pv-tag">Healthcare · Mobile</span>
-          <div class="wcard-peek" aria-hidden="true">
-            <span class="peek-title">a peek inside</span>
-            <span class="peek-line">journey-mapping the fragile first 30 days home</span>
-            <span class="peek-line">a symptom checker with three calm outcomes</span>
-            <span class="peek-cta">open the full story →</span>
-          </div>
-        </div>
-        <div class="wcard-body">
-          <span class="meta">MED · <b>RAY</b> · Healthcare · MedTech</span>
-          <h3>Turning discharge chaos into <em>one calm daily checklist</em> — MedCare</h3>
-          <p class="oneline">A recovery companion for cardiac patients and their caregivers through the first 30 days after stent surgery.</p>
-          <div class="chips"><span>Healthcare UX</span><span>Journey Mapping</span><span>Accessibility</span></div>
-          <span class="read">Read case study →</span>
-        </div>
-      </a>
+    <a class="h2-show" style="--bg:#E3ECFB" href="#/work/medcare">
+      <div class="sc-visual"><div class="scene pv-med3"><img src="photos/medcare-thumb.jpg" alt="MedCare screens" onerror="this.remove()"></div></div>
+      <div class="sc-text">
+        <span class="sc-n">02</span>
+        <span class="sc-k">Healthcare UX · Concept project</span>
+        <h3>A calmer first 30 days after stent surgery</h3>
+        <p>MedCare Companion turns discharge chaos into clear daily actions, with caregiver support on the patient's terms.</p>
+        <span class="sc-btn">View case study <i>&rarr;</i></span>
+      </div>
+    </a>
 
-      <!-- Alibi -->
-      <a class="wcard reveal" href="#/work/alibi">
-        <div class="wcard-visual">
-          <div class="scene pv-alibi">
+    <a class="h2-show" style="--bg:#F3E6E8" href="#/work/verasa">
+      <div class="sc-visual"><div class="scene pv-vrs"><img src="photos/verasa-01.jpg" alt="Vérasa homepage hero" onerror="this.remove()"></div></div>
+      <div class="sc-text">
+        <span class="sc-n">03</span>
+        <span class="sc-k">E-commerce · Concept project</span>
+        <h3>An editorial storefront with confidence woven in</h3>
+        <p>V&eacute;rasa is a research-led Indian-wear concept that makes fit, fabric and cost clear before the customer commits.</p>
+        <span class="sc-btn">View case study <i>&rarr;</i></span>
+      </div>
+    </a>
+
+    <a class="h2-show dark" style="--bg:#1F1B24" href="#/work/alibi">
+      <div class="sc-visual"><div class="scene pv-alibi">
             <div class="a2-top"><span class="a2-mark">Alibi</span><span class="a2-year">2026</span></div>
             <div class="a2-upload"><span class="a2-updot"></span>Upload a statement <span class="a2-or">or try sample data</span></div>
             <div class="a2-card">
@@ -1194,79 +1454,38 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
               <div class="a2-card-row"><span class="a2-card-dot"></span><span class="a2-card-line short"></span><span class="a2-card-amt">•••• 88</span></div>
             </div>
             <div class="a2-insight"><span class="a2-quote">"</span>Your Tuesdays are unusually heavy this month.<span class="a2-clue">Clue 03</span></div>
-          </div>
-          <span class="pv-tag">FinTech · Behavioural</span>
-          <span class="pv-status">Ongoing</span>
-          <div class="wcard-peek" aria-hidden="true">
-            <span class="peek-title">a peek inside</span>
-            <span class="peek-line">start with one month of statement data — no bank linking</span>
-            <span class="peek-line">HDFC, ICICI, SBI, Axis &amp; Kotak statement support</span>
-            <span class="peek-cta">open the full story →</span>
-          </div>
-        </div>
-        <div class="wcard-body">
-          <span class="meta">ALB · <b>RAY</b> · FinTech · Behavioural Finance · SaaS</span>
-          <h3>From an ordinary transaction to <em>a clue you can carry</em> — Alibi</h3>
-          <p class="oneline">A reflective finance product that turns statement data into monthly stories, spending clues, and next-month watchlists.</p>
-          <div class="chips"><span>Product Strategy</span><span>UX Direction</span><span>Ongoing Project</span></div>
-          <span class="read">Read case study →</span>
-        </div>
-      </a>
+          <img class="cover" src="photos/alibi-01.jpg" alt="Alibi landing page" onerror="this.remove()"></div></div>
+      <div class="sc-text">
+        <span class="sc-n">04</span>
+        <span class="sc-k">FinTech · Ongoing project</span>
+        <h3>From an ordinary transaction to a clue you can carry</h3>
+        <p>Alibi turns bank statement data into monthly stories, spending clues and next-month watchlists.</p>
+        <span class="sc-btn">View case study <i>&rarr;</i></span>
+      </div>
+    </a>
 
-      <!-- Human Mode -->
-      <a class="wcard reveal" href="#/work/human-mode">
-        <div class="wcard-visual">
-          <div class="scene pv-hmn">
-            <span class="hm-tag">Human Mode</span>
-            <span class="hm-mark">✎</span>
-            <span class="hm-note">an idea, half-formed…</span>
-            <span class="hm-branch"></span>
-            <span class="hm-ai">structured suggestion →</span>
-          </div>
-          <span class="pv-tag">UX/UI · Service Design</span>
-          <span class="pv-status">Ongoing</span>
-          <div class="wcard-peek" aria-hidden="true">
-            <span class="peek-title">a peek inside</span>
-            <span class="peek-line">a thinking layer between your request and the AI's answer</span>
-            <span class="peek-line">three modes — My Turn, Think Together, Fast Assist</span>
-            <span class="peek-cta">see the work in progress →</span>
-          </div>
-        </div>
-        <div class="wcard-body">
-          <span class="meta">HMN · <b>RAY</b> · UX/UI · Service Design · Human–AI Interaction</span>
-          <h3>Use AI. <em>Keep your mind.</em> — Human Mode</h3>
-          <p class="oneline">Human Mode explores how people can use generative AI without losing ownership of their thinking — starting with your own idea before choosing how much AI help you actually need.</p>
-          <p style="font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;color:var(--muted);margin:-6px 0 14px">Currently designing the core experience and interaction system.</p>
-          <div class="chips"><span>UX Research</span><span>Service Design</span><span>Ongoing Project</span></div>
-          <span class="read">View Work in Progress →</span>
-        </div>
-      </a>
+    <a class="h2-show" style="--bg:#DCE9F4" href="#/work/water-tourism">
+      <div class="sc-visual"><div class="scene pv-wtr"><span class="wt">STEEP · 2032</span><span class="rp rp1"></span><span class="rp rp2"></span><span class="rp rp3"></span><span class="rp rp4"></span><span class="yr">2032</span><img class="cover" src="photos/water-06.jpg" alt="Water Tourism Fest concept" onerror="this.remove()"></div></div>
+      <div class="sc-text">
+        <span class="sc-n">05</span>
+        <span class="sc-k">Speculative design · Team of 3</span>
+        <h3>Imagining water tourism in 2032</h3>
+        <p>Futures research and what-if ideation that led to a two-day water fest helping Gen Z bond with water.</p>
+        <span class="sc-btn">View case study <i>&rarr;</i></span>
+      </div>
+    </a>
 
-      <!-- Beyond Design · creative corner -->
-      <a class="wcard wcard--featured reveal" href="#/work/beyond">
-        <div class="wcard-visual">
-          <div class="scene pv-beyond">
-            <div class="pl pl1"></div><div class="pl pl2"></div><div class="pl pl3"></div>
-            <div class="orbit"><i></i></div><div class="node"></div>
-          </div>
-          <span class="pv-tag">Illustrations · 3D · Play</span>
-          <div class="wcard-peek" aria-hidden="true">
-            <span class="peek-title">a peek inside</span>
-            <span class="peek-line">hand-drawn illustrations and doodles</span>
-            <span class="peek-line">3D renders and playful experiments</span>
-            <span class="peek-cta">step inside →</span>
-          </div>
-        </div>
-        <div class="wcard-body">
-          <span class="meta">BYD · <b>RAY</b> · Creative Corner</span>
-          <h3>Beyond design — where the <em>illustrations live.</em></h3>
-          <p class="oneline">The non-client corner of my practice: illustrations, doodles, 3D renders, and experiments made purely for the joy of it.</p>
-          <div class="chips"><span>Illustration</span><span>3D Art</span><span>Experiments</span></div>
-          <span class="read">Step inside →</span>
-        </div>
-      </a>
+    <a class="h2-show" style="--bg:#F6E7D8" href="#/work/beyond">
+      <div class="sc-visual"><div class="scene pv-img" style="background:#000"><img class="cover" src="photos/art-11.jpg" alt="Glass chess set 3D render" onerror="this.remove()"></div></div>
+      <div class="sc-text">
+        <span class="sc-n">06</span>
+        <span class="sc-k">Creative corner</span>
+        <h3>Beyond design</h3>
+        <p>Social creatives, illustrations and experiments made purely for the joy of it.</p>
+        <span class="sc-btn">View case study <i>&rarr;</i></span>
+      </div>
+    </a>
 
-    </div>
   </div>
 </section>
 
@@ -1323,21 +1542,21 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   <div class="container">
     <div class="section-head reveal">
       <span class="mono-label">about</span>
-      <h2>A little about <span class="it">Ray.</span></h2>
+      <h2>A little about <span class="it">me.</span></h2>
     </div>
     <div class="about-grid">
       <aside class="polaroid reveal">
         <span class="tape" aria-hidden="true"></span>
         <div class="ph-area">
-          <img src="photos/ray-portrait.jpg" alt="Reshma Shirin A" onerror="this.remove()">
+          <img src="photos/portrait.jpg" alt="Reshma Shirin" onerror="this.remove()">
         </div>
         <div class="cap"><span class="hand-note">hi, it's me!</span><span>est. 2022</span></div>
       </aside>
       <div class="about-copy reveal">
-        <p class="big-line"><em>Hi, I'm Reshma — Ray to most people — and I solve problems for a living.</em> The fun kind: where "it's complicated" becomes "oh, I get it."</p>
+        <p class="big-line"><em>Hi, I'm Reshma Shirin, and I solve problems for a living.</em> The fun kind: where "it's complicated" becomes "oh, I get it."</p>
         <p>Designer by profession, interaction thinker by training, healthcare nerd by choice. I studied Interaction Design in Bangalore, took an MSc in Interaction &amp; Experience Design at the University of Limerick (First Class Honours — thesis on VR for migraine relief), and I'm now deep in <b>Medical Device Technology &amp; Business</b> at Griffith University, learning why regulated products are the ultimate design constraint.</p>
         <p>My happy place is the intersection of <b>care and craft</b>: healthcare flows that calm people down, immersive experiences that respect the body, AI features that earn trust instead of demanding it. When I'm not pushing pixels, you'll find me at the water's edge, chasing a new trail, three hours deep in a playlist, hunting down <b>FOOOODD</b> worth photographing — or photographing everything else.</p>
-        <p class="sig">~ Reshma "Ray" Shirin A</p>
+        <p class="sig">~ Reshma Shirin</p>
         <div class="fact-list">
           <div class="fact"><span class="k">degree</span><span>MSc Interaction &amp; Experience Design · University of Limerick · First Class Honours</span></div>
           <div class="fact"><span class="k">now</span><span>PG · Medical Device Technology &amp; Business · Griffith University, Ireland</span></div>
@@ -1374,34 +1593,39 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
       <div class="film-scroller">
         <div class="film-track" id="filmTrack">
           <div class="frame">
-            <span class="frame-no">RAY · 35MM · 01A</span>
-            <div class="shot"><div class="ph-fill ph-beach"><span class="sym">🌊</span><span class="add">your photo here</span></div><img src="photos/01-beach.jpg" alt="At the water's edge" onerror="this.remove()"></div>
+            <span class="frame-no">RS · 35MM · 01A</span>
+            <div class="shot"><div class="ph-fill ph-beach"><span class="sym">🌊</span><span class="add">your photo here</span></div><img src="photos/01-beach.jpg" style="object-position:50% 45%" alt="At the water's edge" onerror="this.remove()"></div>
             <div class="cap"><span>the water's edge</span><b>01</b></div>
           </div>
           <div class="frame">
-            <span class="frame-no">RAY · 35MM · 02A</span>
+            <span class="frame-no">RS · 35MM · 02A</span>
             <div class="shot"><div class="ph-fill ph-adventure"><span class="sym">⛰️</span><span class="add">your photo here</span></div><img src="photos/02-adventure.jpg" alt="Adventure day" onerror="this.remove()"></div>
-            <div class="cap"><span>chasing horizons</span><b>02</b></div>
+            <div class="cap"><span>above the clouds</span><b>02</b></div>
           </div>
           <div class="frame">
-            <span class="frame-no">RAY · 35MM · 03A</span>
-            <div class="shot"><div class="ph-fill ph-music"><span class="sym">🎧</span><span class="add">your photo here</span></div><img src="photos/03-music.jpg" alt="Deep in a playlist" onerror="this.remove()"></div>
-            <div class="cap"><span>playlist mode</span><b>03</b></div>
+            <span class="frame-no">RS · 35MM · 03A</span>
+            <div class="shot"><div class="ph-fill ph-music"><span class="sym">🛕</span><span class="add">your photo here</span></div><img src="photos/03-temple.jpg" style="object-position:50% 38%" alt="Temple gopuram" onerror="this.remove()"></div>
+            <div class="cap"><span>temple town</span><b>03</b></div>
           </div>
           <div class="frame">
-            <span class="frame-no">RAY · 35MM · 04A</span>
-            <div class="shot"><div class="ph-fill ph-food"><span class="sym">🍜</span><span class="add">your photo here</span></div><img src="photos/04-food.jpg" alt="Food worth photographing" onerror="this.remove()"></div>
+            <span class="frame-no">RS · 35MM · 04A</span>
+            <div class="shot"><div class="ph-fill ph-food"><span class="sym">🍜</span><span class="add">your photo here</span></div><img src="photos/04-food.jpg" style="object-position:50% 82%" alt="Food worth photographing" onerror="this.remove()"></div>
             <div class="cap"><span>FOOOODD</span><b>04</b></div>
           </div>
           <div class="frame">
-            <span class="frame-no">RAY · 35MM · 05A</span>
-            <div class="shot"><div class="ph-fill ph-lens"><span class="sym">📷</span><span class="add">your photo here</span></div><img src="photos/05-lens.jpg" alt="Through my lens" onerror="this.remove()"></div>
-            <div class="cap"><span>through my lens</span><b>05</b></div>
+            <span class="frame-no">RS · 35MM · 05A</span>
+            <div class="shot"><div class="ph-fill ph-lens"><span class="sym">📷</span><span class="add">your photo here</span></div><img src="photos/05-lens.jpg" style="object-position:50% 55%" alt="Through my lens" onerror="this.remove()"></div>
+            <div class="cap"><span>coffee &amp; film</span><b>05</b></div>
           </div>
           <div class="frame">
-            <span class="frame-no">RAY · 35MM · 06A</span>
-            <div class="shot"><div class="ph-fill ph-golden"><span class="sym">✨</span><span class="add">your photo here</span></div><img src="photos/06-golden.jpg" alt="Golden hour" onerror="this.remove()"></div>
-            <div class="cap"><span>golden hour</span><b>06</b></div>
+            <span class="frame-no">RS · 35MM · 06A</span>
+            <div class="shot"><div class="ph-fill ph-golden"><span class="sym">✨</span><span class="add">your photo here</span></div><img src="photos/06-golden.jpg" style="object-position:50% 62%" alt="Red evening sky" onerror="this.remove()"></div>
+            <div class="cap"><span>after the rain</span><b>06</b></div>
+          </div>
+          <div class="frame">
+            <span class="frame-no">RS · 35MM · 07A</span>
+            <div class="shot"><div class="ph-fill ph-lens"><span class="sym">🏛️</span><span class="add">your photo here</span></div><img src="photos/07-city.jpg" alt="Old stone building and wires" onerror="this.remove()"></div>
+            <div class="cap"><span>city lines</span><b>07</b></div>
           </div>
         </div>
       </div>
@@ -1418,6 +1642,19 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
       <h2>Where I've <span class="it">worked.</span></h2>
     </div>
     <div class="ledger reveal">
+      <div class="ledger-row">
+        <span class="when">Present · ongoing</span>
+        <div class="what">
+          <b>Growish Digital</b>
+          <span>Freelance Visual Graphic Designer &amp; Interaction Designer · current</span>
+          <ul class="pts">
+            <li>Designing social creatives and illustrated posts for The Donuts Bakery &amp; Caf&eacute; and Burgundy Coffee</li>
+            <li>Managing clients through Growish Digital, from brief to delivery, across 3&ndash;4 more brands at the same time</li>
+            <li>Working fully remotely, balancing several brand voices and deadlines in parallel</li>
+          </ul>
+        </div>
+        <span class="where">Remote</span>
+      </div>
       <div class="ledger-row">
         <span class="when">01/2023 — 08/2023</span>
         <div class="what">
@@ -1489,6 +1726,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
         <div class="what">
           <b>Strate School of Design</b>
           <span>BSc Interaction Design · Jain University, Bangalore.</span>
+          <span class="badge">First Class</span>
         </div>
         <span class="where">Bangalore, IN</span>
       </div>
@@ -1556,21 +1794,17 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
       </div>
       <div class="contact-row">
         <span class="k">linkedin</span>
-        <a href="https://www.linkedin.com/in/reshma-shirin-a-b35397220/" target="_blank" rel="noopener">Reshma Shirin A <span class="arr">↗</span></a>
+        <a href="https://www.linkedin.com/in/reshma-shirin-a-b35397220/" target="_blank" rel="noopener">Reshma Shirin <span class="arr">↗</span></a>
       </div>
       <div class="contact-row">
         <span class="k">medium</span>
         <a href="https://medium.com/@reshma.shirin07" target="_blank" rel="noopener">@reshma.shirin07 <span class="arr">↗</span></a>
       </div>
-      <div class="contact-row">
-        <span class="k">resume</span>
-        <a href="mailto:reshma.shirin07@gmail.com?subject=Resume%20request">Ask for the PDF <span class="arr">↗</span></a>
-      </div>
     </div>
 
     <div class="footer-line">
       <span class="hand-note">designed with care, verified by users</span>
-      <span>© 2026 Reshma Shirin A · Ray design</span>
+      <span>© 2026 Reshma Shirin</span>
     </div>
   </div>
 </section>
@@ -1585,7 +1819,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   <header class="cs-hero">
     <div class="container">
       <a class="cs-back" href="#work" data-home>← back to work</a>
-      <span class="meta">VRM · <b>RAY</b> · MSc Thesis · University of Limerick, 2024</span>
+      <span class="meta">VRM · <b>RESHMA</b> · MSc Thesis · University of Limerick, 2024</span>
       <h1><em>Exploring VR for Relaxation During Migraine Episodes.</em></h1>
       <p class="tagline hand-note">can immersion be gentle?</p>
       <p class="lede">A VR relaxation prototype exploring whether a fully customisable, low-stimulation environment can help migraine sufferers relax and manage discomfort during an episode — without asking too much of a body that's already struggling. My MSc thesis in Interaction &amp; Experience Design at the University of Limerick, submitted August 2024, built and evaluated with real migraine sufferers through surveys, interviews, and hands-on user testing.</p>
@@ -1600,6 +1834,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
         <div class="scene pv-vr">
           <div class="ring"></div><div class="orb"></div><div class="hor"></div>
           <div class="hud">forest · dark room · starry night</div>
+          <img class="cover" src="photos/vr-05.jpg" alt="Moonlit Japanese garden from the VR environment" onerror="this.remove()">
         </div>
       </div>
     </div>
@@ -1728,28 +1963,54 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
       </div>
 
       <div class="cs-sub">
-        <span class="mono-label">from the build</span>
-        <h3>Inside the <em>prototype.</em></h3>
-        <p class="sub-lede">Captures from user testing and the Unity build — added here as the final images are selected.</p>
+        <span class="mono-label">the product</span>
+        <h3>Inside the <em>headset.</em></h3>
+        <p class="sub-lede">What a participant sees: a calm starting scene, a floating menu that stays out of the way, and large, minimal controls for sound, tone, tips and a one-press exit.</p>
       </div>
-      <div class="screen-grid landscape">
+      <div class="screen-grid landscape cols-3">
         <div class="screen-tile">
           <div class="frame-web">
-            <div class="scr-web"><div class="ph-scr dark" style="background:linear-gradient(165deg,#2C3B27 0%,#5C7A52 100%)"><span class="sn">01</span><span class="add">your photo here</span></div><img src="photos/vr-01.jpg" alt="Participant using the VR prototype during testing" onerror="this.remove()"></div>
+            <div class="scr-web"><div class="ph-scr dark" style="background:linear-gradient(165deg,#2C3B27 0%,#5C7A52 100%)"><span class="sn">2</span></div><img src="photos/vr-02.jpg" alt="Forest scene with the soundscape menu" loading="lazy" onerror="this.remove()"></div>
           </div>
-          <div class="s-cap"><b>User testing session</b><p>A participant in headset, working through the prototype's tasks.</p></div>
+          <div class="s-cap"><b>Choose a soundscape</b><p>Forest sound, gentle music or birdsong, with a volume slider and an always-available control bar.</p></div>
         </div>
         <div class="screen-tile">
           <div class="frame-web">
-            <div class="scr-web"><div class="ph-scr dark" style="background:linear-gradient(165deg,#1E1B3A 0%,#5D4FA5 100%)"><span class="sn">02</span><span class="add">your screenshot here</span></div><img src="photos/vr-02.jpg" alt="Environment selection screen during testing" onerror="this.remove()"></div>
+            <div class="scr-web"><div class="ph-scr dark" style="background:linear-gradient(165deg,#1E1B3A 0%,#5D4FA5 100%)"><span class="sn">3</span></div><img src="photos/vr-03.jpg" alt="Starry night welcome menu" loading="lazy" onerror="this.remove()"></div>
           </div>
-          <div class="s-cap"><b>Environment selection</b><p>The test screen where participants chose forest, dark room, or starry night.</p></div>
+          <div class="s-cap"><b>Pick your position</b><p>The welcome screen asks whether to sit, stand or lie down, so the camera height fits the body.</p></div>
         </div>
         <div class="screen-tile">
           <div class="frame-web">
-            <div class="scr-web"><div class="ph-scr dark" style="background:linear-gradient(165deg,#2A2B2E 0%,#5C4A2E 100%)"><span class="sn">03</span><span class="add">your render here</span></div><img src="photos/vr-03.jpg" alt="Dark room and forest environments built in Unity" onerror="this.remove()"></div>
+            <div class="scr-web"><div class="ph-scr dark" style="background:linear-gradient(165deg,#2A2B2E 0%,#5C4A2E 100%)"><span class="sn">4</span></div><img src="photos/vr-04.jpg" alt="Garden scene with the tone slider" loading="lazy" onerror="this.remove()"></div>
           </div>
-          <div class="s-cap"><b>Unity environment build</b><p>The dark room and forest scenes, developed and lit in Unity.</p></div>
+          <div class="s-cap"><b>Warm or cool tone</b><p>Swipe to shift the light cooler or warmer, tuned to each person's light sensitivity.</p></div>
+        </div>
+      </div>
+
+      <div class="cs-sub">
+        <span class="mono-label">the environments</span>
+        <h3>Built and lit <em>in Unity.</em></h3>
+        <p class="sub-lede">The garden at night, a dark tatami room and the Unity scene view: each environment was built to look appealing while staying low-stimulation.</p>
+      </div>
+      <div class="screen-grid landscape cols-3">
+        <div class="screen-tile">
+          <div class="frame-web">
+            <div class="scr-web"><div class="ph-scr dark" style="background:linear-gradient(165deg,#1E1B3A 0%,#5D4FA5 100%)"><span class="sn">5</span></div><img src="photos/vr-05.jpg" alt="Japanese garden at night environment" loading="lazy" onerror="this.remove()"></div>
+          </div>
+          <div class="s-cap"><b>Garden at night</b><p>Moonlit courtyard with soft lantern light and only gentle, slow motion.</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web">
+            <div class="scr-web"><div class="ph-scr dark" style="background:linear-gradient(165deg,#2A2B2E 0%,#5C4A2E 100%)"><span class="sn">6</span></div><img src="photos/vr-06.jpg" alt="Dark tatami room environment" loading="lazy" onerror="this.remove()"></div>
+          </div>
+          <div class="s-cap"><b>Dark room</b><p>A near-dark space with warm lantern light, for the most light-sensitive moments.</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web">
+            <div class="scr-web"><div class="ph-scr dark" style="background:linear-gradient(165deg,#2C3B27 0%,#5C7A52 100%)"><span class="sn">7</span></div><img src="photos/vr-07.jpg" alt="Garden scene open in the Unity editor" loading="lazy" onerror="this.remove()"></div>
+          </div>
+          <div class="s-cap"><b>In the Unity editor</b><p>The garden scene in the Unity scene view, with the project's scene assets below.</p></div>
         </div>
       </div>
 
@@ -1782,6 +2043,14 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
         <span class="mono-label">user testing</span>
         <h3>Five participants, <em>real feedback.</em></h3>
         <p class="sub-lede">Each participant put on the headset, chose a position, selected an environment, adjusted tone and sound, checked the migraine-tips section, then exited — while being observed for friction points.</p>
+      </div>
+      <div class="screen-grid landscape" style="grid-template-columns:minmax(0,860px);margin-bottom:28px">
+        <div class="screen-tile">
+          <div class="frame-web">
+            <div class="scr-web"><div class="ph-scr dark" style="background:linear-gradient(165deg,#2C3B27 0%,#5C7A52 100%)"><span class="sn">1</span></div><img src="photos/vr-01.jpg" alt="Participants wearing VR headsets during user testing" loading="lazy" onerror="this.remove()"></div>
+          </div>
+          <div class="s-cap"><b>User testing sessions</b><p>Four participants trying the prototype in the lab, each working through the same tasks while being observed.</p></div>
+        </div>
       </div>
       <div class="find-list">
         <div class="find"><span class="tag t-friction">friction</span><p>Several participants said the headset felt heavy after extended use. <b>Noted for future iterations: a lighter, more ergonomic headset design.</b></p></div>
@@ -1837,295 +2106,412 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   <header class="cs-hero">
     <div class="container">
       <a class="cs-back" href="#work" data-home>← back to work</a>
-      <span class="meta">MED · <b>RAY</b> · Healthcare UX · MedTech · Self-initiated concept</span>
-      <h1>Turning discharge chaos into <em>one calm daily checklist.</em></h1>
-      <p class="tagline hand-note">recovery shouldn't be a scavenger hunt</p>
-      <p class="lede">Designing a calmer, safer recovery experience for older cardiac patients and their family caregivers — <b>reducing confusion, missed care, and anxiety</b> during the first 30 days after discharge.</p>
+      <span class="meta">MED · <b>RESHMA</b> · Healthcare UX · MedTech · Self-initiated concept</span>
+      <h1>A calmer first 30 days <em>after stent surgery.</em></h1>
+      <p class="tagline hand-note">recovery, one clear step at a time</p>
+      <p class="lede">MedCare Companion helps people understand what comes next in recovery, with <b>clear daily actions, safer guidance, and caregiver support on the patient's terms.</b></p>
       <div class="cs-meta-row">
-        <div><span class="k">role</span>UX Research · UX/UI Design · Prototyping · Testing</div>
-        <div><span class="k">timeline</span>4 weeks</div>
-        <div><span class="k">tools</span>Figma · FigJam · Notion</div>
-        <div><span class="k">platform</span>iOS · Mobile app</div>
-        <div><span class="k">users</span>Cardiac patients 55–65 · Family caregivers</div>
-      </div>
-      <div class="cs-chips"><span>Healthcare UX</span><span>MedTech</span><span>Journey Mapping</span><span>Accessibility</span><span>Usability Testing</span></div>
+        <div><span class="k">project</span>Self-initiated concept</div>
+        <div><span class="k">role</span>End-to-end UX/UI &amp; research</div>
+        <div><span class="k">platform</span>Android &middot; 412 &times; 917 design frame</div>
+        <div><span class="k">timeframe</span>Approx. four weeks</div>
+        <div><span class="k">tools</span>Figma</div>
+      </div>      <div class="cs-chips"><span>Healthcare UX</span><span>Android Product Design</span><span>Caregiver Consent</span><span>Accessibility</span><span>Responsible Design</span></div>
       <div class="cs-banner">
-        <div class="scene pv-med">
-          <div class="ph back">
-            <div class="row"><div class="bar"></div></div>
-            <div class="card"><div class="bar"></div><div class="bar" style="width:55%"></div></div>
-            <div class="card"><div class="bar"></div><div class="bar" style="width:70%"></div></div>
-          </div>
-          <div class="ph">
-            <div class="row"><i></i><div class="bar"></div></div>
-            <div class="row"><i></i><div class="bar"></div></div>
-            <div class="row"><i></i><div class="bar"></div></div>
-            <div class="card"><div class="bar"></div><div class="bar" style="width:60%"></div></div>
-          </div>
-          <div class="pulse">day 8/30 · you're doing well</div>
-        </div>
+        <div class="scene pv-med3"><img src="photos/medcare-thumb.jpg" alt="MedCare screens" onerror="this.remove()"></div>
       </div>
     </div>
   </header>
   <div class="cs-body-wrap">
     <div class="container">
+      <p class="case-pull">Design thesis: recovery should feel like a sequence of manageable daily actions, not a second discharge document.</p>
+      <p style="margin:-18px 0 34px"><a class="btn btn--ghost" href="https://www.figma.com/design/T2HDowyAcYOHEExSsmYEiy/Healthcare-app--Community-?node-id=146-13" target="_blank" rel="noopener">View the Figma file &nearr;</a></p>
 
-      <p class="case-pull">"30 days of recovery. Zero clear guidance. That's what patients went home with."</p>
-      <div class="case-block">
-        <p>MedCare Companion is a self-initiated healthcare UX concept exploring how a focused digital tool could support patients and caregivers in the first 30 days after stent surgery — <b>without replacing the role of medical professionals</b>. The goal was simple: reduce the confusion, anxiety, and scattered information that follows a major cardiac event.</p>
-      </div>
-
-      <!-- problem space -->
       <div class="cs-sub">
-        <span class="mono-label">problem space</span>
-        <h3>The information exists. <em>The clarity doesn't.</em></h3>
-        <p class="sub-lede">After stent surgery, patients return home with multiple medicines, vitals to monitor, lifestyle changes, follow-up appointments, and a list of warning signs to memorise — all on paper, in discharge summaries never designed to be read at home by a 60-year-old with no medical training.</p>
+        <span class="mono-label">01 &middot; the challenge</span>
+        <h3>Good instructions mean little if they're <em>hard to act on.</em></h3>
+        <p class="sub-lede">After coronary stent surgery, patients may return home with medicines, readings, appointments, activity guidance and uncertainty about warning signs. The information is important, but it is often scattered across paper, messages and memory.</p>
       </div>
       <div class="mini-grid">
-        <div class="mini-card"><span class="n">01</span><h5>Medicine confusion</h5><p>Multiple medicines, unclear timing, fear of missed doses — morning, afternoon, and night all on the same paper.</p></div>
-        <div class="mini-card"><span class="n">02</span><h5>Scattered information</h5><p>Discharge papers, WhatsApp forwards, handwritten notes from relatives — no single source of truth.</p></div>
-        <div class="mini-card"><span class="n">03</span><h5>Symptom anxiety</h5><p>Every chest tightness feels catastrophic. No calm, proportionate guidance on what's actually serious.</p></div>
-        <div class="mini-card"><span class="n">04</span><h5>Vitals without meaning</h5><p>BP is recorded daily, but nobody explains what 138/88 means. Numbers without context help no one.</p></div>
-        <div class="mini-card"><span class="n">05</span><h5>Caregiver overload</h5><p>Family members become round-the-clock carers overnight — no training, constant fear of missing something critical.</p></div>
-        <div class="mini-card"><span class="n">06</span><h5>Accessibility ignored</h5><p>Most recovery apps are built for 30-year-olds: small text, jargon, multi-step flows.</p></div>
+        <div class="mini-card"><span class="n">01</span><h5>Answer "What now?"</h5><p>Make the next essential action visible on the first screen.</p></div>
+        <div class="mini-card"><span class="n">02</span><h5>Respect independence</h5><p>Caregivers can offer support without unrestricted access.</p></div>
+        <div class="mini-card"><span class="n">03</span><h5>Keep help close</h5><p>When someone is worried, emergency pathways should be unmistakable.</p></div>
       </div>
 
-      <!-- design challenge -->
       <div class="cs-sub">
-        <span class="mono-label">design challenge</span>
-        <h3>How might we…</h3>
+        <span class="mono-label">02 &middot; research &amp; synthesis</span>
+        <h3>People wanted a daily answer, <em>not a feature menu.</em></h3>
+        <p class="sub-lede">The project notes report four caregiver conversations, two patient conversations, one healthcare-provider conversation and a competitive-pattern review. I synthesised six recurring areas of friction into design decisions.</p>
       </div>
-      <div class="hmw-list">
-        <div class="hmw"><span class="k">hmw 01</span><p>Make medicine tracking simple and anxiety-free for older users with limited app experience?</p></div>
-        <div class="hmw"><span class="k">hmw 02</span><p>Help caregivers stay informed and in control — without making patients feel watched?</p></div>
-        <div class="hmw"><span class="k">hmw 03</span><p>Present warning signs with enough clarity to prompt action, but enough calm to prevent panic?</p></div>
+      <div class="mini-grid">
+        <div class="mini-card"><span class="n">01 &middot; medicine uncertainty</span><h5>"Did I already take it?"</h5><p>Group medicines by time and make completion reversible.</p></div>
+        <div class="mini-card"><span class="n">02 &middot; fragmentation</span><h5>Too many sources</h5><p>Prioritise today's actions, not every available feature.</p></div>
+        <div class="mini-card"><span class="n">03 &middot; symptom anxiety</span><h5>Unclear escalation</h5><p>Offer clear emergency contact access without diagnosing.</p></div>
+        <div class="mini-card"><span class="n">04 &middot; reading ambiguity</span><h5>Numbers without context</h5><p>Record requested readings without declaring them normal or high.</p></div>
+        <div class="mini-card"><span class="n">05 &middot; caregiver overload</span><h5>Reassurance, not surveillance</h5><p>Share a minimal status with explicit patient permission.</p></div>
+        <div class="mini-card"><span class="n">06 &middot; accessibility</span><h5>Dense, difficult controls</h5><p>Use readable text, consistent actions and generous touch targets.</p></div>
       </div>
+      <p class="src">RESEARCH INTEGRITY &middot; Interview counts and synthesised themes are recorded in the project brief. Raw transcripts, participant quotations and recruitment documentation were not available for independent verification.</p>
 
-      <!-- research -->
       <div class="cs-sub">
-        <span class="mono-label">research</span>
-        <h3>Listening <em>before designing.</em></h3>
-        <p class="sub-lede">A focused mixed-methods study to understand what patients and caregivers actually experience — not what we assume they experience.</p>
+        <span class="mono-label">03 &middot; who this is for</span>
+        <h3>Two people. <em>Two kinds of reassurance.</em></h3>
+      </div>
+      <div class="case-grid">
+        <div class="quote-card"><span class="k">patient &middot; Rajan</span><span class="m">Age 60 &middot; recovering from stent surgery</span><q>What do I need to do today?</q><p>Managing multiple medicines and using reading glasses. He needs to know what to do today without asking his daughter to interpret every instruction.</p><p><b>Design rule:</b> completing daily tasks must not depend on family assistance.</p></div>
+        <div class="quote-card"><span class="k">family caregiver &middot; Anitha</span><span class="m">Age 32 &middot; working full-time</span><q>Is the important stuff being done?</q><p>Supporting her father while working. She wants confidence that important tasks are being addressed, without constant calls or access to every health detail.</p><p><b>Design rule:</b> caregivers see only what Rajan chooses to share.</p></div>
+      </div>
+      <p class="src">These personas synthesise project research themes; their descriptions and the lines above are illustrative, not verbatim interview quotes.</p>
+
+      <div class="cs-sub">
+        <span class="mono-label">04 &middot; approach</span>
+        <h3>Four weeks, <em>from ambiguity to action.</em></h3>
       </div>
       <div class="mini-grid mini-grid--4">
-        <div class="mini-card"><span class="big">4</span><h5>Caregiver interviews</h5><p>Daily caregiving tasks, fears, improvised workarounds, and the emotional weight of sudden responsibility.</p></div>
-        <div class="mini-card"><span class="big">2</span><h5>Patient interviews</h5><p>Confusion after discharge, what they tracked, and what they wish someone had told them.</p></div>
-        <div class="mini-card"><span class="big">1</span><h5>Healthcare conversation</h5><p>Common discharge pain points and where patient support typically breaks down.</p></div>
-        <div class="mini-card"><span class="big">—</span><h5>Competitive review</h5><p>Medicine reminder apps, vitals trackers, discharge tools, and wellness apps used by cardiac patients.</p></div>
+        <div class="mini-card"><span class="n">week 01 &middot; discover</span><h5>Find the friction</h5><p>Patient and caregiver conversations, early assumptions, competitor patterns.</p></div>
+        <div class="mini-card"><span class="n">week 02 &middot; define</span><h5>Make the problem legible</h5><p>Research synthesis, journey mapping, personas and navigation priorities.</p></div>
+        <div class="mini-card"><span class="n">week 03 &middot; design</span><h5>Prioritise key tasks</h5><p>Patient and caregiver flows, medicine states, consent and accessibility.</p></div>
+        <div class="mini-card"><span class="n">week 04 &middot; evaluate</span><h5>Refine interactions</h5><p>Small usability review, terminology changes and iterative decisions.</p></div>
+      </div>
+      <div class="flow-box" style="margin-top:18px">
+        <div class="flow-chain"><span class="fstep">The product promise</span><span class="farr">&rarr;</span><span class="fstep">Open the app</span><span class="farr">&rarr;</span><span class="fstep">See what's next</span><span class="farr">&rarr;</span><span class="fstep">Complete it</span><span class="farr">&rarr;</span><span class="fdone">Understand what changed &check;</span></div>
       </div>
 
-      <!-- insights -->
       <div class="cs-sub">
-        <span class="mono-label">key insights</span>
-        <h3>Five patterns that shaped <em>every decision.</em></h3>
+        <span class="mono-label">05 &middot; the solution</span>
+        <h3>Show what matters. <em>Let everything else wait.</em></h3>
+        <p class="sub-lede">Four-tab navigation (Today, Medicines, Readings, Plan) keeps high-frequency tasks accessible. Today leads with the two morning medicines, while recording and undo states make each action understandable.</p>
       </div>
-      <div class="insight-list">
-        <div class="insight-row"><span class="n">1</span><h5>Patients want simple daily guidance, not a feature-rich app</h5><p class="opp"><b>design opportunity</b>A Today tab showing only what's needed today — medicines, vitals, appointment. Nothing else.</p></div>
-        <div class="insight-row"><span class="n">2</span><h5>Medicine timing anxiety is disproportionately high</h5><p class="opp"><b>design opportunity</b>Clear morning / afternoon / night sections and a large, full-width "Mark as taken" button with instant confirmation.</p></div>
-        <div class="insight-row"><span class="n">3</span><h5>Caregivers want visibility, not access to everything</h5><p class="opp"><b>design opportunity</b>A separate caregiver view — medicine completion, last vitals, next appointment — without private notes.</p></div>
-        <div class="insight-row"><span class="n">4</span><h5>Vitals are recorded daily but never contextualised</h5><p class="opp"><b>design opportunity</b>After saving a reading, a gentle prompt: "This looks normal" or "Consider sharing with your doctor."</p></div>
-        <div class="insight-row"><span class="n">5</span><h5>Warning signs create panic more than preparedness</h5><p class="opp"><b>design opportunity</b>Three calm labels — Monitor · Contact doctor · Seek urgent help. No red banners, no alarming language.</p></div>
+      <div class="mini-grid">
+        <div class="mini-card"><span class="n">01 &middot; daily focus</span><h5>Today</h5><p>The next two medicine actions appear immediately.</p></div>
+        <div class="mini-card"><span class="n">02 &middot; clear task</span><h5>Due</h5><p>A time-grouped list with a separate action per dose.</p></div>
+        <div class="mini-card"><span class="n">03 &middot; error recovery</span><h5>Taken + Undo</h5><p>A timestamp and reversible action avoid uncertainty.</p></div>
       </div>
 
-      <!-- personas -->
       <div class="cs-sub">
-        <span class="mono-label">user personas</span>
-        <h3>Two very different people, <em>one shared goal.</em></h3>
+        <span class="mono-label">the screens</span>
+        <h3>Twelve screens. <em>One focused recovery experience.</em></h3>
+        <p class="sub-lede">The patient app and the family companion, shown as flows rather than isolated screens. Clinical content shown is illustrative and would need clinician review before launch.</p>
       </div>
-      <div class="persona-grid">
-        <div class="persona">
-          <div class="p-head"><span class="p-ava">👨</span><div><b>Mr. Rajan</b><span>patient · 60 · recent stent surgery · diabetes</span></div></div>
-          <p class="p-bio">Not comfortable with mobile apps. Lives with his daughter. Takes five medicines daily across three time windows, and is afraid of doing something wrong during recovery.</p>
-          <div class="p-cols">
-            <div><h6>goals</h6><ul><li>Take medicines correctly and on time</li><li>Know when to call the doctor</li><li>Feel independent, not a burden</li></ul></div>
-            <div><h6>frustrations</h6><ul><li>Too many instructions at once</li><li>Small text, confusing medical words</li><li>Not knowing what's serious</li></ul></div>
-          </div>
-          <p class="p-quote">"I just want to know what I should do today without reading everything again."</p>
-        </div>
-        <div class="persona">
-          <div class="p-head"><span class="p-ava">👩</span><div><b>Anitha</b><span>daughter / caregiver · 32 · works full-time</span></div></div>
-          <p class="p-bio">Manages her father's recovery remotely and in person. Keeps discharge papers in a folder and a WhatsApp group for updates. Lives with low-level anxiety about missing a warning sign.</p>
-          <div class="p-cols">
-            <div><h6>goals</h6><ul><li>Know medicines are being taken</li><li>Track BP, sugar, pulse daily</li><li>Know when to escalate</li></ul></div>
-            <div><h6>frustrations</h6><ul><li>Fear of missing a warning sign</li><li>Scattered papers and messages</li><li>Constant disruptive check-ins</li></ul></div>
-          </div>
-          <p class="p-quote">"I want to help without making him feel like I'm controlling him."</p>
-        </div>
-      </div>
-
-      <!-- journey -->
-      <div class="cs-sub">
-        <span class="mono-label">user journey</span>
-        <h3>30 days, <em>six critical stages.</em></h3>
-        <p class="sub-lede">Mapping Mr. Rajan's emotional and practical experience from the moment he leaves hospital through the first follow-up and into long-term habit.</p>
-      </div>
-      <div class="stage-grid">
-        <div class="stage"><b>Discharge</b><span class="emo">feels: <i>overwhelmed</i></span><p>Simple onboarding that imports discharge details.</p></div>
-        <div class="stage"><b>First night</b><span class="emo">feels: <i>uncertain, reliant</i></span><p>Evening medicine reminder with one-tap confirmation.</p></div>
-        <div class="stage"><b>Week 1</b><span class="emo">feels: <i>cautious</i></span><p>Caregiver dashboard replaces disruptive twice-daily calls.</p></div>
-        <div class="stage"><b>Vitals start</b><span class="emo">feels: <i>confused, anxious</i></span><p>Contextual prompt after each reading.</p></div>
-        <div class="stage"><b>Follow-up prep</b><span class="emo">feels: <i>uncertain</i></span><p>Appointment screen with a vitals summary to share.</p></div>
-        <div class="stage"><b>Long-term</b><span class="emo">feels: <i>confident</i></span><p>The Today tab keeps cognitive load low as routine forms.</p></div>
-      </div>
-
-      <!-- IA -->
-      <div class="cs-sub">
-        <span class="mono-label">information architecture</span>
-        <h3>Five tabs. Five mental models. <em>One clear path.</em></h3>
-        <p class="sub-lede">Navigation that mirrors how patients and caregivers already think about recovery — daily tasks, medicines, health readings, guidance, and support — rather than how a developer might structure a database.</p>
-      </div>
-      <div class="ia-grid">
-        <div class="ia-col"><h6>Today</h6><ul><li>Medicine schedule</li><li>Vitals reminder</li><li>Next appointment</li><li>Recovery checklist</li></ul></div>
-        <div class="ia-col"><h6>Medicines</h6><ul><li>Full medicine list</li><li>Dosage &amp; timing</li><li>Taken / missed log</li><li>Refill reminders</li></ul></div>
-        <div class="ia-col"><h6>Health readings</h6><ul><li>Blood pressure</li><li>Pulse</li><li>Blood sugar</li><li>Temperature &amp; notes</li></ul></div>
-        <div class="ia-col"><h6>Guidance</h6><ul><li>Is this normal?</li><li>Warning signs</li><li>Recovery tips</li><li>Discharge notes</li></ul></div>
-        <div class="ia-col"><h6>Caregiver</h6><ul><li>Recovery summary</li><li>Missed medicine alerts</li><li>Appointment updates</li><li>Emergency contacts</li></ul></div>
-      </div>
-
-      <!-- flows -->
-      <div class="cs-sub">
-        <span class="mono-label">core user flows</span>
-        <h3>Three interactions that <em>define the product.</em></h3>
-      </div>
-      <div class="flow-box">
-        <span class="k">flow 01 — patient checks today</span>
-        <div class="flow-chain">
-          <span class="fstep">Open app</span><span class="farr">→</span>
-          <span class="fstep">Today dashboard</span><span class="farr">→</span>
-          <span class="fstep">Mark medicine taken</span><span class="farr">→</span>
-          <span class="fstep">Enter vitals</span><span class="farr">→</span>
-          <span class="fstep">Complete checklist</span><span class="farr">→</span>
-          <span class="fdone">Patient feels in control ✓</span>
-        </div>
-      </div>
-      <div class="flow-box">
-        <span class="k">flow 02 — caregiver checks status</span>
-        <div class="flow-chain">
-          <span class="fstep">Open caregiver view</span><span class="farr">→</span>
-          <span class="fstep">Medicine completion</span><span class="farr">→</span>
-          <span class="fstep">Last vitals</span><span class="farr">→</span>
-          <span class="fstep">Appointment status</span><span class="farr">→</span>
-          <span class="fstep">Gentle reminder (optional)</span><span class="farr">→</span>
-          <span class="fdone">Caregiver is informed ✓</span>
-        </div>
-      </div>
-      <div class="flow-box">
-        <span class="k">flow 03 — patient checks a symptom</span>
-        <div class="flow-chain">
-          <span class="fstep">"Is this normal?"</span><span class="farr">→</span>
-          <span class="fstep">Select symptom</span><span class="farr">→</span>
-          <span class="fstep">Calm guidance</span><span class="farr">→</span>
-          <span class="fstep">Monitor / Doctor / Urgent</span><span class="farr">→</span>
-          <span class="fdone">Patient knows next step ✓</span>
-        </div>
-      </div>
-
-      <!-- screens -->
-      <div class="cs-sub">
-        <span class="mono-label">final ui screens</span>
-        <h3>Ten screens. <em>One focused recovery experience.</em></h3>
-        <p class="sub-lede">Each screen was designed around a single job — no feature creep, no unnecessary information. Just what the user needs, when they need it. Screen mockups are on their way; the frames below fill automatically.</p>
-      </div>
-      <div class="screen-grid landscape cols-2">
+      <div class="screen-grid landscape">
         <div class="screen-tile">
-          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">01</span><span class="add">your screen here</span></div><img src="photos/medcare-01.jpg" alt="Welcome screen" onerror="this.remove()"></div></div>
-          <div class="s-cap"><b>Welcome</b><p>Single CTA, calm trustworthy tone before any data entry.</p></div>
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">01</span></div><img src="photos/medcare-01.jpg" alt="MedCare welcome, Today and Medicines screens" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Welcome, Today &amp; Medicines</b><p>Language choice and a family-help option up front; a Today view with the next medicines and one-tap &ldquo;Mark taken&rdquo;; a morning, afternoon and night schedule.</p></div>
         </div>
         <div class="screen-tile">
-          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">02</span><span class="add">your screen here</span></div><img src="photos/medcare-02.jpg" alt="Today dashboard" onerror="this.remove()"></div></div>
-          <div class="s-cap"><b>Today dashboard</b><p>Medicines, readings, and appointments for this day only.</p></div>
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">02</span></div><img src="photos/medcare-02.jpg" alt="MedCare not-recorded, readings and wound concerns screens" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Safe recording, readings &amp; wound concerns</b><p>&ldquo;Not recorded is not a missed dose&rdquo;; a blood pressure record in plain fields; wound guidance with a clear emergency call, marked as guidance and not a diagnosis.</p></div>
         </div>
         <div class="screen-tile">
-          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">03</span><span class="add">your screen here</span></div><img src="photos/medcare-03.jpg" alt="Medicine schedule" onerror="this.remove()"></div></div>
-          <div class="s-cap"><b>Medicine schedule</b><p>Full-width "Mark as taken", time and instruction on every card.</p></div>
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">03</span></div><img src="photos/medcare-03.jpg" alt="MedCare add medicine, review and reminder screens" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Family setup &amp; review</b><p>A caregiver adds a medicine step by step, checks the plan, sends it to the patient for review, and can send one gentle reminder per dose.</p></div>
         </div>
         <div class="screen-tile">
-          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">04</span><span class="add">your screen here</span></div><img src="photos/medcare-04.jpg" alt="Health readings" onerror="this.remove()"></div></div>
-          <div class="s-cap"><b>Health readings</b><p>Mini trend bars and plain-language context after each save.</p></div>
-        </div>
-        <div class="screen-tile">
-          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">05</span><span class="add">your screen here</span></div><img src="photos/medcare-05.jpg" alt="Is this normal" onerror="this.remove()"></div></div>
-          <div class="s-cap"><b>Is this normal?</b><p>Symptom list with three calm outcome labels — no alarm bells.</p></div>
-        </div>
-        <div class="screen-tile">
-          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">06</span><span class="add">your screen here</span></div><img src="photos/medcare-06.jpg" alt="Caregiver view" onerror="this.remove()"></div></div>
-          <div class="s-cap"><b>Caregiver view</b><p>Summary-level recovery status plus a gentle reminder action.</p></div>
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">04</span></div><img src="photos/medcare-04.jpg" alt="MedCare sharing paused, sharing stopped and recovery guide screens" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Control &amp; guidance</b><p>The patient can pause or stop family sharing at any time; a recovery guide offers small answers, flagged as illustrative and needing clinical review.</p></div>
         </div>
       </div>
 
-      <!-- design system -->
       <div class="cs-sub">
-        <span class="mono-label">visual design system</span>
-        <h3>Calm. Trustworthy. Accessible. <em>Not clinical.</em></h3>
-        <p class="sub-lede">The palette rejects the cold white and aggressive reds of typical medical apps. Every colour decision was made to reduce anxiety, not amplify it.</p>
+        <span class="mono-label">06 &middot; caregiver UX &amp; consent</span>
+        <h3>Family support should never <em>feel like surveillance.</em></h3>
+        <p class="sub-lede">The caregiver view is intentionally limited. Rajan decides which statuses are shared, can pause or stop access, and must confirm his medicine plan before reminders begin.</p>
+      </div>
+      <div class="mini-grid">
+        <div class="mini-card"><span class="n">permissioned overview</span><h5>What Anitha can see</h5><p>Important statuses and update timestamps, not a clinical dashboard.</p></div>
+        <div class="mini-card"><span class="n">patient control</span><h5>Family sharing</h5><p>Private notes stay private; permission can be changed.</p></div>
+        <div class="mini-card"><span class="n">explicit autonomy</span><h5>Review before confirming</h5><p>Patient approval is the boundary for assisted setup.</p></div>
+      </div>
+      <div class="flow-box" style="margin-top:18px">
+        <div class="flow-chain"><span class="fstep">Caregiver enters plan</span><span class="farr">&rarr;</span><span class="fstep">Patient reviews</span><span class="farr">&rarr;</span><span class="fstep">Patient confirms</span><span class="farr">&rarr;</span><span class="fdone">Reminders may begin &check;</span></div>
+      </div>
+
+      <div class="cs-sub">
+        <span class="mono-label">07 &middot; safety &amp; accessibility</span>
+        <h3>Readable in <em>a difficult moment.</em></h3>
+        <p class="sub-lede">Calm does not mean hiding urgency. Emergency contact access uses high contrast, the app avoids diagnoses, and important actions are large enough to reduce precision demands.</p>
+      </div>
+      <div class="mini-grid">
+        <div class="mini-card"><span class="n">find help quickly</span><h5>Emergency pathway</h5><p>Urgent contact options come before explanatory content.</p></div>
+        <div class="mini-card"><span class="n">no automated reassurance</span><h5>Health readings</h5><p>Log clinician-requested numbers without unapproved labels.</p></div>
+        <div class="mini-card"><span class="n">text scale</span><h5>Larger text</h5><p>A design illustration, not yet verified dynamic-type support.</p></div>
+      </div>
+
+      <div class="cs-sub">
+        <span class="mono-label">08 &middot; visual design system</span>
+        <h3>Quiet colour. <em>Confident actions.</em></h3>
+        <p class="sub-lede">An accessible action blue anchors primary controls, while soft blue surfaces organise information without heavy borders. Urgent red is reserved for emergency routes; green is paired with explicit success labels.</p>
       </div>
       <div class="swatch-row">
-        <div class="swatch"><i style="background:#1AB99A"></i><b>Primary teal</b><em>#1AB99A</em></div>
-        <div class="swatch"><i style="background:#A8EDE3"></i><b>Mint</b><em>#A8EDE3</em></div>
-        <div class="swatch"><i style="background:#0B1623"></i><b>Charcoal</b><em>#0B1623</em></div>
-        <div class="swatch"><i style="background:#BA324F"></i><b>Emergency</b><em>#BA324F</em></div>
-        <div class="swatch"><i style="background:#16A34A"></i><b>Success</b><em>#16A34A</em></div>
-        <div class="swatch"><i style="background:#D97706"></i><b>Caution</b><em>#D97706</em></div>
+        <div class="swatch"><i style="background:#315EBB"></i><b>Action blue</b><em>#315EBB</em></div>
+        <div class="swatch"><i style="background:#EBF1FC;border:1px solid var(--border)"></i><b>Soft blue</b><em>#EBF1FC</em></div>
+        <div class="swatch"><i style="background:#152637"></i><b>Ink</b><em>#152637</em></div>
+        <div class="swatch"><i style="background:#F9FBFD;border:1px solid var(--border)"></i><b>Canvas</b><em>#F9FBFD</em></div>
+        <div class="swatch"><i style="background:#176542"></i><b>Success</b><em>#176542</em></div>
+        <div class="swatch"><i style="background:#A52A41"></i><b>Urgent</b><em>#A52A41</em></div>
       </div>
-      <div class="case-block" style="margin-top:22px">
-        <h4>accessibility requirements</h4>
-        <ul>
-          <li>Minimum 16px body text and 44×44px touch targets throughout</li>
-          <li>WCAG AA contrast on all text; icons always paired with labels</li>
-          <li>Emergency access reachable from every screen</li>
-          <li>Plain language — no medical jargon anywhere in the interface</li>
-        </ul>
+      <p class="src">TYPE &middot; Case-study editorial: Inter display + Inter body. App interface: Poppins UI on a 412 &times; 917 frame with 24 px side margins and 56 px primary actions.</p>
+
+      <div class="cs-sub">
+        <span class="mono-label">09 &middot; testing &amp; iteration</span>
+        <h3>Small changes. <em>Meaningful decisions.</em></h3>
+        <p class="sub-lede">The project notes record five participants, six tasks and four iteration rounds. The evidence supports specific changes, but not numerical claims about improved adherence or clinical outcomes.</p>
+      </div>
+      <div class="insight-list">
+        <div class="insight-row"><span class="n">1</span><h5>Small medicine controls</h5><p class="opp"><b>changed to</b>Larger, clearly labelled medicine actions.</p></div>
+        <div class="insight-row"><span class="n">2</span><h5>"Vitals" felt unfamiliar</h5><p class="opp"><b>changed to</b>"Health readings".</p></div>
+        <div class="insight-row"><span class="n">3</span><h5>Emergency guidance was buried</h5><p class="opp"><b>changed to</b>A persistent "Need help" entry point.</p></div>
+        <div class="insight-row"><span class="n">4</span><h5>Caregivers needed a summary</h5><p class="opp"><b>changed to</b>A distinct, permissioned overview.</p></div>
+      </div>
+      <p class="src">EVIDENCE BOUNDARIES &middot; The original archive does not include full moderator notes, raw task timing, participant quotes or verified before-and-after screenshots. The changes above are documented rationales, not measured improvement percentages.</p>
+
+      <div class="cs-sub">
+        <span class="mono-label">10 &middot; the wider experience</span>
+        <h3>Critical states <em>matter too.</em></h3>
+        <p class="sub-lede">Not recorded. Stale data. Sharing paused. Warning guidance. These are trust-defining moments, not secondary decoration. The Figma file holds 22 original screens.</p>
+      </div>
+      <div class="mini-grid mini-grid--4">
+        <div class="mini-card"><span class="n">state</span><h5>Not recorded</h5><p>Unknown is not the same as missed.</p></div>
+        <div class="mini-card"><span class="n">state</span><h5>Stale update</h5><p>Show when information may be outdated.</p></div>
+        <div class="mini-card"><span class="n">state</span><h5>Sharing paused</h5><p>Respect a patient's decision.</p></div>
+        <div class="mini-card"><span class="n">state</span><h5>Help topic</h5><p>Keep escalation clearer than diagnosis.</p></div>
       </div>
 
-      <!-- testing -->
       <div class="cs-sub">
-        <span class="mono-label">usability testing</span>
-        <h3>Testing revealed the changes <em>that mattered.</em></h3>
-        <p class="sub-lede">5 participants · 6 test tasks · 4 design iterations.</p>
+        <span class="mono-label">11 &middot; reflection</span>
+        <h3>The hardest part wasn't adding features. <em>It was deciding what to remove.</em></h3>
+        <p class="sub-lede">MedCare reinforced that responsible healthcare UX is built on understandable actions, clear boundaries and the ability to recover from mistakes. A smaller daily interface can create space for the moments that matter most.</p>
       </div>
-      <div class="find-list">
-        <div class="find"><span class="tag t-friction">friction</span><p>Older users missed the small medicine tap target. <b>Iteration: enlarged to a full-width "Mark as taken" button across the card.</b></p></div>
-        <div class="find"><span class="tag t-confusion">confusion</span><p>The word "Vitals" was unfamiliar to non-medical users. <b>Iteration: renamed to "Health readings" throughout the app.</b></p></div>
-        <div class="find"><span class="tag t-positive">positive</span><p>"Is This Normal?" was described as <b>very reassuring</b> by all five participants — the calm three-tier label system stayed.</p></div>
-        <div class="find"><span class="tag t-iteration">iteration</span><p>Caregivers needed a quick-scan summary. <b>Added a dedicated caregiver dashboard — medicines, vitals, and appointments in one view.</b></p></div>
-        <div class="find"><span class="tag t-concern">concern</span><p>Emergency contacts were buried inside a tab. <b>Iteration: moved to persistent bottom navigation, accessible from every screen.</b></p></div>
+      <div class="mini-grid mini-grid--4">
+        <div class="mini-card"><span class="n">next &middot; 01</span><h5>Verify research evidence</h5><p>Review consent, original tasks, anonymised notes and recorded iterations.</p></div>
+        <div class="mini-card"><span class="n">next &middot; 02</span><h5>Seek clinical review</h5><p>Have qualified professionals validate all medication and emergency guidance.</p></div>
+        <div class="mini-card"><span class="n">next &middot; 03</span><h5>Test accessibility</h5><p>Observe older adults using larger text, screen readers and real devices.</p></div>
+        <div class="mini-card"><span class="n">next &middot; 04</span><h5>Measure real outcomes</h5><p>Benchmark task success, comprehension, errors and recovery, not assumed health benefits.</p></div>
       </div>
 
-      <!-- outcome -->
-      <div class="cs-sub">
-        <span class="mono-label">outcome</span>
-        <h3>What this project <em>taught me.</em></h3>
-      </div>
-      <p class="case-pull">"Designing for someone's recovery taught me that every word is a design decision."</p>
-      <div class="case-grid">
-        <div>
-          <div class="case-block">
-            <h4>the result</h4>
-            <p>The final concept reduced the steps needed to check daily recovery tasks, improved clarity around medicine tracking, made emergency guidance permanently accessible, and created a shared view that keeps caregivers informed <b>without intruding on the patient's independence</b>.</p>
-          </div>
-        </div>
-        <div>
-          <div class="case-block">
-            <h4>learnings</h4>
-            <ul>
-              <li>Simplifying healthcare information without removing critical context is harder than it looks — every word needed a safety review and a plain-language rewrite at once</li>
-              <li>Designing for older users changed everything: assumptions that work at 28 fail completely at 62</li>
-              <li>The caregiver–patient dynamic shaped every shared feature — collaboration, never surveillance</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <p class="case-note">self-initiated concept project — no diagnostic claims, no invented metrics. drop your mockups into /photos as medcare-01.jpg → medcare-06.jpg</p>
+      <p class="case-note">self-initiated concept, not a clinical product. No launch, patient health outcomes, clinical validation, regulatory approval or quantified business impact are claimed.</p>
     </div>
   </div>
   <div class="cs-next">
     <div class="cs-next-card">
       <div>
         <span class="k">next story</span>
-        <h3>Alibi</h3>
-        <p>An ongoing behavioural finance product turning statement data into monthly clues.</p>
+        <h3>V&eacute;rasa</h3>
+        <p>A research-led concept for an editorial Indian-wear storefront.</p>
       </div>
-      <a class="btn" href="#/work/alibi">Read next →</a>
+      <a class="btn" href="#/work/verasa">Read next &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     CASE VIEW · VÉRASA — concept e-commerce
+     ============================================================ -->
+<div class="view case-view cv-vrs" id="view-vrs">
+  <header class="cs-hero">
+    <div class="container">
+      <a class="cs-back" href="#work" data-home>&larr; back to work</a>
+      <span class="meta">VRS &middot; <b>RESHMA</b> &middot; E-commerce &middot; Concept Project</span>
+      <h1>An editorial commerce experience <em>with confidence woven in.</em></h1>
+      <p class="tagline hand-note">a beautiful shop is not enough.</p>
+      <p class="lede">V&Eacute;RASA is a fictional Indian-wear brand I built as a research-led portfolio concept. The goal was a responsive storefront that keeps the editorial feel of fashion while removing the doubts that stop people buying: fit, fabric, delivery and cost.</p>
+      <div class="cs-meta-row">
+        <div><span class="k">type</span>Concept e-commerce project</div>
+        <div><span class="k">focus</span>Research &middot; Strategy &middot; Responsive UI &middot; Product confidence</div>
+        <div><span class="k">platform</span>Responsive web (desktop 1440, mobile 390)</div>
+        <div><span class="k">status</span>Concept, not yet user-tested</div>
+      </div>
+      <div class="cs-chips"><span>E-commerce UX</span><span>Secondary Research</span><span>Size Guide Design</span><span>Guest Checkout</span><span>Accessibility (WCAG 2.2 AA)</span></div>
+      <div class="cs-banner"><div class="scene pv-vrs"><img src="photos/verasa-01.jpg" alt="V&eacute;rasa homepage hero" onerror="this.remove()"></div></div>
+    </div>
+  </header>
+  <div class="cs-body-wrap">
+    <div class="container">
+      <p class="case-pull">"A beautiful shop is not enough. It has to help someone decide."</p>
+
+      <div class="cs-sub">
+        <span class="mono-label">01 &middot; the challenge</span>
+        <h3>The brief, <em>as given.</em></h3>
+        <p class="sub-lede">The brief provides goals and an audience. It does not include observed customer research or verified store analytics, so these figures are targets, not results.</p>
+      </div>
+      <div class="mini-grid mini-grid--4">
+        <div class="stat-card"><span class="k">business outcome</span><b>+30%</b><span class="d">Online revenue target within six months</span></div>
+        <div class="stat-card"><span class="k">audience</span><b>18&ndash;35</b><span class="d">Style-conscious Indian-wear shoppers and professionals</span></div>
+        <div class="stat-card"><span class="k">delivery</span><b>12 weeks</b><span class="d">Research to responsive e-commerce delivery</span></div>
+        <div class="stat-card"><span class="k">budget</span><b>$15k</b><span class="d">Design, development, QA and launch</span></div>
+      </div>
+
+      <div class="cs-sub">
+        <span class="mono-label">02 &middot; secondary research</span>
+        <h3>What needs to be <em>easier?</em></h3>
+        <p class="sub-lede">Published usability research gave me directional principles. These are not findings from V&Eacute;RASA customers.</p>
+      </div>
+      <div class="mini-grid" style="grid-template-columns:1fr 1fr">
+        <div class="mini-card"><span class="n">01 &middot; fit</span><h5>Reduce sizing hesitation</h5><p>Visible size options, a measurement guide, model details and availability on the product page. <i>Source: Baymard, apparel product-page research.</i></p></div>
+        <div class="mini-card"><span class="n">02 &middot; discovery</span><h5>Make browsing intentional</h5><p>Occasion, silhouette, fabric and price pathways alongside editorial inspiration. <i>Source: Baymard, product-list and filtering research.</i></p></div>
+        <div class="mini-card"><span class="n">03 &middot; checkout</span><h5>Be transparent early</h5><p>Expose total costs, delivery estimates, guest checkout and clear payment feedback. <i>Source: Baymard, checkout usability.</i></p></div>
+        <div class="mini-card"><span class="n">04 &middot; access</span><h5>Beauty must be usable</h5><p>Target WCAG 2.2 AA: semantic labelling, keyboard paths, visible focus and sufficient contrast. <i>Source: W3C, WCAG 2.2.</i></p></div>
+      </div>
+      <p class="src">SOURCES &middot; baymard.com/lists/cart-abandonment-rate &middot; baymard.com/research &middot; w3.org/TR/WCAG22/</p>
+
+      <div class="cs-sub">
+        <span class="mono-label">03 &middot; research hypotheses</span>
+        <h3>Two motivations, <em>one storefront.</em></h3>
+        <p class="sub-lede">These proto-personas are hypotheses until user interviews validate them.</p>
+      </div>
+      <div class="case-grid">
+        <div class="quote-card"><span class="k">the explorer</span><span class="m">18&ndash;27 &middot; inspiration-led</span><q>I want to find unique pieces that suit my mood and budget.</q><p><b>Friction:</b> generic catalogue, hard-to-filter styles.</p><p><b>Response:</b> occasion edits, swatches and saved styles.</p></div>
+        <div class="quote-card"><span class="k">the confident buyer</span><span class="m">26&ndash;35 &middot; intent-led</span><q>I need to understand fit, fabric, delivery and cost before I buy.</q><p><b>Friction:</b> ambiguous fit, fulfilment surprises.</p><p><b>Response:</b> size guide, fabric details and cost clarity.</p></div>
+      </div>
+
+      <div class="cs-sub">
+        <span class="mono-label">04 &middot; customer journey</span>
+        <h3>Design for a decision, <em>not just a scroll.</em></h3>
+        <p class="sub-lede">A proposed end-to-end journey, to be validated in moderated usability sessions.</p>
+      </div>
+      <div class="flow-box">
+        <div class="flow-chain">
+          <span class="fstep">Discover: see an occasion or edit</span><span class="farr">&rarr;</span>
+          <span class="fstep">Browse: filter and compare, size stays visible</span><span class="farr">&rarr;</span>
+          <span class="fstep">Evaluate: check fit and fabric beside the CTA</span><span class="farr">&rarr;</span>
+          <span class="fstep">Commit: review costs and timing, no surprises</span><span class="farr">&rarr;</span>
+          <span class="fdone">Pay: complete as a guest &check;</span>
+        </div>
+      </div>
+
+      <div class="cs-sub">
+        <span class="mono-label">05 &middot; priorities</span>
+        <h3>What ships <em>in 12 weeks?</em></h3>
+        <p class="sub-lede">MoSCoW-style scope reduction keeps complex personalisation and AI features out of the first release.</p>
+      </div>
+      <div class="mini-grid">
+        <div class="mini-card"><span class="n">P0 &middot; must</span><h5>The core purchase path</h5><p>Responsive homepage, product list and filters, product imagery with a fit guide, cart and checkout, delivery expectations, accessible forms.</p></div>
+        <div class="mini-card"><span class="n">P1 &middot; should</span><h5>Confidence boosters</h5><p>Wishlist, alternate product views, related collections, clear status messages, saved filters, improved search suggestions.</p></div>
+        <div class="mini-card"><span class="n">P2 &middot; next</span><h5>Later releases</h5><p>Virtual try-on, an automated stylist, a loyalty wallet, a personalisation engine, a community-generated lookbook.</p></div>
+      </div>
+
+      <div class="cs-sub">
+        <span class="mono-label">the storefront</span>
+        <h3>Editorial energy, <em>without conversion friction.</em></h3>
+        <p class="sub-lede">Reference-led visual iteration: a 3-column product grid, compact ratings, layered campaign imagery, a four-unit offer timer and a trending lookbook.</p>
+      </div>
+      <div class="screen-grid landscape cols-2">
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">&middot;</span></div><img src="photos/verasa-01.jpg" alt="Homepage hero" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Homepage</b><p>An editorial hero: 'Everyday beautiful.' with a clear path into the collection.</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">&middot;</span></div><img src="photos/verasa-02.jpg" alt="New arrivals grid" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>New arrivals</b><p>A 3-column product grid with category filters and compact ratings.</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">&middot;</span></div><img src="photos/verasa-03.jpg" alt="Deals of the month and trending looks" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Campaign &amp; lookbook</b><p>Layered campaign imagery with an offer timer and a trending lookbook.</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">&middot;</span></div><img src="photos/verasa-04.jpg" alt="Product detail page" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Product page</b><p>Colour, size and add-to-bag together, with fabric, shipping and fit details close by.</p></div>
+        </div>
+      </div>
+
+      <div class="cs-sub">
+        <span class="mono-label">06 &middot; product-specific sizing</span>
+        <h3>Make size guidance <em>part of the purchase.</em></h3>
+        <p class="sub-lede">Design rationale from the size-guide references. The numeric chart is illustrative until production-approved measurements exist.</p>
+      </div>
+      <div class="mini-grid">
+        <div class="mini-card"><span class="n">discoverability</span><h5>Next to the size picker</h5><p>Place the guide beside size selection so shoppers aren't sent away from the product page.</p></div>
+        <div class="mini-card"><span class="n">clarity</span><h5>Body vs garment</h5><p>Distinguish body measurements from garment dimensions and label units explicitly.</p></div>
+        <div class="mini-card"><span class="n">measurement</span><h5>Inches and centimetres</h5><p>Offer both units, fitting advice and simple anatomical callouts.</p></div>
+        <div class="mini-card"><span class="n">mobile</span><h5>Bottom sheet</h5><p>Use a bottom sheet and a selected-size summary rather than a wide table.</p></div>
+        <div class="mini-card"><span class="n">prototyping</span><h5>Linked overlay states</h5><p>Link Figma overlay states: open, swap units, body or garment view, close.</p></div>
+        <div class="mini-card"><span class="n">validation</span><h5>Needs real data</h5><p>Production chart, ease, model statistics and return policies need real source data.</p></div>
+      </div>
+      <p class="src">SOURCES &middot; baymard.com/research-articles/apparel-size-information &middot; nngroup.com/articles/sizes-measurements-ecommerce/<br>HANDOFF &middot; Browser Back must dismiss an open size guide and preserve PDP scroll; size tables need verified body and garment measurements.</p>
+      <div class="screen-grid landscape cols-2" style="margin-top:22px">
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">&middot;</span></div><img src="photos/verasa-05.jpg" alt="Desktop size guide" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Size guide, desktop</b><p>Body and garment tabs, inch/cm toggle and a how-to-measure panel.</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">&middot;</span></div><img src="photos/verasa-08.jpg" alt="Mobile product page and size guide" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Size guide, mobile</b><p>A bottom sheet with the selected size summarised, in inches and centimetres.</p></div>
+        </div>
+      </div>
+
+      <div class="cs-sub">
+        <span class="mono-label">checkout</span>
+        <h3>Transparent early, <em>simple at the end.</em></h3>
+      </div>
+      <div class="screen-grid landscape cols-2">
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">&middot;</span></div><img src="photos/verasa-06.jpg" alt="Shopping bag" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Bag</b><p>A considered selection: cost and shipping stated plainly.</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">&middot;</span></div><img src="photos/verasa-07.jpg" alt="Guest checkout" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Guest checkout</b><p>No account required, with the order summary always visible.</p></div>
+        </div>
+      </div>
+
+      <div class="cs-sub">
+        <span class="mono-label">design language</span>
+        <h3>A palette <em>that whispers.</em></h3>
+        <p class="sub-lede">Ivory and soft neutral backgrounds keep the garments central. Plum is reserved for clear, accessible primary actions. Cormorant Garamond sets the editorial voice; DM Sans keeps the UI crisp at small sizes.</p>
+      </div>
+      <div class="swatch-row">
+        <div class="swatch"><i style="background:#FCF8F4;border:1px solid var(--border)"></i><b>Canvas / Ivory</b><em>#FCF8F4</em></div>
+        <div class="swatch"><i style="background:#F2E6E6"></i><b>Rose / Bloom</b><em>#F2E6E6</em></div>
+        <div class="swatch"><i style="background:#E7ECE5"></i><b>Sage / Renewal</b><em>#E7ECE5</em></div>
+        <div class="swatch"><i style="background:#75505E"></i><b>Mulberry / Action</b><em>#75505E</em></div>
+        <div class="swatch"><i style="background:#312F2F"></i><b>Ink / Content</b><em>#312F2F</em></div>
+        <div class="swatch"><i style="background:#B99D84"></i><b>Antique Gold / Detail</b><em>#B99D84</em></div>
+      </div>
+      <div class="screen-grid landscape" style="margin-top:22px">
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">&middot;</span></div><img src="photos/verasa-09.jpg" alt="Vérasa design language" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Design language</b><p>Palette, typography, reusable UI and interaction states.</p></div>
+        </div>
+      </div>
+
+      <div class="cs-sub">
+        <span class="mono-label">07 &middot; success metrics</span>
+        <h3>Revenue is <em>an equation.</em></h3>
+        <p class="sub-lede">The 30% target must be evaluated against baseline traffic, seasonality and average order value.</p>
+      </div>
+      <div class="eq-box">Revenue<i>=</i>Sessions<i>&times;</i>Conversion rate<i>&times;</i>Average order value</div>
+      <div class="mini-grid">
+        <div class="mini-card"><span class="n">discovery</span><h5>Are people browsing well?</h5><p>Category engagement, PLP to PDP progression.</p></div>
+        <div class="mini-card"><span class="n">confidence</span><h5>Are they sure?</h5><p>Size-guide use, add-to-cart, returns reasons.</p></div>
+        <div class="mini-card"><span class="n">completion</span><h5>Do they finish?</h5><p>Guest checkout, checkout completion, cost-related drop-off.</p></div>
+      </div>
+
+      <div class="cs-sub">
+        <span class="mono-label">08 &middot; validation plan &amp; handoff</span>
+        <h3>Show the work <em>behind the pixels.</em></h3>
+        <p class="sub-lede">Research and product assumptions need testing before claiming any improvement in conversion. This is the plan, not completed work.</p>
+      </div>
+      <div class="insight-list">
+        <div class="insight-row"><span class="n">1</span><h5>6&ndash;8 qualitative interviews</h5><p class="opp"><b>explore</b>Occasion-led shopping, sizing language and purchase confidence.</p></div>
+        <div class="insight-row"><span class="n">2</span><h5>5&ndash;8 task-based tests</h5><p class="opp"><b>test</b>Collection discovery, PDP sizing, cart, guest checkout.</p></div>
+        <div class="insight-row"><span class="n">3</span><h5>Analytics &amp; accessibility</h5><p class="opp"><b>instrument</b>Funnel instrumentation, mobile QA, WCAG 2.2 AA review.</p></div>
+        <div class="insight-row"><span class="n">4</span><h5>Post-launch experiments</h5><p class="opp"><b>measure</b>Compare matched-period revenue and conversion, segmented by device.</p></div>
+      </div>
+
+      <div class="case-block" style="margin-top:clamp(30px,4vw,44px)">
+        <h4>design disclosure</h4>
+        <p>V&Eacute;RASA is a fictional brand built as a research-led portfolio concept. Product ratings, offer timing and campaign storytelling are illustrative states, not observed customer or sales data. The photography is creative concept imagery, and the offer countdown would need a real campaign end date and front-end logic. No interviews, analytics or business outcomes are claimed as completed.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cs-next">
+    <div class="cs-next-card">
+      <div>
+        <span class="k">next stop</span>
+        <h3>Alibi</h3>
+        <p>A reflective finance product that turns statement data into monthly clues.</p>
+      </div>
+      <a class="btn" href="#/work/alibi">Read next &rarr;</a>
     </div>
   </div>
 </div>
@@ -2137,7 +2523,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   <header class="cs-hero">
     <div class="container">
       <a class="cs-back" href="#work" data-home>← back to work</a>
-      <span class="meta">ALB · <b>RAY</b> · FinTech · Behavioural Finance · SaaS</span>
+      <span class="meta">ALB · <b>RESHMA</b> · FinTech · Behavioural Finance · SaaS</span>
       <span class="status-pill"><i class="dot"></i>Ongoing project</span>
       <h1>From an ordinary transaction to <em>a clue you can carry.</em></h1>
       <p class="tagline hand-note">start with one month. see what Alibi notices about you.</p>
@@ -2197,290 +2583,177 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
       <div class="cs-sub">
         <span class="mono-label">early product preview</span>
         <h3>A first look <em>inside Alibi.</em></h3>
-        <p class="sub-lede">Product screens are still being designed — these frames will fill in as they're ready.</p>
+        <p class="sub-lede">Screens from the live Alibi site.</p>
       </div>
-      <div class="screen-grid landscape">
+      <div class="screen-grid landscape cols-2">
         <div class="screen-tile">
           <div class="frame-web">
             <div class="browser-bar"><i></i><i></i><i></i></div>
-            <div class="scr-web"><div class="ph-scr dark"><span class="sn">01</span><span class="add">your screenshot here</span></div><img src="photos/alibi-01.jpg" alt="Alibi statement upload screen" onerror="this.remove()"></div>
+            <div class="scr-web"><div class="ph-scr dark"><span class="sn">01</span></div><img src="photos/alibi-01.jpg" alt="Alibi landing page" onerror="this.remove()"></div>
           </div>
-          <div class="s-cap"><b>Statement upload</b><p>Upload a statement or start with sample data — no bank linking.</p></div>
+          <div class="s-cap"><b>Landing</b><p>&ldquo;Every month leaves clues.&rdquo; Upload a statement and get spending insights, privately.</p></div>
         </div>
         <div class="screen-tile">
           <div class="frame-web">
             <div class="browser-bar"><i></i><i></i><i></i></div>
-            <div class="scr-web"><div class="ph-scr dark"><span class="sn">02</span><span class="add">your screenshot here</span></div><img src="photos/alibi-02.jpg" alt="Alibi monthly insight screen" onerror="this.remove()"></div>
+            <div class="scr-web"><div class="ph-scr dark"><span class="sn">02</span></div><img src="photos/alibi-02.jpg" alt="Alibi start your story" onerror="this.remove()"></div>
           </div>
-          <div class="s-cap"><b>Monthly insight</b><p>A reflective summary of the month's spending behaviour.</p></div>
+          <div class="s-cap"><b>Start with one month</b><p>No account linking, no bank API. Begin free or try sample data.</p></div>
         </div>
         <div class="screen-tile">
           <div class="frame-web">
             <div class="browser-bar"><i></i><i></i><i></i></div>
-            <div class="scr-web"><div class="ph-scr dark"><span class="sn">03</span><span class="add">your screenshot here</span></div><img src="photos/alibi-03.jpg" alt="Alibi transaction clue screen" onerror="this.remove()"></div>
+            <div class="scr-web"><div class="ph-scr dark"><span class="sn">03</span></div><img src="photos/alibi-03.jpg" alt="How Alibi reads your month" onerror="this.remove()"></div>
           </div>
-          <div class="s-cap"><b>Transaction clue</b><p>An ordinary transaction, reframed as a clue worth noticing.</p></div>
+          <div class="s-cap"><b>How Alibi reads your month</b><p>Five steps from an ordinary moment to a clue you can carry.</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web">
+            <div class="browser-bar"><i></i><i></i><i></i></div>
+            <div class="scr-web"><div class="ph-scr dark"><span class="sn">04</span></div><img src="photos/alibi-04.jpg" alt="Alibi EMI Stress Score" onerror="this.remove()"></div>
+          </div>
+          <div class="s-cap"><b>EMI Stress Score</b><p>A free tool that scores your EMI burden from income and loans.</p></div>
         </div>
       </div>
 
-      <p class="case-note">ongoing project — interface, flows, and product scope are still evolving. drop landscape screenshots (16:9, e.g. 1600×900px) into /photos as alibi-01.jpg → alibi-03.jpg</p>
+      <p class="case-note">ongoing project — interface, flows, and product scope are still evolving.</p>
     </div>
   </div>
   <div class="cs-next">
     <div class="cs-next-card">
       <div>
         <span class="k">next stop</span>
-        <h3>Human Mode</h3>
-        <p>An ongoing UX/UI &amp; service design project on intentional human&ndash;AI collaboration.</p>
+        <h3>Water Tourism</h3>
+        <p>A speculative design project imagining water tourism in 2032.</p>
       </div>
-      <a class="btn" href="#/work/human-mode">See the work in progress →</a>
+      <a class="btn" href="#/work/water-tourism">Read next &rarr;</a>
     </div>
   </div>
 </div>
 
 <!-- ============================================================
-     CASE VIEW · HUMAN MODE — ongoing UX/UI & service design project
+     CASE VIEW · WATER TOURISM — speculative design
      ============================================================ -->
-<div class="view case-view cv-hmn" id="view-hmn">
+<div class="view case-view cv-wtr" id="view-wtr">
   <header class="cs-hero">
     <div class="container">
-      <a class="cs-back" href="#work" data-home>← back to work</a>
-      <span class="meta">HMN · <b>RAY</b> · UX/UI · Service Design · Human–AI Interaction</span>
-      <span class="status-pill"><i class="dot"></i>Ongoing project · currently in development</span>
-      <h1>Use AI. <em>Keep your mind.</em></h1>
-      <p class="tagline hand-note">a human–AI interaction &amp; service design concept</p>
-      <p class="lede">A human–AI interaction and service design concept that helps people think independently before relying on AI-generated answers. I am currently developing the research framework, service model and core user journey — UX/UI screens and interactive prototyping will be added as the project progresses.</p>
+      <a class="cs-back" href="#work" data-home>&larr; back to work</a>
+      <span class="meta">WTR &middot; <b>RESHMA</b> &middot; Speculative Design &middot; Futures Research</span>
+      <h1>Imagining water tourism in 2032, <em>one what-if at a time.</em></h1>
+      <p class="tagline hand-note">how might Gen Z feel bonded to water?</p>
+      <p class="lede">A speculative design project built on STEEP research, future forecasting and what-if ideation. We imagined how water tourism could look in 2032 and designed a two-day water fest that helps people connect with water and use it more mindfully.</p>
       <div class="cs-meta-row">
-        <div><span class="k">role</span>UX/UI &amp; Service Designer</div>
-        <div><span class="k">status</span>Ongoing · in development</div>
-        <div><span class="k">tools</span>Figma · Miro · Service Blueprinting</div>
-        <div><span class="k">platform</span>Cross-platform service layer</div>
+        <div><span class="k">team</span>Reshma Shirin, Hela &amp; Ananth</div>
+        <div><span class="k">my role</span>Research &middot; Future forecasting &middot; Ideation &middot; Concept development</div>
+        <div><span class="k">horizon</span>2032</div>
+        <div><span class="k">type</span>Speculative design</div>
       </div>
-      <div class="cs-chips"><span>UX Research</span><span>Service Design</span><span>Interaction Design</span><span>Human–AI Interaction</span></div>
-      <div class="cs-banner">
-        <div class="scene pv-hmn">
-          <span class="hm-tag">Human Mode</span>
-          <span class="hm-mark">✎</span>
-          <span class="hm-note">an idea, half-formed…</span>
-          <span class="hm-branch"></span>
-          <span class="hm-ai">structured suggestion →</span>
-        </div>
-      </div>
+      <div class="cs-chips"><span>STEEP Research</span><span>Future Wheel</span><span>Timeline in a Cone</span><span>What-If Ideation</span><span>Storyboarding</span></div>
+      <div class="cs-banner"><div class="scene pv-wtr"><span class="wt">STEEP &middot; 2032</span><span class="rp rp1"></span><span class="rp rp2"></span><span class="rp rp3"></span><span class="rp rp4"></span><span class="yr">2032</span></div></div>
     </div>
   </header>
   <div class="cs-body-wrap">
     <div class="container">
+      <p class="case-pull">"How might we make Gen Z form a sense of bonding with water to make them more mindful about its usage?"</p>
 
-      <!-- overview -->
       <div class="cs-sub">
-        <span class="mono-label">project overview</span>
-        <h3>A different way <em>to work with AI.</em></h3>
-        <p class="sub-lede">Generative AI has made writing, studying, brainstorming and decision-making faster. But most AI tools are designed to provide complete answers immediately. Human Mode explores a different interaction model — one where AI supports a person's thinking without automatically replacing it.</p>
-      </div>
-      <div class="case-block">
-        <h4>the service lets users choose</h4>
-        <ul>
-          <li>Think independently, with no AI involved yet</li>
-          <li>Develop an idea with AI guidance alongside them</li>
-          <li>Receive full AI assistance for a routine task</li>
-        </ul>
-        <p>The goal is not to discourage AI use. It's to make the level of AI involvement visible, intentional, and controlled by the person doing the thinking.</p>
-      </div>
-
-      <!-- problem -->
-      <div class="cs-sub">
-        <span class="mono-label">the problem</span>
-        <h3>Convenience is quietly <em>replacing thinking.</em></h3>
-        <p class="sub-lede">People increasingly turn to AI as the first step for writing, studying, planning, ideation and problem-solving. It saves time — but it also means accepting ready-made responses before developing an original idea, opinion, or line of reasoning.</p>
-      </div>
-      <div class="case-block">
-        <h4>most AI tools focus on</h4>
-        <ul>
-          <li>Generating answers quickly</li>
-          <li>Reducing effort</li>
-          <li>Completing tasks</li>
-          <li>Producing polished outputs</li>
-        </ul>
-        <p>They rarely ask users what they already know, what they think, what they've already attempted, or how much support they actually need — which can quietly reduce ownership of the final work and build dependency on AI as the starting point for everything.</p>
-      </div>
-
-      <!-- design challenge -->
-      <p class="case-pull">How might we help people use AI without allowing convenience to replace independent thinking?</p>
-
-      <!-- concept -->
-      <div class="cs-sub">
-        <span class="mono-label">the concept</span>
-        <h3>A thinking layer, <em>before the answer.</em></h3>
-        <p class="sub-lede">Human Mode adds a thinking layer between a person's request and the AI-generated response. Instead of immediately producing an answer, the service asks how they want to approach the task — then offers one of three modes.</p>
+        <span class="mono-label">the brief</span>
+        <h3>Water tourism, <em>ten years out.</em></h3>
+        <p class="sub-lede">We ran STEEP research (Social, Technological, Economic, Ecological, Political) to find the trends likely to shape water tourism over the next decade, from water sustainability to changing tourism practices.</p>
       </div>
       <div class="mini-grid">
-        <div class="mini-card"><span class="n">mode 01</span><h5>My Turn</h5><p>The user begins with their own thought, rough attempt, sketch or direction before receiving any AI assistance.</p></div>
-        <div class="mini-card"><span class="n">mode 02</span><h5>Think Together</h5><p>AI asks questions, offers hints, challenges assumptions, and helps organise the user's existing ideas — without immediately completing the task.</p></div>
-        <div class="mini-card"><span class="n">mode 03</span><h5>Fast Assist</h5><p>AI provides direct support for urgent, repetitive or administrative tasks, where independent thinking isn't the point.</p></div>
-      </div>
-      <div class="case-block" style="margin-top:26px">
-        <p>Human Mode is not anti-AI. It helps people make a conscious decision about when to think independently, when to collaborate, and when to simply automate.</p>
+        <div class="mini-card"><span class="n">01</span><h5>Seek healthy alternatives</h5><p>Consumers increasingly look for health-conscious and environmentally friendly tourism options.</p></div>
+        <div class="mini-card"><span class="n">02</span><h5>Sustainable choices</h5><p>Sustainability, sourcing and vegan-friendly choices will influence the future of water tourism.</p></div>
+        <div class="mini-card"><span class="n">03</span><h5>Non-alcoholic flavours</h5><p>Gen Z and later generations will lean toward complex non-alcoholic flavours and healthier drinks and experiences.</p></div>
       </div>
 
-      <!-- early feature exploration -->
       <div class="cs-sub">
-        <span class="mono-label">features currently being explored</span>
-        <h3>Early concepts, <em>not finished features.</em></h3>
-        <p class="sub-lede">These are directions I'm actively exploring and testing — presented here as concepts, not shipped functionality.</p>
+        <span class="mono-label">future forecasting</span>
+        <h3>Three tools to <em>map what could happen.</em></h3>
       </div>
-      <div class="mini-grid">
-        <div class="mini-card"><span class="n">01</span><h5>Idea Seed</h5><p>Users contribute one initial thought before AI begins generating any suggestions.</p></div>
-        <div class="mini-card"><span class="n">02</span><h5>Reveal Ladder</h5><p>Users gradually choose how much help they want — from a guiding question to a complete generated example.</p></div>
-        <div class="mini-card"><span class="n">03</span><h5>Ask-Back</h5><p>Instead of answering immediately, AI asks a focused question that helps the user clarify their own thinking.</p></div>
-        <div class="mini-card"><span class="n">04</span><h5>Counterpoint</h5><p>AI introduces an alternative perspective instead of automatically agreeing with the user.</p></div>
-        <div class="mini-card"><span class="n">05</span><h5>Review My Work</h5><p>AI evaluates an existing attempt, identifies gaps, and improves clarity — without replacing the original work.</p></div>
-        <div class="mini-card"><span class="n">06</span><h5>Human Receipt</h5><p>At the end of a task, users can see what they created, what AI contributed, and what still needs verification.</p></div>
+      <div class="stage-grid">
+        <div class="stage"><b>Future Wheel</b><span class="emo">ripple effects</span><p>Trends such as non-alcoholic drinks, sustainability and health-conscious tourism sat at the centre. The wheel mapped their direct and indirect consequences and showed how consumer behaviour and sustainable practice interconnect.</p></div>
+        <div class="stage"><b>Timeline in a Cone</b><span class="emo">possible &rarr; preferable</span><p>Sorted futures by time, likelihood and desirability from 2025 to 2032, giving a structured view of how wellness and eco-friendly tourism could become part of the industry.</p></div>
+        <div class="stage"><b>End states</b><span class="emo">snapshots of 2032</span><p>Speculative outcomes such as alcohol-free tourism, home-brewed drinks, health-conscious alternatives and more adventurous experiences.</p></div>
       </div>
 
-      <!-- early user journey -->
       <div class="cs-sub">
-        <span class="mono-label">early user journey</span>
-        <h3>One proposed path <em>through the service.</em></h3>
+        <span class="mono-label">ideation</span>
+        <h3>From trends to <em>tangible artifacts.</em></h3>
+        <p class="sub-lede">What-if scenarios questioned cultural norms and existing assumptions. The process then followed four steps, from analysing today to making speculative ideas concrete.</p>
       </div>
       <div class="flow-box">
-        <span class="k">early design hypothesis</span>
         <div class="flow-chain">
-          <span class="fstep">Enter a task</span><span class="farr">→</span>
-          <span class="fstep">Choose an intention</span><span class="farr">→</span>
-          <span class="fstep">Select a support mode</span><span class="farr">→</span>
-          <span class="fstep">Add an original idea</span><span class="farr">→</span>
-          <span class="fstep">Receive guided assistance</span><span class="farr">→</span>
-          <span class="fstep">Develop the work</span><span class="farr">→</span>
-          <span class="fdone">Review human &amp; AI contributions</span>
+          <span class="fstep">Analyze: spot current trends</span><span class="farr">&rarr;</span>
+          <span class="fstep">Fantasize: explore what-ifs</span><span class="farr">&rarr;</span>
+          <span class="fstep">Concrete: make scenarios actionable</span><span class="farr">&rarr;</span>
+          <span class="fdone">Realize: build objects and experiences &check;</span>
         </div>
       </div>
-      <p class="case-note">this journey is an early design hypothesis and will be refined through research and prototype testing</p>
-
-      <!-- service design direction -->
-      <div class="cs-sub">
-        <span class="mono-label">service design direction</span>
-        <h3>Beyond one app — <em>a service layer.</em></h3>
-        <p class="sub-lede">Human Mode could work as a service layer across several existing surfaces, rather than a single standalone product.</p>
-      </div>
-      <div class="pill-row">
-        <span>AI assistants</span><span>Writing tools</span><span>Learning platforms</span><span>Universities</span><span>Workplace productivity systems</span><span>Creative applications</span>
-      </div>
-      <div class="case-block" style="margin-top:22px">
-        <h4>the wider service may include</h4>
-        <ul>
-          <li>Digital tools and interaction patterns embedded in existing platforms</li>
-          <li>AI-literacy workshops for students and teams</li>
-          <li>Educator guidance for classroom and coursework use</li>
-          <li>Workplace policies around intentional AI use</li>
-          <li>Personal reflection tools for tracking one's own thinking over time</li>
-        </ul>
-        <p>The service blueprint and stakeholder ecosystem are currently being developed.</p>
+      <div class="case-grid" style="margin-top:28px">
+        <div><div class="case-block"><h4>artifacts &amp; interviews</h4><p>Three key artifacts came out of the what-if ideation. We tested and refined them through user interviews to understand how people reacted.</p></div></div>
+        <div><div class="case-block"><h4>the insight</h4><p>Those interviews led to the question that drove the final concept: how might we make Gen Z form a sense of bonding with water, so they become more mindful about its usage?</p></div></div>
       </div>
 
-      <!-- design principles -->
       <div class="cs-sub">
-        <span class="mono-label">design principles</span>
-        <h3>What this project <em>won't compromise on.</em></h3>
+        <span class="mono-label">final concept</span>
+        <h3>The <em>Water Tourism Fest.</em></h3>
+        <p class="sub-lede">A two-day night fest held by a prominent water body, celebrating humanity's connection with water, where technology and art blend.</p>
       </div>
-      <div class="hmw-list">
-        <div class="hmw"><span class="k">principle 01</span><p>Human thinking should remain visible</p></div>
-        <div class="hmw"><span class="k">principle 02</span><p>AI assistance should be intentional</p></div>
-        <div class="hmw"><span class="k">principle 03</span><p>Productive friction must provide value</p></div>
-        <div class="hmw"><span class="k">principle 04</span><p>Users should control the level of support</p></div>
-        <div class="hmw"><span class="k">principle 05</span><p>Full AI assistance should remain available when appropriate</p></div>
-        <div class="hmw"><span class="k">principle 06</span><p>Reflection should not feel like judgement</p></div>
-        <div class="hmw"><span class="k">principle 07</span><p>Personal work and private prompts should remain protected</p></div>
+      <div class="insight-list">
+        <div class="insight-row"><span class="n">1</span><h5>VR integration</h5><p class="opp"><b>on arrival</b>Visitors receive VR glasses that show water particles floating around them and let them interact with digital water.</p></div>
+        <div class="insight-row"><span class="n">2</span><h5>Immersive water visuals</h5><p class="opp"><b>in the headset</b>Water surrounds the visitor, with ripples they can move in sync with.</p></div>
+        <div class="insight-row"><span class="n">3</span><h5>Interactive NFTs</h5><p class="opp"><b>on the beach</b>Visitors submit water-related art to be displayed as NFTs.</p></div>
+        <div class="insight-row"><span class="n">4</span><h5>Water-themed food &amp; drinks</h5><p class="opp"><b>on the menu</b>Only water-based food and drinks are served, which deepens the theme.</p></div>
+        <div class="insight-row"><span class="n">5</span><h5>Dynamic environment</h5><p class="opp"><b>interaction</b>When mist covers the visitor's view, they shake their head to clear it.</p></div>
       </div>
 
-      <!-- current progress -->
       <div class="cs-sub">
-        <span class="mono-label">where the project is now</span>
-        <h3>Progress, shown <em>in stages.</em></h3>
+        <span class="mono-label">process &amp; concept in pictures</span>
+        <h3>From the wheel <em>to the storyboard.</em></h3>
       </div>
-      <div class="progress-grid">
-        <div class="progress-col done">
-          <div class="progress-head"><span class="progress-dot"></span>Completed</div>
-          <ul>
-            <li>Initial problem definition</li>
-            <li>Concept direction</li>
-            <li>Secondary research framing</li>
-            <li>Target-user definition</li>
-            <li>Three-mode interaction model</li>
-            <li>Early feature exploration</li>
-            <li>Initial user journey</li>
-          </ul>
+      <div class="screen-grid landscape cols-2">
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">&middot;</span></div><img src="photos/water-01.jpg" alt="Future Wheel" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Future Wheel</b><p>Mapping direct and indirect consequences of 2032 trends.</p></div>
         </div>
-        <div class="progress-col now">
-          <div class="progress-head"><span class="progress-dot"></span>Currently working on</div>
-          <ul>
-            <li>Research planning</li>
-            <li>User interview questions</li>
-            <li>Service ecosystem</li>
-            <li>Service blueprint</li>
-            <li>Information architecture</li>
-            <li>Core interaction flow</li>
-          </ul>
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">&middot;</span></div><img src="photos/water-02.jpg" alt="Timeline in a Cone" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Timeline in a Cone</b><p>Possible, plausible, probable and preferable futures, 2025 to 2032.</p></div>
         </div>
-        <div class="progress-col next">
-          <div class="progress-head"><span class="progress-dot"></span>Next</div>
-          <ul>
-            <li>Low-fidelity wireframes</li>
-            <li>UX/UI visual system</li>
-            <li>High-fidelity screens</li>
-            <li>Interactive prototype</li>
-            <li>Usability testing</li>
-            <li>Design iterations</li>
-          </ul>
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">&middot;</span></div><img src="photos/water-03.jpg" alt="What-if ideation wall" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>What-if ideation</b><p>A wall of what-if prompts challenging cultural norms.</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">&middot;</span></div><img src="photos/water-04.jpg" alt="Pitcher Perfect artifact interviews" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Artifact interviews</b><p>User reactions to one of the three artifacts.</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">&middot;</span></div><img src="photos/water-05.jpg" alt="Water Tourism Fest storyboard" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Storyboard</b><p>The visitor journey through the Water Tourism Fest.</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">&middot;</span></div><img src="photos/water-06.jpg" alt="Water Tourism Fest concept scene" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>The concept</b><p>A VR view of the fest: water, ripples and art on the beach.</p></div>
         </div>
       </div>
 
-      <!-- upcoming screens -->
-      <div class="cs-sub">
-        <span class="mono-label">upcoming UX/UI screens</span>
-        <h3>What's being <em>designed next.</em></h3>
-        <p class="sub-lede">UX/UI screens are currently in development. These titles reflect the planned scope — not finished designs.</p>
+      <div class="case-grid" style="margin-top:clamp(34px,5vw,52px)">
+        <div><div class="case-block"><h4>intended impact</h4><p>An immersive two-day experience that helps participants form a personal connection with water. Through art, VR and interactive installations, visitors gain a renewed understanding of why water matters and how they use it.</p></div></div>
+        <div><div class="case-block"><h4>my contribution</h4><p>Research, future forecasting, ideation and concept development, working with teammates Hela and Ananth.</p></div></div>
       </div>
-      <div class="wire-grid">
-        <div class="wire-card"><span class="wn">screen 01</span><b>Human Mode onboarding</b><div class="wire-skel"><i class="w1"></i><i class="w2"></i><i class="w3"></i></div></div>
-        <div class="wire-card"><span class="wn">screen 02</span><b>Task entry</b><div class="wire-skel"><i class="w2"></i><i class="w1"></i><i class="w3"></i></div></div>
-        <div class="wire-card"><span class="wn">screen 03</span><b>Task-intention selection</b><div class="wire-skel"><i class="w1"></i><i class="w3"></i><i class="w2"></i></div></div>
-        <div class="wire-card"><span class="wn">screen 04</span><b>Mode recommendation</b><div class="wire-skel"><i class="w2"></i><i class="w2"></i><i class="w1"></i></div></div>
-        <div class="wire-card"><span class="wn">screen 05</span><b>Idea Seed workspace</b><div class="wire-skel"><i class="w1"></i><i class="w2"></i><i class="w1"></i></div></div>
-        <div class="wire-card"><span class="wn">screen 06</span><b>Reveal Ladder</b><div class="wire-skel"><i class="w3"></i><i class="w2"></i><i class="w2"></i></div></div>
-        <div class="wire-card"><span class="wn">screen 07</span><b>AI counterpoint</b><div class="wire-skel"><i class="w2"></i><i class="w1"></i><i class="w3"></i></div></div>
-        <div class="wire-card"><span class="wn">screen 08</span><b>Work comparison</b><div class="wire-skel"><i class="w1"></i><i class="w1"></i><i class="w2"></i></div></div>
-        <div class="wire-card"><span class="wn">screen 09</span><b>Human Receipt</b><div class="wire-skel"><i class="w2"></i><i class="w3"></i><i class="w1"></i></div></div>
-        <div class="wire-card"><span class="wn">screen 10</span><b>Reflection dashboard</b><div class="wire-skel"><i class="w1"></i><i class="w2"></i><i class="w2"></i></div></div>
-      </div>
-
-      <!-- reflection -->
-      <div class="cs-sub">
-        <span class="mono-label">project reflection</span>
-        <h3>Where this is <em>heading.</em></h3>
-      </div>
-      <div class="case-block">
-        <p>Human Mode began with a concern about AI dependency, but the project is evolving into a broader exploration of intentional human–AI collaboration. The aim is not to reduce AI use, but to design interactions that help people remain active participants in their own thinking.</p>
-      </div>
-
-      <p class="case-note">ongoing UX/UI &amp; service design project — research framework, service model and screens are still in development, not finished outcomes</p>
-
-      <!-- final section -->
-      <div class="hm-closing">
-        <h3>The project is <em>still thinking.</em></h3>
-        <p>Human Mode is currently being developed through research, service design and interaction exploration. The complete user experience, prototype and testing outcomes will be added as the project progresses.</p>
-        <span class="status-pill"><i class="dot"></i>Next update: core user flow and early wireframes</span>
-      </div>
-
+      <p class="case-note">speculative design project &mdash; the fest is a proposed future scenario, not a built or tested product.</p>
     </div>
   </div>
   <div class="cs-next">
     <div class="cs-next-card">
       <div>
         <span class="k">next stop</span>
-        <h3>Beyond design</h3>
-        <p>The creative corner — illustrations, 3D renders, and playful experiments.</p>
+        <h3>Beyond Design</h3>
+        <p>Social creatives, illustrations and experiments made for the joy of it.</p>
       </div>
-      <a class="btn" href="#/work/beyond">Step inside →</a>
+      <a class="btn" href="#/work/beyond">Step inside &rarr;</a>
     </div>
   </div>
 </div>
@@ -2492,21 +2765,22 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   <header class="cs-hero">
     <div class="container">
       <a class="cs-back" href="#work" data-home>← back to work</a>
-      <span class="meta">BYD · <b>RAY</b> · Creative Corner · Illustrations &amp; Experiments</span>
+      <span class="meta">BYD · <b>RESHMA</b> · Creative Corner · Social Creatives &amp; Illustration</span>
       <h1>Where the <em>illustrations</em> live.</h1>
       <p class="tagline hand-note">made for joy, not deadlines</p>
-      <p class="lede">Every designer needs a corner with no brief, no stakeholders, and no acceptance criteria. This is mine — <b>illustrations, doodles, 3D renders, and playful experiments</b> that keep my eyes fresh and my hands honest. Some of it feeds back into client work. Most of it exists purely because making things is fun.</p>
+      <p class="lede">Every designer needs a corner with no brief, no stakeholders, and no acceptance criteria. This is mine — <b>social creatives, illustrations, and playful experiments</b> that keep my eyes fresh and my hands honest. Some of it feeds back into client work. Most of it exists purely because making things is fun.</p>
       <div class="cs-meta-row">
-        <div><span class="k">medium</span>Illustration · 3D · Digital art</div>
-        <div><span class="k">tools</span>Illustrator · Photoshop · Blender</div>
+        <div><span class="k">medium</span>Social creatives · Illustration · Logos · 3D modelling</div>
+        <div><span class="k">tools</span>Illustrator · Photoshop · Autodesk Maya</div>
         <div><span class="k">status</span>Always growing</div>
         <div><span class="k">rules</span>None</div>
       </div>
-      <div class="cs-chips"><span>Illustration</span><span>Doodles</span><span>3D Renders</span><span>Experiments</span></div>
+      <div class="cs-chips"><span>Illustration</span><span>Social Creatives</span><span>Branding</span><span>Logo Design</span><span>3D Modelling</span><span>Experiments</span></div>
       <div class="cs-banner">
         <div class="scene pv-beyond">
           <div class="pl pl1"></div><div class="pl pl2"></div><div class="pl pl3"></div>
           <div class="orbit"><i></i></div><div class="node"></div>
+          <img class="cover" src="photos/art-11.jpg" alt="Glass chess set 3D render" onerror="this.remove()">
         </div>
       </div>
     </div>
@@ -2515,30 +2789,99 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     <div class="container">
       <p class="case-pull">"The sketchbook is where taste gets built — one unjudged page at a time."</p>
 
+      <div class="cs-sub">
+        <span class="mono-label">illustration</span>
+        <h3>Characters, <em>drawn for fun.</em></h3>
+        <p class="sub-lede">Expression and pose studies, drawn digitally in Photoshop.</p>
+      </div>
       <div class="screen-grid landscape cols-2">
         <div class="screen-tile">
-          <div class="frame-web"><div class="scr-web"><div class="ph-scr" style="background:linear-gradient(165deg,#E8DFF2 0%,#BCABD8 60%,#77639C 100%)"><span class="sn">01</span><span class="add">your art here</span></div><img src="photos/art-01.jpg" alt="Illustration 01" onerror="this.remove()"></div></div>
-          <div class="s-cap"><b>Ink &amp; digital</b><p>illustration no. 01</p></div>
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">05</span></div><img src="photos/art-05.jpg" alt="Sketchbook page of character expressions" loading="lazy" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Character sketchbook</b><p>Expression and pose studies in coloured pencil style, drawn digitally in Photoshop.</p></div>
+        </div>
+      </div>
+
+      <div class="cs-sub">
+        <span class="mono-label">posters &amp; social creatives</span>
+        <h3>Posters <em>&amp; posts.</em></h3>
+        <p class="sub-lede">Social creatives for food, caf&eacute; and dental brands, made in Photoshop and Illustrator.</p>
+      </div>
+      <div class="screen-grid landscape cols-2">
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">01</span></div><img src="photos/art-01.jpg" alt="Your Sweetest Obsession donut poster" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Your Sweetest Obsession</b><p>Social poster for The Donuts Bakery &amp; Caf&eacute;: three donut flavours with labelled callouts.</p></div>
         </div>
         <div class="screen-tile">
-          <div class="frame-web"><div class="scr-web"><div class="ph-scr" style="background:linear-gradient(165deg,#C4E6E3 0%,#93CBCD 55%,#EEDDBC 100%)"><span class="sn">02</span><span class="add">your art here</span></div><img src="photos/art-02.jpg" alt="Illustration 02" onerror="this.remove()"></div></div>
-          <div class="s-cap"><b>Palette play</b><p>colour study</p></div>
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">02</span></div><img src="photos/art-02.jpg" alt="The Donuts bakery interior post" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Weekend plans</b><p>A bakery interior paired with a playful messaging-app menu.</p></div>
         </div>
         <div class="screen-tile">
-          <div class="frame-web"><div class="scr-web"><div class="ph-scr" style="background:linear-gradient(165deg,#EBE7DD 0%,#CDC6B6 55%,#918A7F 100%)"><span class="sn">03</span><span class="add">your art here</span></div><img src="photos/art-03.jpg" alt="3D render" onerror="this.remove()"></div></div>
-          <div class="s-cap"><b>3D render</b><p>blender study</p></div>
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">03</span></div><img src="photos/art-03.jpg" alt="A Little Indulgence Never Hurt poster" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>A Little Indulgence Never Hurt</b><p>Dark, golden chocolate cake poster with an order call to action.</p></div>
         </div>
         <div class="screen-tile">
-          <div class="frame-web"><div class="scr-web"><div class="ph-scr" style="background:linear-gradient(165deg,#F7E2CB 0%,#EDBC8E 55%,#CE7752 100%)"><span class="sn">04</span><span class="add">your art here</span></div><img src="photos/art-04.jpg" alt="Doodle" onerror="this.remove()"></div></div>
-          <div class="s-cap"><b>Sketchbook</b><p>doodle of the week</p></div>
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">04</span></div><img src="photos/art-04.jpg" alt="Burgundy Coffee illustrated post" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Burgundy Coffee</b><p>Line-art characters added over a caf&eacute; photo to give the post a story.</p></div>
         </div>
         <div class="screen-tile">
-          <div class="frame-web"><div class="scr-web"><div class="ph-scr" style="background:linear-gradient(165deg,#F8E6BB 0%,#F1BD6E 55%,#CD8141 100%)"><span class="sn">05</span><span class="add">your art here</span></div><img src="photos/art-05.jpg" alt="Poster experiment" onerror="this.remove()"></div></div>
-          <div class="s-cap"><b>Type &amp; texture</b><p>poster play</p></div>
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">06</span></div><img src="photos/art-06.jpg" alt="V'Smile coming soon social poster" loading="lazy" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>V'Smile &middot; launch teaser</b><p>A &ldquo;We are coming soon&rdquo; social creative in the brand&rsquo;s blue palette.</p></div>
+        </div>
+      </div>
+
+      <div class="cs-sub">
+        <span class="mono-label">branding &amp; logo work</span>
+        <h3>Logos, explored <em>before they&rsquo;re chosen.</em></h3>
+        <p class="sub-lede">Wordmarks, symbols and announcement creatives, designed in Illustrator and Photoshop, showing the exploration as well as the final mark.</p>
+      </div>
+      <div class="screen-grid landscape cols-2">
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">07</span></div><img src="photos/art-07.jpg" alt="V'Smile dental logo explorations" loading="lazy" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>V'Smile &middot; logo exploration</b><p>Twelve directions for an aesthetic dentistry brand, combining a tooth, a smile curve and type.</p></div>
         </div>
         <div class="screen-tile">
-          <div class="frame-web"><div class="scr-web"><div class="ph-scr" style="background:linear-gradient(165deg,#DDD8C8 0%,#ACB79E 60%,#66755F 100%)"><span class="sn">06</span><span class="add">your art here</span></div><img src="photos/art-06.jpg" alt="Experiment" onerror="this.remove()"></div></div>
-          <div class="s-cap"><b>Experiment</b><p>happy accident</p></div>
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">08</span></div><img src="photos/art-08.jpg" alt="V'Smile final logo" loading="lazy" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>V'Smile &middot; final mark</b><p>The chosen direction: a bold tooth form carrying the V, with an arched &ldquo;Aesthetic Dentistry&rdquo; line.</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">09</span></div><img src="photos/art-09.jpg" alt="DICV logo ideations" loading="lazy" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>DICV &middot; logo ideations</b><p>Global Capability Centre mark explored through people, network and growth motifs.</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">10</span></div><img src="photos/art-10.jpg" alt="Aura wordmark explorations" loading="lazy" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Aura &middot; wordmark study</b><p>Script, serif and circular lockups in a warm brown palette for a beauty brand.</p></div>
+        </div>
+      </div>
+
+      <div class="cs-sub">
+        <span class="mono-label">3D modelling</span>
+        <h3>Built in <em>Autodesk Maya.</em></h3>
+        <p class="sub-lede">Modelling, lighting and rendering studies: a glass chess set, stacked cubes, a small roadside stand and a tiled bathroom.</p>
+      </div>
+      <div class="screen-grid landscape cols-2">
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">11</span></div><img src="photos/art-11.jpg" alt="Glass chess set render in Maya" loading="lazy" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Chess set &middot; glass &amp; red</b><p>Translucent teal and red pieces on a checkered board, lit against black.</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">12</span></div><img src="photos/art-12.jpg" alt="Close-up chess render" loading="lazy" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Chess set &middot; close-up</b><p>Glossy white and chrome-black pieces with reflections on the board.</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">13</span></div><img src="photos/art-13.jpg" alt="Stacked Rubik cubes render" loading="lazy" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Stacked cubes</b><p>Three puzzle cubes with glossy stickers, modelled and rendered in Maya.</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">14</span></div><img src="photos/art-14.jpg" alt="Roadside stand 3D model" loading="lazy" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Roadside stand</b><p>A clay-style environment model with bunting, bins and a mountain backdrop.</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">15</span></div><img src="photos/art-15.jpg" alt="Bathroom interior render" loading="lazy" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Bathroom interior</b><p>Tiled walls, wooden fittings and soft window light, rendered in Maya.</p></div>
+        </div>
+        <div class="screen-tile">
+          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">16</span></div><img src="photos/art-16.jpg" alt="Bathroom top-down render" loading="lazy" onerror="this.remove()"></div></div>
+          <div class="s-cap"><b>Bathroom &middot; bath view</b><p>A higher camera angle showing the bath, mat and stool.</p></div>
         </div>
       </div>
 
@@ -2546,7 +2889,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
         <div>
           <div class="case-block">
             <h4>why it matters</h4>
-            <p>Play is practice in disguise. Illustration sharpens my eye for composition and colour; 3D work keeps my spatial instincts alive for AR/VR projects; doodling teaches restraint — <b>what to leave out</b>. The taste built here quietly shows up in every product I design.</p>
+            <p>Play is practice in disguise. Social creatives sharpen my eye for composition, copy and colour; illustration adds personality; making teaches restraint — <b>what to leave out</b>. The taste built here quietly shows up in every product I design.</p>
           </div>
         </div>
         <div>
@@ -2554,7 +2897,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
             <h4>what lives here</h4>
             <ul>
               <li>Hand-drawn illustrations and character sketches</li>
-              <li>3D renders and material studies from Blender</li>
+              <li>Social posts and campaign creatives for food and caf&eacute; brands</li>
+              <li>Logo and wordmark explorations (Illustrator)</li>
+              <li>3D models and renders (Autodesk Maya)</li>
               <li>Poster, type, and texture experiments</li>
               <li>Whatever this week's curiosity demanded</li>
             </ul>
@@ -2579,12 +2924,42 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 (function(){
   "use strict";
 
+  /* ---------- intro ---------- */
+  (function(){
+    var el=document.getElementById("intro");
+    if(!el)return;
+    var style=window.__introStyle||"waves",preview=!!window.__introPreview,list=window.__introList||["waves"];
+    var seen=false;
+    try{seen=sessionStorage.getItem("introSeen")==="1";}catch(e){}
+    if(preview){
+      var pk=document.createElement("div");pk.className="intro-picker";pk.innerHTML="<b>Intro style</b>";
+      list.forEach(function(n){var a=document.createElement("a");a.href="?intro="+n;a.textContent=n;if(n===style)a.className="on";pk.appendChild(a);});
+      document.body.appendChild(pk);
+    }
+    if((!preview&&seen)||location.hash.indexOf("#/")===0){el.remove();return;}
+    var dur={sketch:6200,waves:4300,curtain:3900,stripes:3900,type:4900,bloom:4200}[style]||4300;
+    if(style==="type"){
+      var h=el.querySelector(".i2"),full=h.textContent,i=0;h.textContent="";
+      setTimeout(function(){(function t(){if(i<=full.length){h.textContent=full.slice(0,i++);setTimeout(t,95);}})();},650);
+    }
+    function end(){
+      if(el.classList.contains("out"))return;
+      el.classList.add("out");
+      if(!preview){try{sessionStorage.setItem("introSeen","1");}catch(e){}}
+      setTimeout(function(){el.remove();},1700);
+    }
+    document.getElementById("introSkip").addEventListener("click",function(e){e.stopPropagation();end();});
+    el.addEventListener("click",end);
+    setTimeout(end,dur);
+  })();
+
   /* ---------- router ---------- */
   var routes={
     "#/work/vr-migraine":"view-vrm",
     "#/work/medcare":"view-med",
+    "#/work/verasa":"view-vrs",
     "#/work/alibi":"view-alb",
-    "#/work/human-mode":"view-hmn",
+    "#/work/water-tourism":"view-wtr",
     "#/work/beyond":"view-byd"
   };
   var views=document.querySelectorAll(".view");
@@ -2634,7 +3009,114 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   var track=document.getElementById("filmTrack");
   if(track){track.innerHTML+=track.innerHTML;}
 
+  /* ---------- custom cursor ---------- */
+  (function(){
+    if(!window.matchMedia||!matchMedia("(hover:hover) and (pointer:fine)").matches)return;
+    if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;
+    var dot=document.createElement("div"),ring=document.createElement("div");
+    dot.className="cur-dot";ring.className="cur-ring";
+    document.body.appendChild(ring);document.body.appendChild(dot);
+    document.documentElement.classList.add("has-cursor");
+    var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my,lx=mx,ly=my,cols=["#E8336B","#8E5FD6","#F2A100","#FF7A45","#E8336B"],shapes=["\u2726","\u2727","\u2736","\u2605"];
+    addEventListener("mousemove",function(e){
+      mx=e.clientX;my=e.clientY;
+      dot.style.transform="translate("+mx+"px,"+my+"px)";
+      var dx=mx-lx,dy=my-ly;
+      if(dx*dx+dy*dy>1100){
+        lx=mx;ly=my;
+        var s=document.createElement("span");
+        s.className="cur-spark";s.textContent=shapes[Math.floor(Math.random()*shapes.length)];s.style.setProperty("--sz",(12+Math.random()*9)+"px");
+        s.style.left=mx+"px";s.style.top=my+"px";
+        s.style.color=cols[Math.floor(Math.random()*cols.length)];
+        s.style.setProperty("--dx",(Math.random()*36-18)+"px");
+        s.style.setProperty("--dy",(16+Math.random()*24)+"px");
+        document.body.appendChild(s);
+        setTimeout(function(){s.remove();},1000);
+      }
+    },{passive:true});
+    (function loop(){
+      rx+=(mx-rx)*.16;ry+=(my-ry)*.16;
+      ring.style.transform="translate("+rx+"px,"+ry+"px)";
+      requestAnimationFrame(loop);
+    })();
+    function state(e){
+      var t=e.target;if(!t||!t.closest)return;
+      var cls="",label="";
+      if(t.closest(".h2-show")){cls="view";label="View";}
+      else if(t.closest(".polaroid")){cls="hi";label="Hi!";}
+      else if(t.closest("a,button,.principle-head")){cls="link";}
+      else if(t.closest("input,textarea")){cls="text";}
+      ring.className="cur-ring"+(cls?" "+cls:"");
+      ring.textContent=label;
+      dot.classList.toggle("hide",cls==="view"||cls==="hi"||cls==="text");
+    }
+    document.addEventListener("mouseover",state);
+    document.addEventListener("mouseleave",function(){ring.style.opacity=0;dot.style.opacity=0;});
+    document.addEventListener("mouseenter",function(){ring.style.opacity=1;dot.style.opacity=1;});
+  })();
+
+
+  /* ---------- case-study jump bar: Challenge / Research / Solution / Reflection ---------- */
+  (function(){
+    var MAP={
+      "view-vrm":function(v){var c=v.querySelectorAll(".cs-sub");return [c[0],c[2],c[5],c[c.length-1]];},
+      "view-med":function(v){var c=v.querySelectorAll(".cs-sub");return [c[0],c[1],c[4],c[c.length-1]];},
+      "view-vrs":function(v){var c=v.querySelectorAll(".cs-sub");return [c[0],c[1],c[5],c[c.length-1]];},
+      "view-alb":function(v){var b=v.querySelectorAll(".case-block"),c=v.querySelectorAll(".cs-sub");return [b[0],b[1],c[0],b[2]];},
+      "view-wtr":function(v){var c=v.querySelectorAll(".cs-sub"),g=v.querySelectorAll(".case-grid");return [c[0],c[1],c[3],g[g.length-1]];},
+      "view-byd":function(v){var c=v.querySelectorAll(".cs-sub");return [c[0],c[1],c[2],c[3]];}
+    };
+    var NAMES=["Challenge","Research","Solution","Reflection"],CUSTOM={"view-byd":["Illustration","Posters","Branding","3D Modeling"]};
+    Object.keys(MAP).forEach(function(id){
+      var v=document.getElementById(id),hero=v&&v.querySelector(".cs-hero");if(!hero)return;
+      var t=MAP[id](v),bar=document.createElement("nav");
+      bar.className="cs-subnav";bar.setAttribute("aria-label","Jump to section");
+      var in_=document.createElement("div");in_.className="cs-subnav-in";bar.appendChild(in_);
+      var back=document.createElement("a");back.className="sn-back";back.href="#work";back.setAttribute("data-home","");back.textContent="\u2190 Portfolio";in_.appendChild(back);
+      var btns=[];
+      (CUSTOM[id]||NAMES).forEach(function(n,i){
+        if(!t[i])return;
+        var b=document.createElement("button");b.type="button";b.textContent=n;
+        b.addEventListener("click",function(){t[i].scrollIntoView({behavior:"smooth",block:"start"});});
+        in_.appendChild(b);btns.push([b,t[i]]);
+      });
+      hero.parentNode.insertBefore(bar,hero.nextSibling);
+      function spy(){
+        if(!v.classList.contains("active"))return;
+        var cur=-1,y=innerHeight*.38;
+        btns.forEach(function(p,i){if(p[1].getBoundingClientRect().top<y)cur=i;});
+        btns.forEach(function(p,i){p[0].classList.toggle("on",i===cur);});
+      }
+      addEventListener("scroll",spy,{passive:true});
+    });
+  })();
+
+
+  /* ---------- drifting doodles on scroll ---------- */
+  (function(){
+    if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;
+    var D=[["\u2726","#E8B730",".12","2.2vw","22%",0],["\u2665","#D9537B","-.1","auto","48%",1],["\u273F","#B69CD8",".08","2.6vw","74%",0],["\u2727","#F2A100","-.14","auto","12%",1]],els=[];
+    D.forEach(function(d){var e=document.createElement("span");e.className="fl-dd";e.textContent=d[0];e.style.color=d[1];e.style.top=d[4];if(d[5])e.style.right=d[3]==="auto"?"2.4vw":d[3];else e.style.left=d[3];document.body.appendChild(e);els.push([e,parseFloat(d[2])]);});
+    var tick=false;function u(){tick=false;var y=scrollY;els.forEach(function(p){p[0].style.transform="translateY("+(y*p[1]).toFixed(1)+"px) rotate("+(y*.12).toFixed(1)+"deg)";});}
+    addEventListener("scroll",function(){if(!tick){tick=true;requestAnimationFrame(u);}},{passive:true});u();
+  })();
+
+  /* ---------- scroll progress ---------- */
+  (function(){
+    var bar=document.getElementById("scrollBar");if(!bar)return;
+    function u(){var h=document.documentElement.scrollHeight-innerHeight;bar.style.transform="scaleX("+(h>0?scrollY/h:0)+")";}
+    addEventListener("scroll",u,{passive:true});u();
+  })();
+
   /* ---------- scroll reveal ---------- */
+  /* extra reveal targets + stagger + directions */
+  document.querySelectorAll(".h2-show,.principle,.fact,.ledger-row,.skill-group,.cert-row,.interest,.h2-title,.h2-help h2").forEach(function(el){el.classList.add("reveal");});
+  document.querySelectorAll(".h2-show").forEach(function(el){el.classList.add("zoom");});
+  var aboutPhoto=document.querySelector(".polaroid");if(aboutPhoto)aboutPhoto.classList.add("from-l");
+  var aboutCopy=document.querySelector(".about-copy");if(aboutCopy)aboutCopy.classList.add("from-r");
+  document.querySelectorAll(".principles,.fact-list,.ledger,.skill-grid,.cert-list,.interest-strip").forEach(function(g){
+    Array.prototype.forEach.call(g.children,function(c,i){c.style.setProperty("--d",Math.min(i*90,450)+"ms");});
+  });
   var reveals=document.querySelectorAll(".reveal");
   if("IntersectionObserver" in window){
     var io=new IntersectionObserver(function(entries){
