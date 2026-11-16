@@ -1293,6 +1293,15 @@ body{background:var(--cream)}
 @media (max-width:900px){.fl-dd{display:none}}
 
 
+/* beyond design: posters (natural size) + videos */
+.poster-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px 22px;align-items:start}
+.poster-tile img{display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 14px 34px rgba(67,51,59,.16)}
+.vid-grid{display:grid;grid-template-columns:repeat(2,minmax(0,340px));gap:26px 24px;justify-content:start}
+.vid-tile video{display:block;width:100%;aspect-ratio:9/16;border-radius:14px;background:#000;box-shadow:0 14px 34px rgba(67,51,59,.18)}
+.client-tag{display:inline-block;margin-left:8px;padding:2px 9px;border-radius:999px;background:var(--rose-soft,rgba(217,83,123,.12));color:var(--rose-deep,#B23A5E);font-size:10.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;vertical-align:2px}
+@media (max-width:900px){.poster-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.poster-grid,.vid-grid{grid-template-columns:1fr}}
+
 /* custom cursor */
 @media (hover:hover) and (pointer:fine){html.has-cursor,html.has-cursor *{cursor:none!important}}
 .cur-dot,.cur-ring,.cur-spark{position:fixed;left:0;top:0;pointer-events:none;z-index:1001}
@@ -2803,37 +2812,53 @@ body{background:var(--cream)}
       </div>
 
       <div class="cs-sub">
-        <span class="mono-label">posters &amp; social creatives</span>
+        <span class="mono-label">posters &amp; social creatives &middot; client projects</span>
         <h3>Posters <em>&amp; posts.</em></h3>
-        <p class="sub-lede">Social creatives for food, caf&eacute; and dental brands, made in Photoshop and Illustrator.</p>
+        <p class="sub-lede">Client work for food, caf&eacute; and dental brands: social posters and posts made in Photoshop and Illustrator.</p>
       </div>
-      <div class="screen-grid landscape cols-2">
-        <div class="screen-tile">
-          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">01</span></div><img src="photos/art-01.jpg" alt="Your Sweetest Obsession donut poster" onerror="this.remove()"></div></div>
-          <div class="s-cap"><b>Your Sweetest Obsession</b><p>Social poster for The Donuts Bakery &amp; Caf&eacute;: three donut flavours with labelled callouts.</p></div>
+      <div class="poster-grid">
+        <div class="poster-tile">
+          <img src="photos/poster-01.jpg" alt="Your Sweetest Obsession donut poster" loading="lazy" onerror="this.remove()">
+          <div class="s-cap"><b>Your Sweetest Obsession</b><span class="client-tag">Client project</span><p>Social poster for The Donuts Bakery &amp; Caf&eacute;: three donut flavours with labelled callouts.</p></div>
         </div>
-        <div class="screen-tile">
-          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">02</span></div><img src="photos/art-02.jpg" alt="The Donuts bakery interior post" onerror="this.remove()"></div></div>
-          <div class="s-cap"><b>Weekend plans</b><p>A bakery interior paired with a playful messaging-app menu.</p></div>
+        <div class="poster-tile">
+          <img src="photos/poster-02.jpg" alt="The Donuts bakery interior post" loading="lazy" onerror="this.remove()">
+          <div class="s-cap"><b>Weekend plans</b><span class="client-tag">Client project</span><p>A bakery interior paired with a playful messaging-app menu.</p></div>
         </div>
-        <div class="screen-tile">
-          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">03</span></div><img src="photos/art-03.jpg" alt="A Little Indulgence Never Hurt poster" onerror="this.remove()"></div></div>
-          <div class="s-cap"><b>A Little Indulgence Never Hurt</b><p>Dark, golden chocolate cake poster with an order call to action.</p></div>
+        <div class="poster-tile">
+          <img src="photos/poster-03.jpg" alt="A Little Indulgence Never Hurt poster" loading="lazy" onerror="this.remove()">
+          <div class="s-cap"><b>A Little Indulgence Never Hurt</b><span class="client-tag">Client project</span><p>Dark, golden chocolate cake poster with an order call to action.</p></div>
         </div>
-        <div class="screen-tile">
-          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">04</span></div><img src="photos/art-04.jpg" alt="Burgundy Coffee illustrated post" onerror="this.remove()"></div></div>
-          <div class="s-cap"><b>Burgundy Coffee</b><p>Line-art characters added over a caf&eacute; photo to give the post a story.</p></div>
+        <div class="poster-tile">
+          <img src="photos/poster-04.jpg" alt="Burgundy Coffee illustrated post" loading="lazy" onerror="this.remove()">
+          <div class="s-cap"><b>Burgundy Coffee</b><span class="client-tag">Client project</span><p>Line-art characters added over a caf&eacute; photo to give the post a story.</p></div>
         </div>
-        <div class="screen-tile">
-          <div class="frame-web"><div class="scr-web"><div class="ph-scr"><span class="sn">06</span></div><img src="photos/art-06.jpg" alt="V'Smile coming soon social poster" loading="lazy" onerror="this.remove()"></div></div>
-          <div class="s-cap"><b>V'Smile &middot; launch teaser</b><p>A &ldquo;We are coming soon&rdquo; social creative in the brand&rsquo;s blue palette.</p></div>
+        <div class="poster-tile">
+          <img src="photos/art-06.jpg" alt="V'Smile coming soon social poster" loading="lazy" onerror="this.remove()">
+          <div class="s-cap"><b>V'Smile &middot; launch teaser</b><span class="client-tag">Client project</span><p>A &ldquo;We are coming soon&rdquo; social creative in the brand&rsquo;s blue palette.</p></div>
         </div>
       </div>
 
       <div class="cs-sub">
-        <span class="mono-label">branding &amp; logo work</span>
+        <span class="mono-label">ai video &middot; client project</span>
+        <h3>Product films, <em>made with AI.</em></h3>
+        <p class="sub-lede">AI-generated product videos for The Donuts Bakery &amp; Caf&eacute;&rsquo;s dessert cups: close-up food shots built to stop the scroll on social.</p>
+      </div>
+      <div class="vid-grid">
+        <div class="vid-tile">
+          <video controls playsinline preload="metadata" poster="photos/video-01.jpg"><source src="videos/donuts-film-01.mp4" type="video/mp4"></video>
+          <div class="s-cap"><b>Coffee dessert film</b><span class="client-tag">Client project</span><p>Coffee beans, layered sponge and cream, ending on the branded dessert cup.</p></div>
+        </div>
+        <div class="vid-tile">
+          <video controls playsinline preload="metadata" poster="photos/video-02.jpg"><source src="videos/donuts-film-02.mp4" type="video/mp4"></video>
+          <div class="s-cap"><b>Espresso &amp; cream film</b><span class="client-tag">Client project</span><p>Falling beans, an espresso pour and the cream layer, in a slow, rich product reel.</p></div>
+        </div>
+      </div>
+
+      <div class="cs-sub">
+        <span class="mono-label">branding &amp; logo work &middot; client projects</span>
         <h3>Logos, explored <em>before they&rsquo;re chosen.</em></h3>
-        <p class="sub-lede">Wordmarks, symbols and announcement creatives, designed in Illustrator and Photoshop, showing the exploration as well as the final mark.</p>
+        <p class="sub-lede">Wordmarks, symbols and announcement creatives, designed in Illustrator and Photoshop, showing the exploration as well as the final mark. These were client projects.</p>
       </div>
       <div class="screen-grid landscape cols-2">
         <div class="screen-tile">
@@ -3065,9 +3090,9 @@ body{background:var(--cream)}
       "view-vrs":function(v){var c=v.querySelectorAll(".cs-sub");return [c[0],c[1],c[5],c[c.length-1]];},
       "view-alb":function(v){var b=v.querySelectorAll(".case-block"),c=v.querySelectorAll(".cs-sub");return [b[0],b[1],c[0],b[2]];},
       "view-wtr":function(v){var c=v.querySelectorAll(".cs-sub"),g=v.querySelectorAll(".case-grid");return [c[0],c[1],c[3],g[g.length-1]];},
-      "view-byd":function(v){var c=v.querySelectorAll(".cs-sub");return [c[0],c[1],c[2],c[3]];}
+      "view-byd":function(v){var c=v.querySelectorAll(".cs-sub");return [c[0],c[1],c[2],c[3],c[4]];}
     };
-    var NAMES=["Challenge","Research","Solution","Reflection"],CUSTOM={"view-byd":["Illustration","Posters","Branding","3D Modeling"]};
+    var NAMES=["Challenge","Research","Solution","Reflection"],CUSTOM={"view-byd":["Illustration","Posters","AI Video","Branding","3D Modeling"]};
     Object.keys(MAP).forEach(function(id){
       var v=document.getElementById(id),hero=v&&v.querySelector(".cs-hero");if(!hero)return;
       var t=MAP[id](v),bar=document.createElement("nav");
